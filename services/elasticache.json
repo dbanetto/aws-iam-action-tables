@@ -1,0 +1,1110 @@
+{
+    "actions": [
+        {
+            "access_level": "Tagging",
+            "action": "AddTagsToResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The AddTagsToResource action adds up to 10 cost allocation tags to the named resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "snapshot",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AuthorizeCacheSecurityGroupIngress",
+            "condition_keys": [],
+            "dependent_actions": [
+                "ec2:AuthorizeSecurityGroupIngress"
+            ],
+            "description": "The AuthorizeCacheSecurityGroupIngress action allows network ingress to a cache security group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "securitygroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchApplyUpdateAction",
+            "condition_keys": [],
+            "dependent_actions": [
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs",
+                "s3:GetObject"
+            ],
+            "description": "Apply the service update.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "replicationgroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchStopUpdateAction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stop the service update.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "replicationgroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CompleteMigration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stop the service update.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "replicationgroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CopySnapshot",
+            "condition_keys": [],
+            "dependent_actions": [
+                "elasticache:AddTagsToResource",
+                "s3:DeleteObject",
+                "s3:GetBucketAcl",
+                "s3:PutObject"
+            ],
+            "description": "The CopySnapshot action makes a copy of an existing snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCacheCluster",
+            "condition_keys": [],
+            "dependent_actions": [
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs",
+                "elasticache:AddTagsToResource",
+                "s3:GetObject"
+            ],
+            "description": "The CreateCacheCluster action creates a cache cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parametergroup",
+                    "required": true
+                },
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "replicationgroup",
+                    "required": false
+                },
+                {
+                    "name": "securitygroup",
+                    "required": false
+                },
+                {
+                    "name": "snapshot",
+                    "required": false
+                },
+                {
+                    "name": "subnetgroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCacheParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [
+                "elasticache:AddTagsToResource"
+            ],
+            "description": "The CreateCacheParameterGroup action creates a new cache parameter group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parametergroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCacheSecurityGroup",
+            "condition_keys": [],
+            "dependent_actions": [
+                "elasticache:AddTagsToResource"
+            ],
+            "description": "The CreateCacheSecurityGroup action creates a new cache security group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "securitygroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCacheSubnetGroup",
+            "condition_keys": [],
+            "dependent_actions": [
+                "elasticache:AddTagsToResource"
+            ],
+            "description": "The CreateCacheSubnetGroup action creates a new cache subnet group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subnetgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateGlobalReplicationGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The CreateGlobalReplicationGroup action creates a global datastore.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "globalreplicationgroup",
+                    "required": true
+                },
+                {
+                    "name": "replicationgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateReplicationGroup",
+            "condition_keys": [],
+            "dependent_actions": [
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs",
+                "elasticache:AddTagsToResource",
+                "s3:GetObject"
+            ],
+            "description": "The CreateReplicationGroup action creates a replication group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parametergroup",
+                    "required": true
+                },
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "globalreplicationgroup",
+                    "required": false
+                },
+                {
+                    "name": "replicationgroup",
+                    "required": false
+                },
+                {
+                    "name": "securitygroup",
+                    "required": false
+                },
+                {
+                    "name": "snapshot",
+                    "required": false
+                },
+                {
+                    "name": "subnetgroup",
+                    "required": false
+                },
+                {
+                    "name": "usergroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [
+                "elasticache:AddTagsToResource",
+                "s3:DeleteObject",
+                "s3:GetBucketAcl",
+                "s3:PutObject"
+            ],
+            "description": "The CreateSnapshot action creates a copy of an entire cache cluster at a specific moment in time.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                },
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "replicationgroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The CreateUser action creates a new user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUserGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The CreateUserGroup action creates a new user group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                },
+                {
+                    "name": "usergroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DecreaseNodeGroupsInGlobalReplicationGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DecreaseNodeGroupsInGlobalReplicationGroup action dec a global datastore.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "globalreplicationgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DecreaseReplicaCount",
+            "condition_keys": [],
+            "dependent_actions": [
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs"
+            ],
+            "description": "The DecreaseReplicaCount action decreases the number of replicas in a Redis replication group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "replicationgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCacheCluster",
+            "condition_keys": [],
+            "dependent_actions": [
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs"
+            ],
+            "description": "The DeleteCacheCluster action deletes a previously provisioned cache cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "snapshot",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCacheParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DeleteCacheParameterGroup action deletes the specified cache parameter group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parametergroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCacheSecurityGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DeleteCacheSecurityGroup action deletes a cache security group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "securitygroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCacheSubnetGroup",
+            "condition_keys": [],
+            "dependent_actions": [
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs"
+            ],
+            "description": "The DeleteCacheSubnetGroup action deletes a cache subnet group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subnetgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteGlobalReplicationGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DeleteGlobalReplicationGroup action deletes a global datastore.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "globalreplicationgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteReplicationGroup",
+            "condition_keys": [],
+            "dependent_actions": [
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs"
+            ],
+            "description": "The DeleteReplicationGroup action deletes an existing replication group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "replicationgroup",
+                    "required": true
+                },
+                {
+                    "name": "snapshot",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DeleteSnapshot action deletes an existing snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DeleteUser action deletes an existing user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUserGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DeleteUserGroup action deletes an existing user group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "usergroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeCacheClusters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeCacheClusters action returns information about all provisioned cache clusters if no cache cluster identifier is specified, or about a specific cache cluster if a cache cluster identifier is supplied.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeCacheEngineVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeCacheEngineVersions action returns a list of the available cache engines and their versions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeCacheParameterGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeCacheParameterGroups action returns information about parameter groups for this account, or a particular parameter group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parametergroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeCacheParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeCacheParameters action returns the detailed parameter list for a particular cache parameter group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parametergroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeCacheSecurityGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeCacheSecurityGroups action returns a list of cache security group descriptions, or the description of the specified security group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "securitygroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeCacheSubnetGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeCacheSubnetGroups action returns a list of cache subnet group descriptions, or the description of the specified subnet group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subnetgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeEngineDefaultParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeEngineDefaultParameters action returns the default engine and system parameter information for the specified cache engine.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeEvents action returns events related to cache clusters, cache security groups, and cache parameter groups.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeGlobalReplicationGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeGlobalReplicationGroups action returns information about global datastores for this account, or a particular global datastore.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "globalreplicationgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeReplicationGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeReplicationGroups action returns information about replication groups for this account, or a particular replication group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "replicationgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeReservedCacheNodes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeReservedCacheNodes action returns information about reserved cache nodes for this account, or a particular reserved cache node.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "reserved-instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeReservedCacheNodesOfferings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeReservedCacheNodesOfferings action lists available reserved cache node offerings.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeServiceUpdates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns details of the service updates",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeSnapshots",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeSnapshots action returns information about cache cluster snapshots.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeUpdateActions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns details of the update actions.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "replicationgroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeUserGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeUserGroups action returns information about all user groups for this account, or a particular user group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "usergroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeUsers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeUsers action returns information about all users for this account, or a particular user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateGlobalReplicationGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DisassociateGlobalReplicationGroup action removes a secondary Replication Group from the Global Datastore.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "globalreplicationgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "FailoverGlobalReplicationGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The FailoverGlobalReplicationGroup action removes a secondary Replication Group from the Global Datastore.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "globalreplicationgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "IncreaseNodeGroupsInGlobalReplicationGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The IncreaseNodeGroupsInGlobalReplicationGroup action increases the number of node groups in the Global Datastore.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "globalreplicationgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "IncreaseReplicaCount",
+            "condition_keys": [],
+            "dependent_actions": [
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs"
+            ],
+            "description": "The IncreaseReplicaCount action increases the number of replicas in a Redis replication group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "replicationgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListAllowedNodeTypeModifications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List Allowed Node Type Modifications",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "replicationgroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The ListTagsForResource action lists all cost allocation tags currently on the named resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "snapshot",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyCacheCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The ModifyCacheCluster action modifies the settings for a cache cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "parametergroup",
+                    "required": false
+                },
+                {
+                    "name": "securitygroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyCacheParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The ModifyCacheParameterGroup action modifies the parameters of a cache parameter group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parametergroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyCacheSubnetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The ModifyCacheSubnetGroup action modifies an existing cache subnet group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subnetgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyGlobalReplicationGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The ModifyGlobalReplicationGroup action modifies the settings for a Global Datastore.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "globalreplicationgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyReplicationGroup",
+            "condition_keys": [],
+            "dependent_actions": [
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs"
+            ],
+            "description": "The ModifyReplicationGroup action modifies the settings for a replication group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "replicationgroup",
+                    "required": true
+                },
+                {
+                    "name": "parametergroup",
+                    "required": false
+                },
+                {
+                    "name": "securitygroup",
+                    "required": false
+                },
+                {
+                    "name": "usergroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyReplicationGroupShardConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs"
+            ],
+            "description": "The ModifyReplicationGroupShardConfiguration action allows you to add shards, remove shards, or rebalance the keyspaces among exisiting shards.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "replicationgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The ModifyUser action modifies an existing user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyUserGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The ModifyUserGroup action modifies an existing user group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                },
+                {
+                    "name": "usergroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PurchaseReservedCacheNodesOffering",
+            "condition_keys": [],
+            "dependent_actions": [
+                "elasticache:AddTagsToResource"
+            ],
+            "description": "The PurchaseReservedCacheNodesOffering action allows you to purchase a reserved cache node offering.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "reserved-instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RebalanceSlotsInGlobalReplicationGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The RebalanceSlotsInGlobalReplicationGroup action redistributes slots to ensure uniform distribution across existing shards in the cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "globalreplicationgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RebootCacheCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The RebootCacheCluster action reboots some, or all, of the cache nodes within a provisioned cache cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "RemoveTagsFromResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The RemoveTagsFromResource action removes the tags identified by the TagKeys list from the named resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "snapshot",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ResetCacheParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The ResetCacheParameterGroup action modifies the parameters of a cache parameter group to the engine or system default value.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parametergroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RevokeCacheSecurityGroupIngress",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The RevokeCacheSecurityGroupIngress action revokes ingress from a cache security group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "securitygroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartMigration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Start the migration of data.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "replicationgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TestFailover",
+            "condition_keys": [],
+            "dependent_actions": [
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs"
+            ],
+            "description": "The TestFailover action allows you to test automatic failover on a specified node group in a replication group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "replicationgroup",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache"
+}

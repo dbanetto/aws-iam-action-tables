@@ -1,0 +1,387 @@
+{
+    "actions": [
+        {
+            "access_level": "Tagging",
+            "action": "AddTagsToStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds or updates tags for the specified Amazon Kinesis stream. Each stream can have up to 10 tags.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a Amazon Kinesis stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DecreaseStreamRetentionPeriod",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Decreases the stream's retention period, which is the length of time data records are accessible after they are added to the stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a stream and all its shards and data.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterStreamConsumer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deregisters a stream consumer with a Kinesis data stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "consumer",
+                    "required": true
+                },
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLimits",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the shard limits and usage for the account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the specified stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStreamConsumer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the description of a registered stream consumer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "consumer",
+                    "required": true
+                },
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStreamSummary",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Provides a summarized description of the specified Kinesis data stream without the shard list.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableEnhancedMonitoring",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disables enhanced monitoring.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableEnhancedMonitoring",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "API_EnableEnhancedMonitoring.html",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRecords",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets data records from a shard.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetShardIterator",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a shard iterator. A shard iterator expires five minutes after it is returned to the requester.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "IncreaseStreamRetentionPeriod",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Increases the stream's retention period, which is the length of time data records are accessible after they are added to the stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListShards",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the shards in a stream and provides information about each shard.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListStreamConsumers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the stream consumers registered to receive data from a Kinesis stream using enhanced fan-out, and provides information about each consumer.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListStreams",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists your streams.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the tags for the specified Amazon Kinesis stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "MergeShards",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Merges two adjacent shards in a stream and combines them into a single shard to reduce the stream's capacity to ingest and transport data.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutRecord",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Writes a single data record from a producer into an Amazon Kinesis stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutRecords",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Writes multiple data records from a producer into an Amazon Kinesis stream in a single call (also referred to as a PutRecords request).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterStreamConsumer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Registers a stream consumer with a Kinesis data stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "consumer",
+                    "required": true
+                },
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "RemoveTagsFromStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Description for SplitShard",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SplitShard",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Description for SplitShard",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartStreamEncryption",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to enable or update server-side encryption using an AWS KMS key for a specified stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "kmsKey",
+                    "required": true
+                },
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopStreamEncryption",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disable server-side encryption for a specified stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "kmsKey",
+                    "required": true
+                },
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "SubscribeToShard",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Listening to a specific shard with enhanced fan-out.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "consumer",
+                    "required": true
+                },
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateShardCount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the shard count of the specified stream to the specified number of shards.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "kinesis",
+    "service": "Amazon Kinesis"
+}

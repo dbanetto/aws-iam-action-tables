@@ -1,0 +1,687 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "BatchDelete",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete channels, inputs, input security groups, and multiplexes.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": false
+                },
+                {
+                    "name": "input",
+                    "required": false
+                },
+                {
+                    "name": "input-security-group",
+                    "required": false
+                },
+                {
+                    "name": "multiplex",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchStart",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start channels and multiplexes.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": false
+                },
+                {
+                    "name": "multiplex",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchStop",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop channels and multiplexes.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": false
+                },
+                {
+                    "name": "multiplex",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchUpdateSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add and remove actions from a channel's schedule.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateChannel",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a channel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                },
+                {
+                    "name": "input",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateInput",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an input",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input",
+                    "required": true
+                },
+                {
+                    "name": "input-security-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateInputSecurityGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an input security group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input-security-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateMultiplex",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a multiplex",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "multiplex",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateTags",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create tags for channels, inputs, input security groups, multiplexes, and reservations.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": false
+                },
+                {
+                    "name": "input",
+                    "required": false
+                },
+                {
+                    "name": "input-security-group",
+                    "required": false
+                },
+                {
+                    "name": "multiplex",
+                    "required": false
+                },
+                {
+                    "name": "reservation",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a channel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteInput",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an input",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteInputSecurityGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an input security group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input-security-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMultiplex",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a multiplex",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "multiplex",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteReservation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an expired reservation",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "reservation",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "DeleteTags",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete tags from channels, inputs, input security groups, multiplexes, and reservations.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": false
+                },
+                {
+                    "name": "input",
+                    "required": false
+                },
+                {
+                    "name": "input-security-group",
+                    "required": false
+                },
+                {
+                    "name": "multiplex",
+                    "required": false
+                },
+                {
+                    "name": "reservation",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get details about a channel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeInput",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe an input",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeInputDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe an input device",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input-device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeInputDeviceThumbnail",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe an input device thumbnail",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input-device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeInputSecurityGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe an input security group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input-security-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeMultiplex",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a multiplex",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "multiplex",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeOffering",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get details about a reservation offering",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "offering",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeReservation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get details about a reservation",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "reservation",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view a list of actions scheduled on a channel.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListChannels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list channels",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListInputDevices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list input devices",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListInputSecurityGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list input security groups",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListInputs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list inputs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListMultiplexes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list multiplexes",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListOfferings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list reservation offerings",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListReservations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list reservations",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list tags for channels, inputs, input security groups, multiplexes, and reservations.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": false
+                },
+                {
+                    "name": "input",
+                    "required": false
+                },
+                {
+                    "name": "input-security-group",
+                    "required": false
+                },
+                {
+                    "name": "multiplex",
+                    "required": false
+                },
+                {
+                    "name": "reservation",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "PurchaseOffering",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to purchase a reservation offering",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "offering",
+                    "required": true
+                },
+                {
+                    "name": "reservation",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start a channel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartMultiplex",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start a multiplex",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "multiplex",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop a channel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopMultiplex",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop a multiplex",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "multiplex",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a channel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateChannelClass",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the class of a channel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateInput",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an input",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateInputDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an input device",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input-device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateInputSecurityGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an input security group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input-security-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateMultiplex",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a multiplex",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "multiplex",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateReservation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a reservation",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "reservation",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive"
+}

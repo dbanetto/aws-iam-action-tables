@@ -1,0 +1,641 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CopyIntoBackupVault",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Copy into a backup vault",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateBackupPlan",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new backup plan",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupPlan",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateBackupSelection",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Creates a new resource assignment in a backup plan.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupPlan",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateBackupVault",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new backup vault.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupVault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBackupPlan",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a backup plan.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupPlan",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBackupSelection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a resource assignment from a backup plan.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupPlan",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBackupVault",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a backup vault.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupVault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBackupVaultAccessPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes backup vault access policy.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupVault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBackupVaultNotifications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Remove notifications from backup vault.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupVault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRecoveryPoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a recovery point from a backup vault.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "recoveryPoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeBackupJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a backup job",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeBackupVault",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new backup vault with the specified name.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupVault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCopyJob",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Describes a copy job",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProtectedResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a protected resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeRecoveryPoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a recovery point.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "recoveryPoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeRegionSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes region settings",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeRestoreJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a restore job.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ExportBackupPlanTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Exports a backup plan as a JSON.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBackupPlan",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a backup plan.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupPlan",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBackupPlanFromJSON",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Transforms a JSON to a backup plan.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBackupPlanFromTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Transforms a template to a backup plan.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBackupSelection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a backup plan resource assignment.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupPlan",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBackupVaultAccessPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets backup vault access policy.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupVault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBackupVaultNotifications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets backup vault notifications.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupVault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRecoveryPointRestoreMetadata",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets recovery point restore metadata.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "recoveryPoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSupportedResourceTypes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets supported resource types.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListBackupJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists backup jobs.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListBackupPlanTemplates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists backup plan templates provided by AWS Backup.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListBackupPlanVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists backup plan versions.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupPlan",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListBackupPlans",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists backup plans.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListBackupSelections",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists resource assignments for a specific backup plan.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupPlan",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListBackupVaults",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists backup vaults.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListCopyJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List copy jobs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListProtectedResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists protected resources by AWS Backup.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListRecoveryPointsByBackupVault",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists recovery points inside a backup vault.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupVault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListRecoveryPointsByResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists recovery points for a resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListRestoreJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists restore jobs.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists tags for a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupPlan",
+                    "required": false
+                },
+                {
+                    "name": "backupVault",
+                    "required": false
+                },
+                {
+                    "name": "recoveryPoint",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutBackupVaultAccessPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds an access policy to the backup vault.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupVault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutBackupVaultNotifications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds an SNS topic to the backup vault.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupVault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartBackupJob",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Starts a new backup job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupVault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartCopyJob",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Copy a backup from a source region to a destination region.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "recoveryPoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartRestoreJob",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Starts a new restore job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "recoveryPoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopBackupJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops a backup job.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Tags a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupPlan",
+                    "required": false
+                },
+                {
+                    "name": "backupVault",
+                    "required": false
+                },
+                {
+                    "name": "recoveryPoint",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Untags a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupPlan",
+                    "required": false
+                },
+                {
+                    "name": "backupVault",
+                    "required": false
+                },
+                {
+                    "name": "recoveryPoint",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateBackupPlan",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a backup plan.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backupPlan",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRecoveryPointLifecycle",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the lifecycle of the recovery point.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "recoveryPoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRegionSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes region settings",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "backup",
+    "service": "AWS Backup"
+}

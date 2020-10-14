@@ -1,0 +1,367 @@
+{
+    "actions": [
+        {
+            "access_level": "Read",
+            "action": "BatchGetChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get multiple channels simultaneously by channel ARN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetStreamKey",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get multiple stream keys simultaneously by stream key ARN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Stream-Key",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateChannel",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new channel and an associated stream key.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Channel",
+                    "required": true
+                },
+                {
+                    "name": "Stream-Key",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateStreamKey",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a stream key.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Stream-Key",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a channel and channel's stream keys.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Channel",
+                    "required": true
+                },
+                {
+                    "name": "Stream-Key",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePlaybackKeyPair",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the playback key pair for a specified ARN",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Playback-Key-Pair",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteStreamKey",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the stream key for a specified ARN",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Stream-Key",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get the channel configuration for a specified channel ARN",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPlaybackKeyPair",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get the playback keypair information for a specified ARN",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Playback-Key-Pair",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about the active (live) stream on a specified channel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetStreamKey",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get stream-key information for a specified ARN",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Stream-Key",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ImportPlaybackKeyPair",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to import the public key.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Playback-Key-Pair",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListChannels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get summary information about channels",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListPlaybackKeyPairs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get summary information about playback key pairs",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Playback-Key-Pair",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListStreamKeys",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get summary information about stream keys",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Channel",
+                    "required": true
+                },
+                {
+                    "name": "Stream-Key",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListStreams",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get summary information about live streams",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "ListTagsForResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about the tags for a specified ARN",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Channel",
+                    "required": false
+                },
+                {
+                    "name": "Playback-Key-Pair",
+                    "required": false
+                },
+                {
+                    "name": "Stream-Key",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutMetadata",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to insert metadata into an RTMP stream for a specified channel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disconnect a streamer on a specified channel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add or update tags for a resource with a specified ARN",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Channel",
+                    "required": false
+                },
+                {
+                    "name": "Playback-Key-Pair",
+                    "required": false
+                },
+                {
+                    "name": "Stream-Key",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove tags for a resource with a specified ARN",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Channel",
+                    "required": false
+                },
+                {
+                    "name": "Playback-Key-Pair",
+                    "required": false
+                },
+                {
+                    "name": "Stream-Key",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a channel's configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Channel",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service"
+}

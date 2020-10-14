@@ -1,0 +1,34 @@
+{
+    "actions": [
+        {
+            "access_level": "Read",
+            "action": "DescribeDimensionKeys",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "For a specific time period, retrieve the top N dimension keys for a metric.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "metric-resource",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResourceMetrics",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve PI metrics for a set of data sources, over a time period.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "metric-resource",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "pi",
+    "service": "AWS Performance Insights"
+}

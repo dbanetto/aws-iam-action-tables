@@ -1,0 +1,69 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "ModifyAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allow or deny IAM users permission to modify Account Settings.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyBilling",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allow or deny IAM users permission to modify billing settings.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyPaymentMethods",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allow or deny IAM users permission to modify payment methods.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ViewAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allow or deny IAM users permission to view account settings.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ViewBilling",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allow or deny IAM users permission to view billing pages in the console.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ViewPaymentMethods",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allow or deny IAM users permission to view payment methods.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ViewUsage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allow or deny IAM users permission to view AWS usage reports.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "aws-portal",
+    "service": "AWS Billing"
+}

@@ -1,0 +1,20 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "Connect",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Connects customer to Elastic Inference accelerator",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "accelerator",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "elastic-inference",
+    "service": "Amazon Elastic Inference"
+}

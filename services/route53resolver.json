@@ -1,0 +1,451 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateResolverEndpointIpAddress",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate a specified IP address with a Resolver endpoint. This is an IP address that DNS queries pass through on the way to your network (outbound) or your VPCs (inbound)",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateResolverQueryLogConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate an Amazon VPC with a specified query logging configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-query-log-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateResolverRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate a specified Resolver rule with a specified VPC",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateResolverEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a Resolver endpoint. There are two types of Resolver endpoints, inbound and outbound",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateResolverQueryLogConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a Resolver query logging configuration, which defines where you want Resolver to save DNS query logs that originate in your VPCs",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-query-log-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateResolverRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "For DNS queries that originate in your VPC, grants permission to define how to route the queries out of the VPC",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteResolverEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a Resolver endpoint. The effect of deleting a Resolver endpoint depends on whether it's an inbound or an outbound endpoint",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteResolverQueryLogConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a Resolver query logging configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-query-log-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteResolverRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a Resolver rule",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateResolverEndpointIpAddress",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove a specified IP address from a Resolver endpoint. This is an IP address that DNS queries pass through on the way to your network (outbound) or your VPCs (inbound)",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateResolverQueryLogConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove the association between a specified Resolver query logging configuration and a specified VPC",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-query-log-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateResolverRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove the association between a specified Resolver rule and a specified VPC",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResolverEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about a specified Resolver endpoint, such as whether it's an inbound or an outbound endpoint, and the IP addresses in your VPC that DNS queries are forwarded to on the way into or out of your VPC",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResolverQueryLogConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about a specified Resolver query logging configuration, such as the number of VPCs that the configuration is logging queries for and the location that logs are sent to",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-query-log-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResolverQueryLogConfigAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about a specified association between a Resolver query logging configuration and an Amazon VPC. When you associate a VPC with a query logging configuration, Resolver logs DNS queries that originate in that VPC",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-query-log-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResolverQueryLogConfigPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about a specified Resolver query logging policy, which specifies the Resolver query logging operations and resources that you want to allow another AWS account to use",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-query-log-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResolverRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about a specified Resolver rule, such as the domain name that the rule forwards DNS queries for and the IP address that queries are forwarded to.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResolverRuleAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about an association between a specified Resolver rule and a VPC",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResolverRulePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about a Resolver rule policy, which specifies the Resolver operations and resources that you want to allow another AWS account to use",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListResolverEndpointIpAddresses",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "For a specified Resolver endpoint, grants permission to list the IP addresses that DNS queries pass through on the way to your network (outbound) or your VPCs (inbound)",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListResolverEndpoints",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all the Resolver endpoints that were created using the current AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListResolverQueryLogConfigAssociations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list information about associations between Amazon VPCs and query logging configurations",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-query-log-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListResolverQueryLogConfigs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list information about the specified query logging configurations, which define where you want Resolver to save DNS query logs and specify the VPCs that you want to log queries for",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-query-log-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListResolverRuleAssociations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the associations that were created between Resolver rules and VPCs using the current AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListResolverRules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the Resolver rules that were created using the current AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the tags that you associated with the specified resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-endpoint",
+                    "required": false
+                },
+                {
+                    "name": "resolver-rule",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutResolverQueryLogConfigPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to specify an AWS account that you want to share a query logging configuration with, the query logging configuration that you want to share, and the operations that you want the account to be able to perform on the configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-query-log-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutResolverRulePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to specify an AWS account that you want to share rules with, the Resolver rules that you want to share, and the operations that you want the account to be able to perform on those rules",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add one or more tags to a specified resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-endpoint",
+                    "required": false
+                },
+                {
+                    "name": "resolver-rule",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove one or more tags from a specified resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-endpoint",
+                    "required": false
+                },
+                {
+                    "name": "resolver-rule",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateResolverEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update selected settings for an inbound or an outbound Resolver endpoint",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateResolverRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update settings for a specified Resolver rule",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resolver-rule",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "route53resolver",
+    "service": "Amazon Route 53 Resolver"
+}

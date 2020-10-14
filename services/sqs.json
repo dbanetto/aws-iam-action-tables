@@ -1,0 +1,281 @@
+{
+    "actions": [
+        {
+            "access_level": "Permissions management",
+            "action": "AddPermission",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds a permission to a queue for a specific principal.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ChangeMessageVisibility",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Changes the visibility timeout of a specified message in a queue to a new value.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ChangeMessageVisibilityBatch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Changes the visibility timeout of multiple messages.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateQueue",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new queue, or returns the URL of an existing one.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMessage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified message from the specified queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMessageBatch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes up to ten messages from the specified queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteQueue",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the queue specified by the queue URL, regardless of whether the queue is empty.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetQueueAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets attributes for the specified queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetQueueUrl",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the URL of an existing queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListDeadLetterSourceQueues",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of your queues that have the RedrivePolicy queue attribute configured with a dead letter queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListQueueTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists tags added to an SQS queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListQueues",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of your queues.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PurgeQueue",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the messages in a queue specified by the queue URL.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ReceiveMessage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves one or more messages, with a maximum limit of 10 messages, from the specified queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "RemovePermission",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Revokes any permissions in the queue policy that matches the specified Label parameter.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SendMessage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delivers a message to the specified queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SendMessageBatch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delivers up to ten messages to the specified queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetQueueAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets the value of one or more queue attributes.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagQueue",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Add tags to the specified SQS queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagQueue",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Remove tags from the specified SQS queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "queue",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "sqs",
+    "service": "Amazon SQS"
+}

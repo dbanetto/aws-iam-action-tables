@@ -1,0 +1,483 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateDataset",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a dataset",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDatasetGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a dataset group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasetGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDatasetImportJob",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a dataset import job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasetImportJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateForecast",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a forecast",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "predictor",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateForecastExportJob",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a forecast export job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "forecast",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePredictor",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a predictor",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasetGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDataset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a dataset",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDatasetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a dataset group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasetGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDatasetImportJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a dataset import job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasetImportJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteForecast",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a forecast",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "forecast",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteForecastExportJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a forecast export job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "forecastExport",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePredictor",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a predictor",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "predictor",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDataset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a dataset",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDatasetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a dataset group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasetGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDatasetImportJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a dataset import job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasetImportJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeForecast",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a forecast",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "forecast",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeForecastExportJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a forecast export job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "forecastExport",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribePredictor",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a predictor",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "predictor",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAccuracyMetrics",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets Accuracy Metrics for a predictor",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "predictor",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDatasetGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists dataset groups",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDatasetImportJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists dataset import jobs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDatasets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists datasets",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListForecastExportJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists forecast export jobs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListForecasts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists forecasts",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListPredictors",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists predictors",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the tags for an Amazon Forecast resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": false
+                },
+                {
+                    "name": "datasetGroup",
+                    "required": false
+                },
+                {
+                    "name": "datasetImportJob",
+                    "required": false
+                },
+                {
+                    "name": "forecast",
+                    "required": false
+                },
+                {
+                    "name": "forecastExport",
+                    "required": false
+                },
+                {
+                    "name": "predictor",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "QueryForecast",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves a forecast for a single item",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "forecast",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Associates the specified tags to a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": false
+                },
+                {
+                    "name": "datasetGroup",
+                    "required": false
+                },
+                {
+                    "name": "datasetImportJob",
+                    "required": false
+                },
+                {
+                    "name": "forecast",
+                    "required": false
+                },
+                {
+                    "name": "forecastExport",
+                    "required": false
+                },
+                {
+                    "name": "predictor",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Deletes the specified tags for a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": false
+                },
+                {
+                    "name": "datasetGroup",
+                    "required": false
+                },
+                {
+                    "name": "datasetImportJob",
+                    "required": false
+                },
+                {
+                    "name": "forecast",
+                    "required": false
+                },
+                {
+                    "name": "forecastExport",
+                    "required": false
+                },
+                {
+                    "name": "predictor",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDatasetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a dataset group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                },
+                {
+                    "name": "datasetGroup",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "forecast",
+    "service": "Amazon Forecast"
+}

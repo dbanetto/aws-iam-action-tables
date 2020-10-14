@@ -1,0 +1,546 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AddInstanceFleet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add an instance fleet to a running cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AddInstanceGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add instance groups to a running cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AddJobFlowSteps",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add new steps to a running cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "AddTags",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "elasticmapreduce:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add tags to an Amazon EMR resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "editor",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelSteps",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to cancel a pending step or steps in a running cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateEditor",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "elasticmapreduce:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an EMR notebook.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSecurityConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a security configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteEditor",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an EMR notebook.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "editor",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSecurityConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a security configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get details about a cluster, including status, hardware and software configuration, VPC settings, and so on.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEditor",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about a notebook, including status, user, role, tags, location, and more.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "editor",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeJobFlows",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This API is deprecated and will eventually be removed. We recommend you use ListClusters, DescribeCluster, ListSteps, ListInstanceGroups and ListBootstrapActions instead.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSecurityConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get details of a security configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStep",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get details about a cluster step.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBlockPublicAccessConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the EMR block public access configuration for the AWS account in the Region.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetManagedScalingPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the managed scaling policy associated with a cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListBootstrapActions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get details about the bootstrap actions associated with a cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListClusters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get the status of accessible clusters.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListEditors",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list summary information for accessible EMR notebooks.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListInstanceFleets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get details of instance fleets in a cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListInstanceGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get details of instance groups in a cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListInstances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get details about the Amazon EC2 instances in a cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListSecurityConfigurations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list available security configurations in this account by name, along with creation dates and times.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListSteps",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list steps associated with a cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to change cluster settings such as number of steps that can be executed concurrently for a cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyInstanceFleet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to change the target On-Demand and target Spot capacities for a instance fleet.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyInstanceGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to change the number and configuration of EC2 instances for an instance group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "OpenEditorInConsole",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to launch the Jupyter notebook editor for an EMR notebook from within the console.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "editor",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutAutoScalingPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create or update an automatic scaling policy for a core instance group or task instance group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "PutBlockPublicAccessConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create or update the EMR block public access configuration for the AWS account in the Region.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutManagedScalingPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create or update the managed scaling policy associated with a cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RemoveAutoScalingPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove an automatic scaling policy from an instance group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RemoveManagedScalingPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove the managed scaling policy associated with a cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "RemoveTags",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove tags from an Amazon EMR resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "editor",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RunJobFlow",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "elasticmapreduce:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create and launch a cluster (job flow).",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SetTerminationProtection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add and remove termination protection for a cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartEditor",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start an EMR notebook.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "editor",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopEditor",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to shut down an EMR notebook.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "editor",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TerminateJobFlows",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to terminate a cluster (job flow).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ViewEventsFromAllClustersInConsole",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to use the EMR management console to view events from all clusters.",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce"
+}

@@ -1,0 +1,164 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateServiceQuotaTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate the Service Quotas template with your organization",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteServiceQuotaIncreaseRequestFromTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove the specified service quota from the service quota template",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateServiceQuotaTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate the Service Quotas template from your organization",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAWSDefaultServiceQuota",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return the details for the specified service quota, including the AWS default value",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAssociationForServiceQuotaTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the ServiceQuotaTemplateAssociationStatus value, which tells you if the Service Quotas template is associated with an organization",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRequestedServiceQuotaChange",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the details for a particular service quota increase request",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetServiceQuota",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return the details for the specified service quota, including the applied value",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetServiceQuotaIncreaseRequestFromTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the details for a service quota increase request from the service quota template",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListAWSDefaultServiceQuotas",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all default service quotas for the specified AWS service",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListRequestedServiceQuotaChangeHistory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to request a list of the changes to quotas for a service",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListRequestedServiceQuotaChangeHistoryByQuota",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to request a list of the changes to specific service quotas",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListServiceQuotaIncreaseRequestsInTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of the service quota increase requests from the service quota template",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListServiceQuotas",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all service quotas for the specified AWS service, in that account, in that Region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListServices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the AWS services available in Service Quotas",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutServiceQuotaIncreaseRequestIntoTemplate",
+            "condition_keys": [
+                "servicequotas:service"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to define and add a quota to the service quota template",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "quota",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RequestServiceQuotaIncrease",
+            "condition_keys": [
+                "servicequotas:service"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to submit the request for a service quota increase",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "quota",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "prefix": "servicequotas",
+    "service": "Service Quotas"
+}

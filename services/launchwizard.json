@@ -1,0 +1,78 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "DeleteApp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete an application",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProvisionedApp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe provisioning applications",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProvisioningEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe provisioning events",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInfrastructureSuggestion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get infrastructure suggestion",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetIpAddress",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get customer's ip address",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResourceCostEstimate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get resource cost estimate",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListProvisionedApps",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List provisioning applications",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartProvisioning",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Start a provisioning",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "launchwizard",
+    "service": "Launch Wizard"
+}

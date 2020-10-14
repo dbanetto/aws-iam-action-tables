@@ -1,0 +1,93 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "DeletePlaybackConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the playback configuration for the specified name",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "playbackConfiguration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPlaybackConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the configuration for the specified name",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "playbackConfiguration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListPlaybackConfigurations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the list of available configurations",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of the tags assigned to the specified playback configuration resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutPlaybackConfiguration",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add a new configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "playbackConfiguration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Adds tags to the specified playback configuration resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Removes tags from the specified playback configuration resource.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor"
+}

@@ -1,0 +1,66 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateWorkload",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new workload.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateWorkloadShare",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Shares a workload with another account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workload",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteWorkload",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an existing workload.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workload",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetWorkload",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves the specified workload.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workload",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListWorkloads",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the workloads in this account.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "wellarchitected",
+    "service": "AWS Well-Architected Tool"
+}

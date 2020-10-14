@@ -1,0 +1,1473 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AllocateStaticIp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a static IP address that can be attached to an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "StaticIp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AttachDisk",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Attaches a disk to an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Disk",
+                    "required": true
+                },
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AttachInstancesToLoadBalancer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Attaches one or more instances to a load balancer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "LoadBalancer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AttachLoadBalancerTlsCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Attaches a TLS certificate to a load balancer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "LoadBalancer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AttachStaticIp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Attaches a static IP address to an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "StaticIp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CloseInstancePublicPorts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Closes a public port of an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CopySnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Copies a snapshot from one AWS Region to another in Amazon Lightsail.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCloudFormationStack",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new Amazon EC2 instance from an exported Amazon Lightsail snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ExportSnapshotRecord",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDisk",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a disk.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Disk",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDiskFromSnapshot",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a disk from snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Disk",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDiskSnapshot",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a disk snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Disk",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDomain",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a domain resource for the specified domain name.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDomainEntry",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates one or more DNS record entries for a domain resource: Address (A), canonical name (CNAME), mail exchanger (MX), name server (NS), start of authority (SOA), service locator (SRV), or text (TXT).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateInstanceSnapshot",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an instance snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "InstanceSnapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateInstances",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates one or more instances.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "KeyPair",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateInstancesFromSnapshot",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates one or more instances based on an instance snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "InstanceSnapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateKeyPair",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a key pair used to authenticate and connect to an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "KeyPair",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLoadBalancer",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a load balancer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "LoadBalancer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLoadBalancerTlsCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a load balancer TLS certificate.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "LoadBalancer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRelationalDatabase",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new relational database.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "RelationalDatabase",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRelationalDatabaseFromSnapshot",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new relational database from a snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "RelationalDatabase",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRelationalDatabaseSnapshot",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a relational database snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "RelationalDatabaseSnapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDisk",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a disk.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Disk",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDiskSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a disk snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Disk",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a domain resource and all of its DNS records.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDomainEntry",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a DNS record entry for a domain resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteInstanceSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an instance snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "InstanceSnapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteKeyPair",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a key pair used to authenticate and connect to an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "KeyPair",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteKnownHostKeys",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the known host key or certificate used by the Amazon Lightsail browser-based SSH or RDP clients to authenticate an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLoadBalancer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a load balancer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "LoadBalancer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLoadBalancerTlsCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a load balancer TLS certificate.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "LoadBalancer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRelationalDatabase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a relational database.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "RelationalDatabase",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRelationalDatabaseSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes relational database snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "RelationalDatabaseSnapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DetachDisk",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Detaches a disk from an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Disk",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DetachInstancesFromLoadBalancer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Detaches one or more instances from a load balancer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "LoadBalancer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DetachStaticIp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Detaches a static IP from an instance to which it is attached.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "StaticIp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DownloadDefaultKeyPair",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Downloads the default key pair used to authenticate and connect to instances in a specific AWS Region.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "KeyPair",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ExportSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Exports an Amazon Lightsail snapshot to Amazon EC2.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetActiveNames",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the names of all active (not deleted) resources.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "GetBlueprints",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of instance images, or blueprints. You can use a blueprint to create a new instance already running a specific operating system, as well as a pre-installed application or development stack. The software that runs on your instance depends on the blueprint you define when creating the instance.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "GetBundles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of instance bundles. You can use a bundle to create a new instance with a set of performance specifications, such as CPU count, disk size, RAM size, and network transfer allowance. The cost of your instance depends on the bundle you define when creating the instance.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "GetCloudFormationStackRecords",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about all CloudFormation stacks used to create Amazon EC2 resources from exported Amazon Lightsail snapshots.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "CloudFormationStackRecord",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDisk",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a disk.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Disk",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDiskSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a disk snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Disk",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetDiskSnapshots",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about all disk snapshots.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Disk",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetDisks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about all disks.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns DNS records for a domain resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDomains",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns DNS records for all domain resources.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetExportSnapshotRecords",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about all records to export Amazon Lightsail snapshots to Amazon EC2.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ExportSnapshotRecord",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "GetInstanceAccessDetails",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns temporary keys you can use to authenticate and connect to an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInstanceMetricData",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the data points for the specified metric of an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInstancePortStates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the port states of an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInstanceSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about an instance snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "InstanceSnapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetInstanceSnapshots",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about all instance snapshots.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "InstanceSnapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInstanceState",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the state of an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInstances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about all instances.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetKeyPair",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a key pair.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "KeyPair",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetKeyPairs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about all key pairs.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "KeyPair",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLoadBalancer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a load balancer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "LoadBalancer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLoadBalancerMetricData",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the data points for the specified metric of a load balancer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "LoadBalancer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLoadBalancerTlsCertificates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a load balancer TLS certificate.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "LoadBalancer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLoadBalancers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about load balancers.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "LoadBalancer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetOperation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about an operation. Operations include events such as when you create an instance, allocate a static IP, attach a static IP, and so on.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetOperations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about all operations. Operations include events such as when you create an instance, allocate a static IP, attach a static IP, and so on.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetOperationsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns operations for a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Domain",
+                    "required": false
+                },
+                {
+                    "name": "Instance",
+                    "required": false
+                },
+                {
+                    "name": "InstanceSnapshot",
+                    "required": false
+                },
+                {
+                    "name": "KeyPair",
+                    "required": false
+                },
+                {
+                    "name": "StaticIp",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetRegions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of all valid AWS Regions for Amazon Lightsail.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "GetRelationalDatabase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a relational database.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "RelationalDatabase",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetRelationalDatabaseBlueprints",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of relational database images, or blueprints. You can use a blueprint to create a new database running a specific database engine. The database engine that runs on your database depends on the blueprint you define when creating the relational database.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "GetRelationalDatabaseBundles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of relational database bundles. You can use a bundle to create a new database with a set of performance specifications, such as CPU count, disk size, RAM size, network transfer allowance, and standard of high availability. The cost of your database depends on the bundle you define when creating the relational database.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRelationalDatabaseEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns events for a relational database.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRelationalDatabaseLogEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns events for the specified log stream of a relational database.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRelationalDatabaseLogStreams",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the log streams available for a relational database.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "GetRelationalDatabaseMasterUserPassword",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the master user password of a relational database.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRelationalDatabaseMetricData",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the data points for the specified metric of a relational database.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "GetRelationalDatabaseParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the parameters of a relational database.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "GetRelationalDatabaseSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a relational database snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "RelationalDatabase",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetRelationalDatabaseSnapshots",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about all relational database snapshots.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "RelationalDatabase",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRelationalDatabases",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Return information about all relational databases.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "RelationalDatabase",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetStaticIp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a static IP.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "StaticIp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetStaticIps",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about all static IPs.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "StaticIp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ImportKeyPair",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Imports a public key from a key pair.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "KeyPair",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "IsVpcPeered",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a boolean value indicating whether the Amazon Lightsail virtual private cloud (VPC) is peered.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "OpenInstancePublicPorts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds, or opens a public port of an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PeerVpc",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Tries to peer the Amazon Lightsail virtual private cloud (VPC) with the default VPC.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutInstancePublicPorts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets the specified open ports for an instance, and closes all ports for every protocol not included in the request.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RebootInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Reboots an instance that is in a running state.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RebootRelationalDatabase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Reboots a relational database that is in a running state.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "RelationalDatabase",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ReleaseStaticIp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a static IP.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "StaticIp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts an instance that is in a stopped state.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartRelationalDatabase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts a relational database that is in a stopped state.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "RelationalDatabase",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops an instance that is in a running state.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopRelationalDatabase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops a relational database that is in a running state.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "RelationalDatabase",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Tags a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Disk",
+                    "required": false
+                },
+                {
+                    "name": "DiskSnapshot",
+                    "required": false
+                },
+                {
+                    "name": "Domain",
+                    "required": false
+                },
+                {
+                    "name": "Instance",
+                    "required": false
+                },
+                {
+                    "name": "InstanceSnapshot",
+                    "required": false
+                },
+                {
+                    "name": "KeyPair",
+                    "required": false
+                },
+                {
+                    "name": "LoadBalancer",
+                    "required": false
+                },
+                {
+                    "name": "RelationalDatabase",
+                    "required": false
+                },
+                {
+                    "name": "RelationalDatabaseSnapshot",
+                    "required": false
+                },
+                {
+                    "name": "StaticIp",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UnpeerVpc",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Attempts to unpeer the Amazon Lightsail virtual private cloud (VPC) from the default VPC.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Untags a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Disk",
+                    "required": false
+                },
+                {
+                    "name": "DiskSnapshot",
+                    "required": false
+                },
+                {
+                    "name": "Domain",
+                    "required": false
+                },
+                {
+                    "name": "Instance",
+                    "required": false
+                },
+                {
+                    "name": "InstanceSnapshot",
+                    "required": false
+                },
+                {
+                    "name": "KeyPair",
+                    "required": false
+                },
+                {
+                    "name": "LoadBalancer",
+                    "required": false
+                },
+                {
+                    "name": "RelationalDatabase",
+                    "required": false
+                },
+                {
+                    "name": "RelationalDatabaseSnapshot",
+                    "required": false
+                },
+                {
+                    "name": "StaticIp",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDomainEntry",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a domain recordset after it is created.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateLoadBalancerAttribute",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a load balancer attribute, such as the health check path and session stickiness.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "LoadBalancer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRelationalDatabase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a relational database.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "RelationalDatabase",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRelationalDatabaseParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the parameters of a relational database.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail"
+}

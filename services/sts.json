@@ -1,0 +1,194 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssumeRole",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:PrincipalTag/${TagKey}",
+                "aws:RequestTag/${TagKey}",
+                "sts:TransitiveTagKeys",
+                "sts:ExternalId",
+                "sts:RoleSessionName",
+                "iam:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Returns a set of temporary security credentials that you can use to access AWS resources that you might not normally have access to",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "role",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssumeRoleWithSAML",
+            "condition_keys": [
+                "saml:namequalifier",
+                "saml:sub",
+                "saml:sub_type",
+                "saml:aud",
+                "saml:iss",
+                "saml:doc",
+                "saml:cn",
+                "saml:commonName",
+                "saml:eduorghomepageuri",
+                "saml:eduorgidentityauthnpolicyuri",
+                "saml:eduorglegalname",
+                "saml:eduorgsuperioruri",
+                "saml:eduorgwhitepagesuri",
+                "saml:edupersonaffiliation",
+                "saml:edupersonassurance",
+                "saml:edupersonentitlement",
+                "saml:edupersonnickname",
+                "saml:edupersonorgdn",
+                "saml:edupersonorgunitdn",
+                "saml:edupersonprimaryaffiliation",
+                "saml:edupersonprimaryorgunitdn",
+                "saml:edupersonprincipalname",
+                "saml:edupersonscopedaffiliation",
+                "saml:edupersontargetedid",
+                "saml:givenName",
+                "saml:mail",
+                "saml:name",
+                "saml:organizationStatus",
+                "saml:primaryGroupSID",
+                "saml:surname",
+                "saml:uid",
+                "saml:x500UniqueIdentifier",
+                "aws:TagKeys",
+                "aws:PrincipalTag/${TagKey}",
+                "aws:RequestTag/${TagKey}",
+                "sts:TransitiveTagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Returns a set of temporary security credentials for users who have been authenticated via a SAML authentication response",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "role",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssumeRoleWithWebIdentity",
+            "condition_keys": [
+                "cognito-identity.amazonaws.com:amr",
+                "cognito-identity.amazonaws.com:aud",
+                "cognito-identity.amazonaws.com:sub",
+                "www.amazon.com:app_id",
+                "www.amazon.com:user_id",
+                "graph.facebook.com:app_id",
+                "graph.facebook.com:id",
+                "accounts.google.com:aud",
+                "accounts.google.com:oaud",
+                "accounts.google.com:sub",
+                "aws:TagKeys",
+                "aws:PrincipalTag/${TagKey}",
+                "aws:RequestTag/${TagKey}",
+                "sts:TransitiveTagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Returns a set of temporary security credentials for users who have been authenticated in a mobile or web application with a web identity provider",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "role",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DecodeAuthorizationMessage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Decodes additional information about the authorization status of a request from an encoded message returned in response to an AWS request",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAccessKeyInfo",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns details about the access key id passed as a parameter to the request.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCallerIdentity",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns details about the IAM identity whose credentials are used to call the API",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFederationToken",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:PrincipalTag/${TagKey}",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Returns a set of temporary security credentials (consisting of an access key ID, a secret access key, and a security token) for a federated user",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetServiceBearerToken",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a STS bearer token for an AWS root user, IAM role, or an IAM user",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSessionToken",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a set of temporary security credentials (consisting of an access key ID, a secret access key, and a security token) for an AWS account or IAM user",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagSession",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:PrincipalTag/${TagKey}",
+                "aws:RequestTag/${TagKey}",
+                "sts:TransitiveTagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add tags to a STS session",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "role",
+                    "required": false
+                },
+                {
+                    "name": "user",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "prefix": "sts",
+    "service": "AWS Security Token Service"
+}

@@ -1,0 +1,114 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateChimeWebhookConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an AWS Chatbot Chime Webhook Configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSlackChannelConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an AWS Chatbot Slack Channel Configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteChimeWebhookConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an AWS Chatbot Chime Webhook Configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSlackChannelConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an AWS Chatbot Slack Channel Configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeChimeWebhookConfigurations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all AWS Chatbot Chime Webhook Configurations in an AWS Account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSlackChannelConfigurations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all AWS Chatbot Slack Channel Configurations in an AWS account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSlackChannels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all public Slack channels in the Slack workspace connected to the AWS Account onboarded with AWS Chatbot service.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSlackWorkspaces",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all authorized Slack workspaces connected to the AWS Account onboarded with AWS Chatbot service.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSlackOauthParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Generate OAuth parameters to request Slack OAuth code to be used by the AWS Chatbot service.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RedeemSlackOauthCode",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Redeem previously generated parameters with Slack API, to acquire OAuth tokens to be used by the AWS Chatbot service.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateChimeWebhookConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an AWS Chatbot Chime Webhook Configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSlackChannelConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an AWS Chatbot Slack Channel Configuration.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "chatbot",
+    "service": "AWS Chatbot"
+}

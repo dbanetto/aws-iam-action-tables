@@ -1,0 +1,204 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AddAttachmentsToSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds one or more attachments to an AWS Support case.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "AddCommunicationToCase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds a customer communication to an AWS Support case.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new AWS Support case.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAttachment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the description for an attachment.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCaseAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This is an internally managed function which allows secondary services to read AWS Support case attributes.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCases",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of AWS Support cases that matches the given inputs.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCommunications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the communications and attachments for one or more AWS Support cases.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeIssueTypes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns issue types for AWS Support cases.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeServices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the current list of AWS services and categories that applies to each service.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSeverityLevels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the list of severity levels that can be assigned to an AWS Support case.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSupportLevel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the support level for an AWS Account identifier.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTrustedAdvisorCheckRefreshStatuses",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the status of a Trusted Advisor refresh check based on a list of check identifiers.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTrustedAdvisorCheckResult",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the results of the Trusted Advisor check that has the specified check identifier.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTrustedAdvisorCheckSummaries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the summaries of the results of the Trusted Advisor checks that have the specified check identifiers.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTrustedAdvisorChecks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of all available Trusted Advisor checks, including name, identifier, category and description.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "InitiateCallForCase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This is an internally managed function to initiate a call on AWS Support Center.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "InitiateChatForCase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This is an internally managed function to initiate a chat on AWS Support Center.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutCaseAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This is an internally managed function which allows secondary services to attach attributes to AWS Support cases.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RateCaseCommunication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Rate an AWS Support case communication.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RefreshTrustedAdvisorCheck",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Requests a refresh of the Trusted Advisor check that has the specified check identifier.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ResolveCase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Resolves an AWS Support case.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "SearchForCases",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of AWS Support cases that matches the given inputs.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "support",
+    "service": "AWS Support"
+}

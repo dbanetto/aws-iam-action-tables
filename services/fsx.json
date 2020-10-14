@@ -1,0 +1,240 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CancelDataRepositoryTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action cancels a data repository task",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "task",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateBackup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This action creates a new backup.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": true
+                },
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateDataRepositoryTask",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This action creates a new task.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                },
+                {
+                    "name": "task",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateFileSystem",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This action creates a new, empty, Amazon FSx file system",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateFileSystemFromBackup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This action creates a new Amazon FSx file system from an existing backup.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": true
+                },
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBackup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action deletes a backup, deleting its contents. After deletion, the backup no longer exists, and its data is gone.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFileSystem",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action deletes a file system, deleting its contents.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeBackups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action returns the description of specific Amazon FSx backups, if one or more BackupIds are provided for that backup. Otherwise, it returns all backups owned by your AWS account in the AWS Region of the endpoint that you're calling.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDataRepositoryTasks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action returns the description of specific Amazon FSx data repository task, if one or more TaskIds are provided for that data repository task. Otherwise, it returns all data repository task owned by your AWS account in the AWS Region of the endpoint that you're calling.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeFileSystems",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action returns the description of specific Amazon FSx file systems, if a FileSystemIds value is provided for that file system. Otherwise, it returns descriptions of all file systems owned by your AWS account in the AWS Region of the endpoint that you're calling.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action lists tags for an Amazon FSx resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": false
+                },
+                {
+                    "name": "file-system",
+                    "required": false
+                },
+                {
+                    "name": "task",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "This action tags an Amazon FSx resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": false
+                },
+                {
+                    "name": "file-system",
+                    "required": false
+                },
+                {
+                    "name": "task",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This action removes a tag from an Amazon FSx resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": false
+                },
+                {
+                    "name": "file-system",
+                    "required": false
+                },
+                {
+                    "name": "task",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFileSystem",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action updates file system configuration.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "fsx",
+    "service": "Amazon FSx"
+}

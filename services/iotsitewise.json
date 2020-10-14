@@ -1,0 +1,835 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateAssets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate a child asset to a parent asset by a hierarchy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchAssociateProjectAssets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate assets to a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchDisassociateProjectAssets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate assets from a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchPutAssetPropertyValue",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to put property values for asset properties",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "CreateAccessPolicy",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an access policy for a portal or a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "portal",
+                    "required": false
+                },
+                {
+                    "name": "project",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAsset",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an asset from an asset model",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset-model",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAssetModel",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an asset model",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDashboard",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a dashboard in a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateGateway",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a gateway",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePortal",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [
+                "sso:CreateManagedApplicationInstance",
+                "sso:DescribeRegisteredRegions"
+            ],
+            "description": "Grants permission to create a portal",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateProject",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a project in a portal",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "portal",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "DeleteAccessPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an access policy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "access-policy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAsset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an asset",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAssetModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an asset model",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset-model",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDashboard",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a dashboard",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dashboard",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteGateway",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a gateway",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePortal",
+            "condition_keys": [],
+            "dependent_actions": [
+                "sso:DeleteManagedApplicationInstance"
+            ],
+            "description": "Grants permission to delete a portal",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "portal",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "DescribeAccessPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe an access policy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "access-policy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAsset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe an asset",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAssetModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe an asset model",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset-model",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAssetProperty",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe an asset property",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDashboard",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a dashboard",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dashboard",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeGateway",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a gateway",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeGatewayCapabilityConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a capability configuration for a gateway",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLoggingOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe logging options for the AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribePortal",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a portal",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "portal",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateAssets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate a child asset from a parent asset by a hierarchy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAssetPropertyAggregates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve computed aggregates for an asset property",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAssetPropertyValue",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the latest value for an asset property",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAssetPropertyValueHistory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the value history for an asset property",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "ListAccessPolicies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all access policies for an identity or a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "portal",
+                    "required": false
+                },
+                {
+                    "name": "project",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListAssetModels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all asset models",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListAssets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all assets",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset-model",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListAssociatedAssets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all assets associated to an asset by a hierarchy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDashboards",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all dashboards in a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListGateways",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all gateways",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListPortals",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all portals",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListProjectAssets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all assets associated with a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListProjects",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all projects in a portal",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "portal",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to list all tags for a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "access-policy",
+                    "required": false
+                },
+                {
+                    "name": "asset",
+                    "required": false
+                },
+                {
+                    "name": "asset-model",
+                    "required": false
+                },
+                {
+                    "name": "dashboard",
+                    "required": false
+                },
+                {
+                    "name": "gateway",
+                    "required": false
+                },
+                {
+                    "name": "portal",
+                    "required": false
+                },
+                {
+                    "name": "project",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutLoggingOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to set logging options for the AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to tag a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "access-policy",
+                    "required": false
+                },
+                {
+                    "name": "asset",
+                    "required": false
+                },
+                {
+                    "name": "asset-model",
+                    "required": false
+                },
+                {
+                    "name": "dashboard",
+                    "required": false
+                },
+                {
+                    "name": "gateway",
+                    "required": false
+                },
+                {
+                    "name": "portal",
+                    "required": false
+                },
+                {
+                    "name": "project",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to untag a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "access-policy",
+                    "required": false
+                },
+                {
+                    "name": "asset",
+                    "required": false
+                },
+                {
+                    "name": "asset-model",
+                    "required": false
+                },
+                {
+                    "name": "dashboard",
+                    "required": false
+                },
+                {
+                    "name": "gateway",
+                    "required": false
+                },
+                {
+                    "name": "portal",
+                    "required": false
+                },
+                {
+                    "name": "project",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "UpdateAccessPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an access policy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "access-policy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateAsset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an asset",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateAssetModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an asset model",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset-model",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateAssetProperty",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an asset property",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "asset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDashboard",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a dashboard",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dashboard",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateGateway",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a gateway",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateGatewayCapabilityConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a capability configuration for a gateway",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePortal",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a portal",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "portal",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise"
+}

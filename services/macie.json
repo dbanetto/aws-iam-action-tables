@@ -1,0 +1,75 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateMemberAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the user to associate a specified AWS account with Amazon Macie as a member account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateS3Resources",
+            "condition_keys": [
+                "aws:SourceArn"
+            ],
+            "dependent_actions": [],
+            "description": "Enables the user to associate specified S3 resources with Amazon Macie for monitoring and data classification.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateMemberAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the user to remove the specified member account from Amazon Macie.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateS3Resources",
+            "condition_keys": [
+                "aws:SourceArn"
+            ],
+            "dependent_actions": [],
+            "description": "Enables the user to remove specified S3 resources from being monitored by Amazon Macie.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListMemberAccounts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the user to list all Amazon Macie member accounts for the current Macie master account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListS3Resources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the user to list all the S3 resources associated with Amazon Macie.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateS3Resources",
+            "condition_keys": [
+                "aws:SourceArn"
+            ],
+            "dependent_actions": [],
+            "description": "Enables the user to update the classification types for the specified S3 resources.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "macie",
+    "service": "Amazon Macie Classic"
+}

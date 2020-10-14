@@ -1,0 +1,37 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "DisableRegion",
+            "condition_keys": [
+                "account:TargetRegion"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to disable a region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableRegion",
+            "condition_keys": [
+                "account:TargetRegion"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to enable a region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListRegions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list regions",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "account",
+    "service": "AWS Accounts"
+}

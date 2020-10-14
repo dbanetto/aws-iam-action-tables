@@ -1,0 +1,279 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateServer",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Enables the caller to create a server.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUser",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Enables the caller to add a user associated with a server.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "server",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteServer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the caller to delete a server.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "server",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSshPublicKey",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the caller to delete an SSH public key from a user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the caller to delete a user associated with a server.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeServer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the caller to describe a server.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "server",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the caller to describe a user associated with a server.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ImportSshPublicKey",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the caller to add an SSH public key to a user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListServers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the caller to list servers",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the caller to list tags for a server or a user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "server",
+                    "required": false
+                },
+                {
+                    "name": "user",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListUsers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the caller to list users associated with a server.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "server",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartServer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the caller to start a server.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "server",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopServer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the caller to stop a server.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "server",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Enables the caller to tag a server or a user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "server",
+                    "required": false
+                },
+                {
+                    "name": "user",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "TestIdentityProvider",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the caller to test a server's custom identity provider.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Enables the caller to untag a server or a user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "server",
+                    "required": false
+                },
+                {
+                    "name": "user",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateServer",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Enables the caller to update the configuration of a server",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "server",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateUser",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Enables the caller to update the configuration of a user",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "transfer",
+    "service": "AWS Transfer for SFTP"
+}

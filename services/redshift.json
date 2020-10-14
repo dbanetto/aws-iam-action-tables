@@ -1,0 +1,1493 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AcceptReservedNodeExchange",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to exchange a DC1 reserved node for a DC2 reserved node with no changes to the configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "AuthorizeClusterSecurityGroupIngress",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add an inbound (ingress) rule to an Amazon Redshift security group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "securitygroup",
+                    "required": true
+                },
+                {
+                    "name": "securitygroupingress-ec2securitygroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "AuthorizeSnapshotAccess",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to the specified AWS account to restore a snapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchDeleteClusterSnapshots",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete snapshots in a batch of size upto 100",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchModifyClusterSnapshots",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify settings for a list of snapshots",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to cancel a query through the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelQuerySession",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to see queries in the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelResize",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to cancel a resize operation",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CopyClusterSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to copy a cluster snapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCluster",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateClusterParameterGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an Amazon Redshift parameter group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parametergroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateClusterSecurityGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an Amazon Redshift security group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "securitygroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateClusterSnapshot",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a manual snapshot of the specified cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateClusterSubnetGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an Amazon Redshift subnet group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subnetgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "CreateClusterUser",
+            "condition_keys": [
+                "redshift:DbUser"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to automatically create the specified Amazon Redshift user if it does not exist",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dbuser",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateEventSubscription",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an Amazon Redshift event notification subscription",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "eventsubscription",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateHsmClientCertificate",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an HSM client certificate that a cluster uses to connect to an HSM",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hsmclientcertificate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateHsmConfiguration",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an HSM configuration that contains information required by a cluster to store and use database encryption keys in a hardware security module (HSM)",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hsmconfiguration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSavedQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create saved SQL queries through the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateScheduledAction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an Amazon Redshift scheduled action",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "CreateSnapshotCopyGrant",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a snapshot copy grant and encrypt copied snapshots in a destination AWS Region",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshotcopygrant",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSnapshotSchedule",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a snapshot schedule",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshotschedule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateTags",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add one or more tags to a specified resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "dbgroup",
+                    "required": false
+                },
+                {
+                    "name": "dbname",
+                    "required": false
+                },
+                {
+                    "name": "dbuser",
+                    "required": false
+                },
+                {
+                    "name": "eventsubscription",
+                    "required": false
+                },
+                {
+                    "name": "hsmclientcertificate",
+                    "required": false
+                },
+                {
+                    "name": "hsmconfiguration",
+                    "required": false
+                },
+                {
+                    "name": "parametergroup",
+                    "required": false
+                },
+                {
+                    "name": "securitygroup",
+                    "required": false
+                },
+                {
+                    "name": "securitygroupingress-cidr",
+                    "required": false
+                },
+                {
+                    "name": "securitygroupingress-ec2securitygroup",
+                    "required": false
+                },
+                {
+                    "name": "snapshot",
+                    "required": false
+                },
+                {
+                    "name": "snapshotcopygrant",
+                    "required": false
+                },
+                {
+                    "name": "snapshotschedule",
+                    "required": false
+                },
+                {
+                    "name": "subnetgroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a previously provisioned cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteClusterParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an Amazon Redshift parameter group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parametergroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteClusterSecurityGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an Amazon Redshift security group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "securitygroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteClusterSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a manual snapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteClusterSubnetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a cluster subnet group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subnetgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteEventSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an Amazon Redshift event notification subscription",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "eventsubscription",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteHsmClientCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an HSM client certificate",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hsmclientcertificate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteHsmConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an Amazon Redshift HSM configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hsmconfiguration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSavedQueries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete saved SQL queries through the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteScheduledAction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an Amazon Redshift scheduled action",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSnapshotCopyGrant",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a snapshot copy grant",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshotcopygrant",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSnapshotSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a snapshot schedule",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshotschedule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "DeleteTags",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a tag or tags from a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "dbgroup",
+                    "required": false
+                },
+                {
+                    "name": "dbname",
+                    "required": false
+                },
+                {
+                    "name": "dbuser",
+                    "required": false
+                },
+                {
+                    "name": "eventsubscription",
+                    "required": false
+                },
+                {
+                    "name": "hsmclientcertificate",
+                    "required": false
+                },
+                {
+                    "name": "hsmconfiguration",
+                    "required": false
+                },
+                {
+                    "name": "parametergroup",
+                    "required": false
+                },
+                {
+                    "name": "securitygroup",
+                    "required": false
+                },
+                {
+                    "name": "securitygroupingress-cidr",
+                    "required": false
+                },
+                {
+                    "name": "securitygroupingress-ec2securitygroup",
+                    "required": false
+                },
+                {
+                    "name": "snapshot",
+                    "required": false
+                },
+                {
+                    "name": "snapshotcopygrant",
+                    "required": false
+                },
+                {
+                    "name": "snapshotschedule",
+                    "required": false
+                },
+                {
+                    "name": "subnetgroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAccountAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe attributes attached to the specified AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeClusterDbRevisions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe database revisions for a cluster",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeClusterParameterGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe Amazon Redshift parameter groups, including parameter groups you created and the default parameter group",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeClusterParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe parameters contained within an Amazon Redshift parameter group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parametergroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeClusterSecurityGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe Amazon Redshift security groups",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeClusterSnapshots",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe one or more snapshot objects, which contain metadata about your cluster snapshots",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeClusterSubnetGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe one or more cluster subnet group objects, which contain metadata about your cluster subnet groups",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeClusterTracks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe available maintenance tracks",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeClusterVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe available Amazon Redshift cluster versions",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeClusters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe properties of provisioned clusters",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDefaultClusterParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe parameter settings for a parameter group family",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEventCategories",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe event categories for all event source types, or for a specified source type",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEventSubscriptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe Amazon Redshift event notification subscriptions for the specified AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe events related to clusters, security groups, snapshots, and parameter groups for the past 14 days",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeHsmClientCertificates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe HSM client certificates",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeHsmConfigurations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe Amazon Redshift HSM configurations",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLoggingStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe whether information, such as queries and connection attempts, is being logged for a cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeNodeConfigurationOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe properties of possible node configurations such as node type, number of nodes, and disk usage for the specified action type",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeOrderableClusterOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe orderable cluster options",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a query through the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeReservedNodeOfferings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe available reserved node offerings by Amazon Redshift",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeReservedNodes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the reserved nodes",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeResize",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the last resize operation for a cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSavedQueries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe saved queries through the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeScheduledActions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe created Amazon Redshift scheduled actions",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSnapshotCopyGrants",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe snapshot copy grants owned by the specified AWS account in the destination AWS Region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSnapshotSchedules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe snapshot schedules",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshotschedule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStorage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe account level backups storage size and provisional storage",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a table through the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTableRestoreStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe status of one or more table restore requests made using the RestoreTableFromClusterSnapshot API action",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe tags",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "dbgroup",
+                    "required": false
+                },
+                {
+                    "name": "dbname",
+                    "required": false
+                },
+                {
+                    "name": "dbuser",
+                    "required": false
+                },
+                {
+                    "name": "eventsubscription",
+                    "required": false
+                },
+                {
+                    "name": "hsmclientcertificate",
+                    "required": false
+                },
+                {
+                    "name": "hsmconfiguration",
+                    "required": false
+                },
+                {
+                    "name": "parametergroup",
+                    "required": false
+                },
+                {
+                    "name": "securitygroup",
+                    "required": false
+                },
+                {
+                    "name": "securitygroupingress-cidr",
+                    "required": false
+                },
+                {
+                    "name": "securitygroupingress-ec2securitygroup",
+                    "required": false
+                },
+                {
+                    "name": "snapshot",
+                    "required": false
+                },
+                {
+                    "name": "snapshotcopygrant",
+                    "required": false
+                },
+                {
+                    "name": "snapshotschedule",
+                    "required": false
+                },
+                {
+                    "name": "subnetgroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableLogging",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disable logging information, such as queries and connection attempts, for a cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableSnapshotCopy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disable the automatic copy of snapshots for a cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableLogging",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to enable logging information, such as queries and connection attempts, for a cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableSnapshotCopy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to enable the automatic copy of snapshots for a cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ExecuteQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to execute a query through the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "FetchResults",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to fetch query results through the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "GetClusterCredentials",
+            "condition_keys": [
+                "redshift:DbName",
+                "redshift:DbUser",
+                "redshift:DurationSeconds"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to get temporary credentials to access an Amazon Redshift database by the specified AWS account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dbuser",
+                    "required": true
+                },
+                {
+                    "name": "dbgroup",
+                    "required": false
+                },
+                {
+                    "name": "dbname",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetReservedNodeExchangeOfferings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get an array of DC2 ReservedNodeOfferings that matches the payment type, term, and usage price of the given DC1 reserved node",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "JoinGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to join the specified Amazon Redshift group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dbgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDatabases",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list databases through the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSavedQueries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list saved queries through the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSchemas",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list schemas through the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTables",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list tables through the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the settings of a cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyClusterDbRevision",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the database revision of a cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "ModifyClusterIamRoles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the list of AWS Identity and Access Management (IAM) roles that can be used by a cluster to access other AWS services",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyClusterMaintenance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the maintenance settings of a cluster",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyClusterParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the parameters of a parameter group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parametergroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyClusterSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the settings of a snapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyClusterSnapshotSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify a snapshot schedule for a cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyClusterSubnetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify a cluster subnet group to include the specified list of VPC subnets",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subnetgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyEventSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an existing Amazon Redshift event notification subscription",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "eventsubscription",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifySavedQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an existing saved query through the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyScheduledAction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an existing Amazon Redshift scheduled action",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifySnapshotCopyRetentionPeriod",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the number of days to retain snapshots in the destination AWS Region after they are copied from the source AWS Region",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifySnapshotSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify a snapshot schedule",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshotschedule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PauseCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to pause a cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PurchaseReservedNodeOffering",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to purchase a reserved node",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RebootCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to reboot a cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ResetClusterParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to set one or more parameters of a parameter group to their default values and set the source values of the parameters to \"engine-default\"",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parametergroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ResizeCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to change the size of a cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RestoreFromClusterSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a cluster from a snapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RestoreTableFromClusterSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a table from a table in an Amazon Redshift cluster snapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ResumeCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to resume a cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "RevokeClusterSecurityGroupIngress",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to revoke an ingress rule in an Amazon Redshift security group for a previously authorized IP range or Amazon EC2 security group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "securitygroup",
+                    "required": true
+                },
+                {
+                    "name": "securitygroupingress-ec2securitygroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "RevokeSnapshotAccess",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to revoke access from the specified AWS account to restore a snapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "RotateEncryptionKey",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to rotate an encryption key for a cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ViewQueriesFromConsole",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view query results through the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ViewQueriesInConsole",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to terminate running queries and loads through the Amazon Redshift console",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "redshift",
+    "service": "Amazon Redshift"
+}

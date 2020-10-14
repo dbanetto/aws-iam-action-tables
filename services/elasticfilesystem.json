@@ -1,0 +1,421 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "Backup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts a backup job for an existing file system.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ClientMount",
+            "condition_keys": [
+                "elasticfilesystem:AccessPointArn"
+            ],
+            "dependent_actions": [],
+            "description": "Permission for allowing read-access to a file system.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ClientRootAccess",
+            "condition_keys": [
+                "elasticfilesystem:AccessPointArn"
+            ],
+            "dependent_actions": [],
+            "description": "Permission for allowing root-access to a file system.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ClientWrite",
+            "condition_keys": [
+                "elasticfilesystem:AccessPointArn"
+            ],
+            "dependent_actions": [],
+            "description": "Permission for allowing write-access to a file system.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAccessPoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an access point for the specified file system.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateFileSystem",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "elasticfilesystem:Encrypted"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new, empty file system.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateMountTarget",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a mount target for a file system.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateTags",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates or overwrites tags associated with a file system.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAccessPoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified access point.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "access-point",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFileSystem",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a file system, permanently severing access to its contents.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFileSystemPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Clears the resource-level policy for a given file system.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMountTarget",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified mount target.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "DeleteTags",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Deletes the specified tags from a file system.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeAccessPoints",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the descriptions of Amazon EFS access points.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeBackupPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the current BackupPolicy object for the specified Amazon EFS file system.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeFileSystemPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the current resource-level policy for a given file system.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeFileSystems",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the description of a specific Amazon EFS file system if either the file system CreationToken or the FileSystemId is provided; otherwise, returns descriptions of all file systems owned by the caller's AWS account in the AWS region of the endpoint that you're calling.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLifecycleConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the current LifecycleConfiguration object for the specified Amazon EFS file system.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeMountTargetSecurityGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the security groups currently in effect for a mount target.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeMountTargets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the descriptions of all the current mount targets, or a specific mount target, for a file system.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the tags associated with a file system.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the tags associated with the specified Amazon EFS resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyMountTargetSecurityGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies the set of security groups in effect for a mount target.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutBackupPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables automatic backups with AWS Backup by creating a new BackupPolicy object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutFileSystemPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Apply a resource-level policy granting and/or restricting actions from given actors for the specified file system.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutLifecycleConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables lifecycle management by creating a new LifecycleConfiguration object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "Restore",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts a restore job for an existing file system.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates or overwrites tags associated with the specified Amazon EFS resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified tags from a specified Amazon EFS resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFileSystem",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the throughput mode or the amount of provisioned throughput of an existing file system.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "file-system",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System"
+}

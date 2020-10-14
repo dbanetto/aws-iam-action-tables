@@ -1,0 +1,237 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateCreatedArtifact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associate a given AWS artifact to a MigrationTask",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "migrationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateDiscoveredResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associate a given ADS resource to a MigrationTask",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "migrationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateHomeRegionControl",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a Migration Hub Home Region Control",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateProgressUpdateStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a ProgressUpdateStream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "progressUpdateStream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProgressUpdateStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a ProgressUpdateStream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "progressUpdateStream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeApplicationState",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get an Application Discovery Service Application's state",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeHomeRegionControls",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List Home Region Controls",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeMigrationTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a MigrationTask",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "migrationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateCreatedArtifact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociate a given AWS artifact from a MigrationTask",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "migrationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateDiscoveredResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociate a given ADS resource from a MigrationTask",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "migrationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetHomeRegion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the Migration Hub Home Region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ImportMigrationTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Import a MigrationTask",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "migrationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListCreatedArtifacts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List associated created artifacts for a MigrationTask",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "migrationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDiscoveredResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List associated ADS resources from MigrationTask",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "migrationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListMigrationTasks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List MigrationTasks",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListProgressUpdateStreams",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List ProgressUpdateStreams",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "NotifyApplicationState",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update an Application Discovery Service Application's state",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "NotifyMigrationTaskState",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Notify latest MigrationTask state",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "migrationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutResourceAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Put ResourceAttributes",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "migrationTask",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "mgh",
+    "service": "AWS Migration Hub"
+}

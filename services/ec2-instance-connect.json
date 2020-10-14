@@ -1,0 +1,22 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "SendSSHPublicKey",
+            "condition_keys": [
+                "ec2:osuser"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to push the SSH public key to the instance metadata where it remains for 60 seconds.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "instance",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "ec2-instance-connect",
+    "service": "Amazon EC2 Instance Connect"
+}

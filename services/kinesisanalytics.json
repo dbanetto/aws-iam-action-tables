@@ -1,0 +1,363 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AddApplicationCloudWatchLoggingOption",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds cloudwatch logging option to the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AddApplicationInput",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds input to the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AddApplicationInputProcessingConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds input processing configuration to the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AddApplicationOutput",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds output to the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AddApplicationReferenceDataSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds reference data source to the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AddApplicationVpcConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds VPC configuration to the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateApplication",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an application.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateApplicationSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a snapshot for an application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApplicationCloudWatchLoggingOption",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified cloudwatch logging option of the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApplicationInputProcessingConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified input processing configuration of the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApplicationOutput",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified output of the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApplicationReferenceDataSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified reference data source of the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApplicationSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a snapshot for an application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApplicationVpcConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified VPC configuration of the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the specified application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeApplicationSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an application snapshot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DiscoverInputSchema",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Discovers the input schema for the application.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListApplicationSnapshots",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the snapshots for an application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListApplications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List applications for the account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Fetch the tags associated with the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Add tags to the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Remove the specified tags from the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the application.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "kinesisanalytics",
+    "service": "Amazon Kinesis Analytics V2"
+}

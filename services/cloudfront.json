@@ -1,0 +1,675 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateCachePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action adds a new cache policy to CloudFront.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCloudFrontOriginAccessIdentity",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action creates a new CloudFront origin access identity.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "origin-access-identity",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDistribution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action creates a new web distribution.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "distribution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateDistributionWithTags",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This action creates a new web distribution with tags.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "distribution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFieldLevelEncryptionConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action creates a new field-level encryption configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFieldLevelEncryptionProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action creates a field-level encryption profile.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateInvalidation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action creates a new invalidation batch request.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "distribution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateOriginRequestPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action adds a new origin request policy to CloudFront.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePublicKey",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action adds a new public key to CloudFront.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateStreamingDistribution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action creates a new RTMP distribution.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "streaming-distribution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateStreamingDistributionWithTags",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This action creates a new RTMP distribution with tags.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "streaming-distribution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCachePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action deletes a cache policy.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCloudFrontOriginAccessIdentity",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action deletes a CloudFront origin access identity.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "origin-access-identity",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDistribution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action deletes a web distribution.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "distribution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFieldLevelEncryptionConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action deletes a field-level encryption configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFieldLevelEncryptionProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action deletes a field-level encryption profile.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteOriginRequestPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action deletes an origin request policy.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePublicKey",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action deletes a public key from CloudFront.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteStreamingDistribution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action deletes an RTMP distribution.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "streaming-distribution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCachePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the cache policy",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCachePolicyConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the cache policy configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCloudFrontOriginAccessIdentity",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the information about a CloudFront origin access identity.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "origin-access-identity",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCloudFrontOriginAccessIdentityConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the configuration information about a Cloudfront origin access identity.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "origin-access-identity",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDistribution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the information about a web distribution.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "distribution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDistributionConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the configuration information about a distribution.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "distribution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFieldLevelEncryption",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the field-level encryption configuration information.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFieldLevelEncryptionConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the field-level encryption configuration information.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFieldLevelEncryptionProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the field-level encryption configuration information.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFieldLevelEncryptionProfileConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the field-level encryption profile configuration information.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInvalidation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the information about an invalidation.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "distribution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetOriginRequestPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the origin request policy",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetOriginRequestPolicyConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the origin request policy configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPublicKey",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the public key information.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPublicKeyConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the public key configuration information.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetStreamingDistribution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the information about an RTMP distribution.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "streaming-distribution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetStreamingDistributionConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the configuration information about a streaming distribution.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "streaming-distribution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListCachePolicies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all cache policies that have been created in CloudFront for this account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListCloudFrontOriginAccessIdentities",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List your CloudFront origin access identities.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDistributions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List the distributions associated with your AWS account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDistributionsByCachePolicyId",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List distribution IDs for distributions that have a cache behavior that's associated with the specified cache policy.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDistributionsByOriginRequestPolicyId",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List distribution IDs for distributions that have a cache behavior that's associated with the specified origin request policy.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDistributionsByWebACLId",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List the distributions associated with your AWS account with given AWS WAF web ACL.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListFieldLevelEncryptionConfigs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all field-level encryption configurations that have been created in CloudFront for this account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListFieldLevelEncryptionProfiles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all field-level encryption profiles that have been created in CloudFront for this account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListInvalidations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List your invalidation batches.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "distribution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListOriginRequestPolicies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all origin request policies that have been created in CloudFront for this account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListPublicKeys",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all public keys that have been added to CloudFront for this account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListStreamingDistributions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List your RTMP distributions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List tags for a CloudFront resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "distribution",
+                    "required": false
+                },
+                {
+                    "name": "streaming-distribution",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Add tags to a CloudFront resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "distribution",
+                    "required": false
+                },
+                {
+                    "name": "streaming-distribution",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Remove tags from a CloudFront resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "distribution",
+                    "required": false
+                },
+                {
+                    "name": "streaming-distribution",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateCachePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action updates a cache policy.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateCloudFrontOriginAccessIdentity",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action sets the configuration for a CloudFront origin access identity.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "origin-access-identity",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDistribution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action updates the configuration for a web distribution.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "distribution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFieldLevelEncryptionConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action updates a field-level encryption configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFieldLevelEncryptionProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action updates a field-level encryption profile.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateOriginRequestPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action updates an origin request policy.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePublicKey",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action updates public key information.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateStreamingDistribution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action updates the configuration for an RTMP distribution.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "streaming-distribution",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "cloudfront",
+    "service": "Amazon CloudFront"
+}

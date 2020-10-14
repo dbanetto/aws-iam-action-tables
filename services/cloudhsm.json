@@ -1,0 +1,358 @@
+{
+    "actions": [
+        {
+            "access_level": "Tagging",
+            "action": "AddTagsToResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds or overwrites one or more tags for the specified AWS CloudHSM resource",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CopyBackupToRegion",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a copy of a backup in the specified region",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCluster",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new AWS CloudHSM cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateHapg",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a high-availability partition group",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateHsm",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new hardware security module (HSM) in the specified AWS CloudHSM cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLunaClient",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an HSM client",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBackup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified CloudHSM backup",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified AWS CloudHSM cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteHapg",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a high-availability partition group",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteHsm",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified HSM",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLunaClient",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a client",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeBackups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about backups of AWS CloudHSM clusters",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeClusters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about AWS CloudHSM clusters",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeHapg",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves information about a high-availability partition group",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeHsm",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves information about an HSM. You can identify the HSM by its ARN or its serial number",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLunaClient",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves information about an HSM client",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the configuration files necessary to connect to all high availability partition groups the client is associated with",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "InitializeCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Claims an AWS CloudHSM cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListAvailableZones",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the Availability Zones that have available AWS CloudHSM capacity",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListHapgs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the high-availability partition groups for the account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListHsms",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves the identifiers of all of the HSMs provisioned for the current customer",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListLunaClients",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all of the clients",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a list of tags for the specified AWS CloudHSM cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": false
+                },
+                {
+                    "name": "cluster",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of all tags for the specified AWS CloudHSM resource",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyHapg",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies an existing high-availability partition group",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyHsm",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies an HSM",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyLunaClient",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies the certificate used by the client",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "RemoveTagsFromResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes one or more tags from the specified AWS CloudHSM resource",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RestoreBackup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Restores the specified CloudHSM backup",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Adds or overwrites one or more tags for the specified AWS CloudHSM cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": false
+                },
+                {
+                    "name": "cluster",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Removes the specified tag or tags from the specified AWS CloudHSM cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": false
+                },
+                {
+                    "name": "cluster",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM"
+}

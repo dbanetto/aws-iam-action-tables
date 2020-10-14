@@ -1,0 +1,378 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateDeviceWithPlacement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associate a device to a placement",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ClaimDevicesByClaimCode",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Claim a batch of devices with a claim code.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePlacement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a new placement in a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateProject",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Create a new project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePlacement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a placement from a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a device",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribePlacement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a placement",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateDeviceFromPlacement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociate a device from a placement",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "FinalizeDeviceClaim",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Finalize a device claim",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDeviceMethods",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get available methods of a device",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDevicesInPlacement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get devices associated to a placement",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "InitiateDeviceClaim",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Initialize a device claim",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "InvokeDeviceMethod",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Invoke a device method",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListDeviceEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List past events published by a device",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDevices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all devices",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListPlacements",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List placements in a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListProjects",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all projects",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the tags (metadata) which you have assigned to the resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": false
+                },
+                {
+                    "name": "project",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Adds to or modifies the tags of the given resource. Tags are metadata which can be used to manage a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": false
+                },
+                {
+                    "name": "project",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "UnclaimDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Unclaim a device",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Removes the given tags (metadata) from the resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": false
+                },
+                {
+                    "name": "project",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDeviceState",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update device state",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePlacement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update a placement",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "iot1click",
+    "service": "AWS IoT 1-Click"
+}

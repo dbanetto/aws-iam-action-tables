@@ -1,0 +1,649 @@
+{
+    "actions": [
+        {
+            "access_level": "Tagging",
+            "action": "AddTagsToResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Adds metadata tags to a DMS resource, including replication instance, endpoint, security group, and migration task",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Certificate",
+                    "required": false
+                },
+                {
+                    "name": "Endpoint",
+                    "required": false
+                },
+                {
+                    "name": "EventSubscription",
+                    "required": false
+                },
+                {
+                    "name": "ReplicationInstance",
+                    "required": false
+                },
+                {
+                    "name": "ReplicationSubnetGroup",
+                    "required": false
+                },
+                {
+                    "name": "ReplicationTask",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ApplyPendingMaintenanceAction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Applies a pending maintenance action to a resource (for example, to a replication instance).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ReplicationInstance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateEndpoint",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an endpoint using the provided settings",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateEventSubscription",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an AWS DMS event notification subscription.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateReplicationInstance",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Creates the replication instance using the specified parameters",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateReplicationSubnetGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a replication subnet group given a list of the subnet IDs in a VPC",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateReplicationTask",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a replication task using the specified parameters",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Endpoint",
+                    "required": true
+                },
+                {
+                    "name": "ReplicationInstance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified certificate",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Certificate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified endpoint",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteEventSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an AWS DMS event subscription.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "EventSubscription",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteReplicationInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified replication instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ReplicationInstance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteReplicationSubnetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a subnet group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ReplicationSubnetGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteReplicationTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified replication task",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ReplicationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAccountAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all of the AWS DMS attributes for a customer account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCertificates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Provides a description of the certificate.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeConnections",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the status of the connections that have been made between the replication instance and an endpoint",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEndpointTypes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about the type of endpoints available",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEndpoints",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about the endpoints for your account in the current region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEventCategories",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists categories for all event source types, or, if specified, for a specified source type.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEventSubscriptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all the event subscriptions for a customer account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists events for a given source identifier and source type.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeOrderableReplicationInstances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about the replication instance types that can be created in the specified region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeRefreshSchemasStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the status of the RefreshSchemas operation",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeReplicationInstanceTaskLogs",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Returns information about the task logs for the specified task.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ReplicationInstance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeReplicationInstances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about replication instances for your account in the current region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeReplicationSubnetGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about the replication subnet groups",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeReplicationTaskAssessmentResults",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the task assessment results from Amazon S3. This action always returns the latest results.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ReplicationTask",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeReplicationTasks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about replication tasks for your account in the current region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSchemas",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about the schema for the specified endpoint",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTableStatistics",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns table statistics on the database migration task, including table name, rows inserted, rows updated, and rows deleted",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ReplicationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ImportCertificate",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Uploads the specified certificate.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all tags for an AWS DMS resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Certificate",
+                    "required": false
+                },
+                {
+                    "name": "Endpoint",
+                    "required": false
+                },
+                {
+                    "name": "EventSubscription",
+                    "required": false
+                },
+                {
+                    "name": "ReplicationInstance",
+                    "required": false
+                },
+                {
+                    "name": "ReplicationSubnetGroup",
+                    "required": false
+                },
+                {
+                    "name": "ReplicationTask",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies the specified endpoint",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Endpoint",
+                    "required": true
+                },
+                {
+                    "name": "Certificate",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyEventSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies an existing AWS DMS event notification subscription.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyReplicationInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies the replication instance to apply new settings",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ReplicationInstance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyReplicationSubnetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies the settings for the specified replication subnet group",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyReplicationTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies the specified replication task.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ReplicationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RebootReplicationInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Reboots a replication instance. Rebooting results in a momentary outage, until the replication instance becomes available again.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ReplicationInstance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RefreshSchemas",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Populates the schema for the specified endpoint",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Endpoint",
+                    "required": true
+                },
+                {
+                    "name": "ReplicationInstance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ReloadTables",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Reloads the target database table with the source data.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ReplicationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "RemoveTagsFromResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Removes metadata tags from a DMS resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Certificate",
+                    "required": false
+                },
+                {
+                    "name": "Endpoint",
+                    "required": false
+                },
+                {
+                    "name": "EventSubscription",
+                    "required": false
+                },
+                {
+                    "name": "ReplicationInstance",
+                    "required": false
+                },
+                {
+                    "name": "ReplicationSubnetGroup",
+                    "required": false
+                },
+                {
+                    "name": "ReplicationTask",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartReplicationTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts the replication task",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ReplicationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartReplicationTaskAssessment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts the replication task assessment for unsupported data types in the source database.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ReplicationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopReplicationTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops the replication task",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ReplicationTask",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "TestConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Tests the connection between the replication instance and the endpoint",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Endpoint",
+                    "required": true
+                },
+                {
+                    "name": "ReplicationInstance",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "dms",
+    "service": "AWS Database Migration Service"
+}

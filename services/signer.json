@@ -1,0 +1,158 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CancelSigningProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Cancels a signing profile.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "signing-profile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSigningJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a signing job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "signing-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSigningPlatform",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves a signing platform.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSigningProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves a signing profile.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "signing-profile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListSigningJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List signing jobs.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSigningPlatforms",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all signing platforms.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSigningProfiles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all signing profile associated with the account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the tags associated with the Signing Profile resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "signing-profile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutSigningProfile",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new signing profile if not exists.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartSigningJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts a code signing request.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "signing-profile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Adds one or more tags to an Signing Profile resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "signing-profile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Removes one or more tags from an Signing Profile resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "signing-profile",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "signer",
+    "service": "AWS Code Signing for Amazon FreeRTOS"
+}

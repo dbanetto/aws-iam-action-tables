@@ -1,0 +1,159 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an application from a resource group",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateComponent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a component from a group of resources",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteComponent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a component",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeComponent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a component",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeComponentConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a component configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeComponentConfigurationRecommendation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe the recommended application component configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeObservation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an observation",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProblem",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a problem",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProblemObservations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the observation in a problem",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListApplications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all applications",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListComponents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List an application's components",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListProblems",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the problems in an application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateComponent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a component",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateComponentConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a component configuration",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "applicationinsights",
+    "service": "CloudWatch Application Insights"
+}

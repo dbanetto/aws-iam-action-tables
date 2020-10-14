@@ -1,0 +1,33 @@
+{
+    "actions": [
+        {
+            "access_level": "Read",
+            "action": "DescribeServices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the service details for all (paginated) services (if serviceCode is not set) or service detail for a particular service (if given serviceCode).",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAttributeValues",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns all (paginated) possible values for a given attribute.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetProducts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns all matching products with given search criteria.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "pricing",
+    "service": "AWS Price List"
+}

@@ -1,0 +1,535 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateApp",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateBackendEnvironment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new backend environment for an Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateBranch",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new Branch for an Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDeployment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a deployment for manual deploy apps. (Apps are not connected to repository)",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "branches",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDomainAssociation",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Create a new DomainAssociation on an App",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateWebHook",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a new webhook on an App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "branches",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete an existing Amplify App by appId.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBackendEnvironment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a branch for an Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBranch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a branch for an Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "branches",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDomainAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a DomainAssociation.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domains",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a job, for an Amplify branch, part of Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "jobs",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteWebHook",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a webhook by id.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "GenerateAccessLogs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Generate website access logs for a specific time range via a pre-signed URL.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetApp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves an existing Amplify App by appId.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetArtifactUrl",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves artifact info that corresponds to a artifactId.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBackendEnvironment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves a backend environment for an Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBranch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves a branch for an Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "branches",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDomainAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves domain info that corresponds to an appId and domainName.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domains",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get a job for a branch, part of an Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "jobs",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetWebHook",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves webhook info that corresponds to a webhookId.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListApps",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists existing Amplify Apps.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListArtifacts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List artifacts with an app, a branch, a job and an artifact type.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListBackendEnvironments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists backend environments for an Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListBranches",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists branches for an Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDomainAssociations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List domains with an app",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List Jobs for a branch, part of an Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "branches",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListWebHooks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List webhooks on an App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartDeployment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Start a deployment for manual deploy apps. (Apps are not connected to repository)",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "branches",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts a new job for a branch, part of an Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "jobs",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stop a job that is in progress, for an Amplify branch, part of Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "jobs",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "This action tags an AWS Amplify Console resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": false
+                },
+                {
+                    "name": "branches",
+                    "required": false
+                },
+                {
+                    "name": "jobs",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This action removes a tag from an AWS Amplify Console resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": false
+                },
+                {
+                    "name": "branches",
+                    "required": false
+                },
+                {
+                    "name": "jobs",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateBranch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a branch for an Amplify App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "branches",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDomainAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update a DomainAssociation on an App.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domains",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateWebHook",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update a webhook.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apps",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "amplify",
+    "service": "AWS Amplify"
+}

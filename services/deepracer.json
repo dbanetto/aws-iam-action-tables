@@ -1,0 +1,337 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CloneReinforcementLearningModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to clone existing DeepRacer models",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "reinforcement_learning_model",
+                    "required": true
+                },
+                {
+                    "name": "track",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAccountResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create resources needed by DeepRacer on behalf of the user",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLeaderboardSubmission",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to submit DeepRacer models to be evaluated for leaderboards",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "leaderboard",
+                    "required": true
+                },
+                {
+                    "name": "reinforcement_learning_model",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateReinforcementLearningModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create reinforcement learning models for DeepRacer",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "track",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAccountResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete resources created by DeepRacer on behalf of the user",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete DeepRacer models",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "reinforcement_learning_model",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAccountResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the resources created by DeepRacer on behalf of the user",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAlias",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the user's alias for submitting DeepRacer models to leaderboards",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetEvaluation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about existing DeepRacer models' evaluation jobs",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "evaluation_job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLatestUserSubmission",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about how the latest submitted DeepRacer model for a user performed on a leaderboard",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "leaderboard",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLeaderboard",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about leaderboards",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "leaderboard",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about existing DeepRacer models",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "reinforcement_learning_model",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRankedUserSubmission",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about the performance of a user's DeepRacer model that got placed on a leaderboard",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "leaderboard",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTrack",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about DeepRacer tracks",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "track",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTrainingJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about existing DeepRacer models' training job",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "training_job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListEvaluations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list DeepRacer models' evaluation jobs",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "reinforcement_learning_model",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListLeaderboardSubmissions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all the submissions of DeepRacer models of a user on a leaderboard",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "leaderboard",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListLeaderboards",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all the available leaderboards",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListModels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all existing DeepRacer models",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTracks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all DeepRacer tracks",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTrainingJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list DeepRacer models' training jobs",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "reinforcement_learning_model",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetAlias",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to set the user's alias for submitting DeepRacer models to leaderboards",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartEvaluation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to evaluate DeepRacer models in a simulated environment",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "reinforcement_learning_model",
+                    "required": true
+                },
+                {
+                    "name": "track",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopEvaluation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop DeepRacer model evaluations",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "evaluation_job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopTrainingReinforcementLearningModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop training DeepRacer models",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "reinforcement_learning_model",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TestRewardFunction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to test reward functions for correctness",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer"
+}

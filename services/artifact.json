@@ -1,0 +1,66 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AcceptAgreement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to accept an AWS agreement that has not yet been accepted by the customer account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "agreement",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DownloadAgreement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to download an AWS agreement that has not yet been accepted or a customer agreement that has been accepted by the customer account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "agreement",
+                    "required": false
+                },
+                {
+                    "name": "customer-agreement",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "Get",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to download an AWS compliance report package.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "report-package",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TerminateAgreement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to terminate a customer agreement that was previously accepted by the customer account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "customer-agreement",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "artifact",
+    "service": "AWS Artifact"
+}

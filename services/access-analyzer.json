@@ -1,0 +1,254 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateAnalyzer",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an analyzer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Analyzer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateArchiveRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an archive rule for the specified analyzer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Analyzer",
+                    "required": true
+                },
+                {
+                    "name": "ArchiveRule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAnalyzer",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the specified analyzer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Analyzer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteArchiveRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete archive rules for the specified analyzer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Analyzer",
+                    "required": true
+                },
+                {
+                    "name": "ArchiveRule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAnalyzedResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about an analyzed resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAnalyzer",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about analyzers.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Analyzer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetArchiveRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about archive rules for the specified analyzer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Analyzer",
+                    "required": true
+                },
+                {
+                    "name": "ArchiveRule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFinding",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve findings.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListAnalyzedResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of resources that have been analyzed.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListAnalyzers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieves a list of analyzers.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListArchiveRules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of archive rules from an analyzer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Analyzer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListFindings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of findings from an analyzer.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of tags applied to a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Analyzer",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartResourceScan",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start a scan of the policies applied to a resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add a tag to a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Analyzer",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove a tag from a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Analyzer",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateArchiveRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an archive rule.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Analyzer",
+                    "required": true
+                },
+                {
+                    "name": "ArchiveRule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFindings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify findings.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "access-analyzer",
+    "service": "IAM Access Analyzer"
+}

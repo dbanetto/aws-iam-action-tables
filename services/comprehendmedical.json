@@ -1,0 +1,24 @@
+{
+    "actions": [
+        {
+            "access_level": "Read",
+            "action": "DetectEntities",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Inspects the specified text for the specified type of entities and returns information about them.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DetectPHI",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Inspects the specified text for PHI entities and returns information about them.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "comprehendmedical",
+    "service": "Comprehend Medical"
+}

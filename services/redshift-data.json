@@ -1,0 +1,87 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CancelStatement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to cancel a running query",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStatement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve detailed information about a statement execution",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve metadata about a particular table",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ExecuteStatement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to execute a query",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetStatementResult",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to fetch the result of a query",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDatabases",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list databases for a given cluster",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSchemas",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list schemas for a given cluster",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListStatements",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list queries for a given principal",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTables",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list tables for a given cluster",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "redshift-data",
+    "service": "Amazon Redshift Data API"
+}

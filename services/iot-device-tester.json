@@ -1,0 +1,51 @@
+{
+    "actions": [
+        {
+            "access_level": "Read",
+            "action": "CheckVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission for IoT Device Tester to check if a given set of product, test suite and device tester version are compatible",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DownloadTestSuite",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission for IoT Device Tester to download compatible test suite versions",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "LatestIdt",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission for IoT Device Tester to get information on latest version of device tester available",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SendMetrics",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions for IoT Device Tester to send usage metrics on your behalf",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "SupportedVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission for IoT Device Tester to get list of supported products and test suite versions",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "iot-device-tester",
+    "service": "AWS IoT Device Tester"
+}

@@ -1,0 +1,15 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AuthenticatePackager",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows the Amazon WAM packaging instance to access your application package catalog.",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "wam",
+    "service": "Amazon WorkSpaces Application Manager"
+}

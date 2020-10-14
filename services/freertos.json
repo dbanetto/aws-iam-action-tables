@@ -1,0 +1,128 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateSoftwareConfiguration",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a software configuration.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "configuration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSoftwareConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the software configuration.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "configuration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeHardwarePlatform",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the hardware platform.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSoftwareConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the software configuration.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "configuration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSoftwareURL",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the URL for Amazon FreeRTOS software download.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSoftwareURLForConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the URL for Amazon FreeRTOS software download based on the configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListFreeRTOSVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists versions of AmazonFreeRTOS.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListHardwarePlatforms",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the hardware platforms.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListHardwareVendors",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the hardware vendors.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSoftwareConfigurations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the software configurations.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSoftwareConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the software configuration.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "configuration",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "freertos",
+    "service": "Amazon FreeRTOS"
+}

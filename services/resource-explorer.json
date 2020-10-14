@@ -1,0 +1,35 @@
+{
+    "actions": [
+        {
+            "access_level": "List",
+            "action": "ListResourceTypes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the resource types currently supported by Tag Editor",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the identifiers of the resources in the AWS account",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTags",
+            "condition_keys": [],
+            "dependent_actions": [
+                "tag:GetResources"
+            ],
+            "description": "Grants permission to retrieve the tags attached to the specified resource identifiers",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "resource-explorer",
+    "service": "AWS Tag Editor"
+}

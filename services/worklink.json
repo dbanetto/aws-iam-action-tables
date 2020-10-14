@@ -1,0 +1,472 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate a domain with an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateWebsiteAuthorizationProvider",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate a website authorization provider with an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateWebsiteCertificateAuthority",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate a website certificate authority with an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFleet",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFleet",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAuditStreamConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the audit stream configuration for an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCompanyNetworkConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the company network configuration for an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe details of a device associated with an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDevicePolicyConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the device policy configuration for an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe details about a domain associated with an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeFleetMetadata",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to describe metadata of an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeIdentityProviderConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the identity provider configuration for an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeWebsiteCertificateAuthority",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a website certificate authority associated with an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate a domain from an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateWebsiteAuthorizationProvider",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate a website authorization provider from an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateWebsiteCertificateAuthority",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate a website certificate authority from an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDevices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the devices associated with an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDomains",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the associated domains for an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListFleets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the Amazon WorkLink fleets associated with the account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list tags for a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListWebsiteAuthorizationProviders",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the website authorization providers for an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListWebsiteCertificateAuthorities",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the website certificate authorities associated with an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RestoreDomainAccess",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to restore access to a domain associated with an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RevokeDomainAccess",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to revoke access to a domain associated with an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SignOutUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to sign out a user from an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add one or more tags to a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove one or more tags from a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateAuditStreamConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the audit stream configuration for an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateCompanyNetworkConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the company network configuration for an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDevicePolicyConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the device policy configuration for an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDomainMetadata",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the metadata for a domain associated with an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFleetMetadata",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the metadata of an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateIdentityProviderConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the identity provider configuration for an Amazon WorkLink fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "worklink",
+    "service": "Amazon WorkLink"
+}

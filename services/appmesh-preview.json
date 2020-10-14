@@ -1,0 +1,545 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateGatewayRoute",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a gateway route that is associated with a virtual gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gatewayRoute",
+                    "required": true
+                },
+                {
+                    "name": "virtualService",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateMesh",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mesh",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRoute",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a route that is associated with a virtual router.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "route",
+                    "required": true
+                },
+                {
+                    "name": "virtualNode",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateVirtualGateway",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a virtual gateway within a service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualGateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateVirtualNode",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a virtual node within a service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualNode",
+                    "required": true
+                },
+                {
+                    "name": "virtualService",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateVirtualRouter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a virtual router within a service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualRouter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateVirtualService",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a virtual service within a service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualService",
+                    "required": true
+                },
+                {
+                    "name": "virtualNode",
+                    "required": false
+                },
+                {
+                    "name": "virtualRouter",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteGatewayRoute",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an existing gateway route.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gatewayRoute",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMesh",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an existing service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mesh",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRoute",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an existing route.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "route",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteVirtualGateway",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an existing virtual gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualGateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteVirtualNode",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an existing virtual node.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualNode",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteVirtualRouter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an existing virtual router.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualRouter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteVirtualService",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an existing virtual service.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualService",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeGatewayRoute",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an existing gateway route.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gatewayRoute",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeMesh",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an existing service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mesh",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeRoute",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an existing route.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "route",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeVirtualGateway",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an existing virtual gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualGateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeVirtualNode",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an existing virtual node.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualNode",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeVirtualRouter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an existing virtual router.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualRouter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeVirtualService",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an existing virtual service.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualService",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListGatewayRoutes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of existing gateway routes in a service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualGateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListMeshes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of existing service meshes.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListRoutes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of existing routes in a service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualRouter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListVirtualGateways",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of existing virtual gateways in a service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mesh",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListVirtualNodes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of existing virtual nodes.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mesh",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListVirtualRouters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of existing virtual routers in a service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mesh",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListVirtualServices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of existing virtual services in a service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mesh",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "StreamAggregatedResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows an Envoy Proxy to receive streamed resources for an App Mesh endpoint (VirtualNode/VirtualGateway).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualGateway",
+                    "required": false
+                },
+                {
+                    "name": "virtualNode",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateGatewayRoute",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing gateway route for a specified service mesh and virtual gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gatewayRoute",
+                    "required": true
+                },
+                {
+                    "name": "virtualService",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateMesh",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mesh",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRoute",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing route for a specified service mesh and virtual router.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "route",
+                    "required": true
+                },
+                {
+                    "name": "virtualNode",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateVirtualGateway",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing virtual gateway in a specified service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualGateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateVirtualNode",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing virtual node in a specified service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualNode",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateVirtualRouter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing virtual router in a specified service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "virtualRouter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateVirtualService",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing virtual service in a specified service mesh.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mesh",
+                    "required": true
+                },
+                {
+                    "name": "virtualNode",
+                    "required": false
+                },
+                {
+                    "name": "virtualRouter",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview"
+}

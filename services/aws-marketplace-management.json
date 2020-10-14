@@ -1,0 +1,51 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "uploadFiles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows access to the File Upload page inside the AWS Marketplace Management Portal.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "viewMarketing",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows access to the Marketing page inside the AWS Marketplace Management Portal.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "viewReports",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows access to the Reports page inside the AWS Marketplace Management Portal.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "viewSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows access to the Settings page inside the AWS Marketplace Management Portal.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "viewSupport",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows access to the Customer Support Eligibility page inside the AWS Marketplace Management Portal.",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "aws-marketplace-management",
+    "service": "AWS Marketplace Management Portal"
+}

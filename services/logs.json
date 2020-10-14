@@ -1,0 +1,531 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateKmsKey",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associates the specified AWS Key Management Service (AWS KMS) customer master key (CMK) with the specified log group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelExportTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Cancels an export task if it is in PENDING or RUNNING state",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateExportTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an ExportTask which allows you to efficiently export data from a Log Group to your Amazon S3 bucket",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLogDelivery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates the log delivery",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLogGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new log group with the specified name",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLogStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new log stream with the specified name",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDestination",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the destination with the specified name and eventually disables all the subscription filters that publish to it",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLogDelivery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the log delivery information for specified log delivery",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLogGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the log group with the specified name and permanently deletes all the archived log events associated with it",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLogStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a log stream and permanently deletes all the archived log events associated with it",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMetricFilter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a metric filter associated with the specified log group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteResourcePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a resource policy from this account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRetentionPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the retention policy of the specified log group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSubscriptionFilter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a subscription filter associated with the specified log group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDestinations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns all the destinations that are associated with the AWS account making the request",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeExportTasks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns all the export tasks that are associated with the AWS account making the request",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeLogGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns all the log groups that are associated with the AWS account making the request",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeLogStreams",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns all the log streams that are associated with the specified log group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeMetricFilters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns all the metrics filters associated with the specified log group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeQueries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of CloudWatch Logs Insights queries that are scheduled, executing, or have been executed recently in this account. You can request all queries, or limit it to queries of a specific log group or queries with a certain status.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeResourcePolicies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Return all the resource policies in this account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeSubscriptionFilters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns all the subscription filters associated with the specified log group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateKmsKey",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociates the associated AWS Key Management Service (AWS KMS) customer master key (CMK) from the specified log group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "FilterLogEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves log events, optionally filtered by a filter pattern from the specified log group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLogDelivery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the log delivery information for specified log delivery",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLogEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves log events from the specified log stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLogGroupFields",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of the fields that are included in log events in the specified log group, along with the percentage of log events that contain each field. The search is limited to a time period that you specify.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLogRecord",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves all the fields and values of a single log event. All fields are retrieved, even if the original query that produced the logRecordPointer retrieved only a subset of fields. Fields are returned as field name/field value pairs.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetQueryResults",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the results from the specified query. If the query is in progress, partial results of that current execution are returned. Only the fields requested in the query are returned.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListLogDeliveries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all the log deliveries for specified account and/or log source",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsLogGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the tags for the specified log group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutDestination",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Creates or updates a Destination",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutDestinationPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates or updates an access policy associated with an existing Destination",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutLogEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Uploads a batch of log events to the specified log stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutMetricFilter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates or updates a metric filter and associates it with the specified log group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutResourcePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates or updates a resource policy allowing other AWS services to put log events to this account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutRetentionPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets the retention of the specified log group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutSubscriptionFilter",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Creates or updates a subscription filter and associates it with the specified log group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "StartQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Schedules a query of a log group using CloudWatch Logs Insights. You specify the log group and time range to query, and the query string to use.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "StopQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops a CloudWatch Logs Insights query that is in progress. If the query has already ended, the operation returns an error indicating that the specified query is not running.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "TagLogGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds or updates the specified tags for the specified log group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "TestMetricFilter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Tests the filter pattern of a metric filter against a sample of log event messages",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UntagLogGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes the specified tags from the specified log group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "log-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateLogDelivery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the log delivery information for specified log delivery",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "logs",
+    "service": "Amazon CloudWatch Logs"
+}

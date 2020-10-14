@@ -1,0 +1,33 @@
+{
+    "actions": [
+        {
+            "access_level": "Read",
+            "action": "GetFinancialReports",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grant access to financial metrics for an app",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetReports",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grant access to standard metrics for an app",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The PutEvents operation records one or more events",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "mobileanalytics",
+    "service": "Amazon Mobile Analytics"
+}

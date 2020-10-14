@@ -1,0 +1,224 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AcceptInvitation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to accept an invitation to become a member of a behavior graph",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Graph",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateGraph",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a behavior graph and begin to aggregate security information",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to request the membership of one or more accounts in a behavior graph managed by this account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Graph",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteGraph",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a behavior graph and stop aggregating security information",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Graph",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove member accounts from a behavior graph managed by this account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Graph",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateMembership",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove the association of this account with a behavior graph",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Graph",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFreeTrialEligibility",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a behavior graph's eligibility for a free trial period",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "Graph",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetGraphIngestState",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the data ingestion state of a behavior graph",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "Graph",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve details on specified members of a behavior graph",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Graph",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPricingInformation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about Amazon Detective's pricing",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetUsageInformation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list usage information of a behavior graph",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "Graph",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListGraphs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list behavior graphs managed by this account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListInvitations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve details on the behavior graphs to which this account has been invited to join",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve details on all members of a behavior graph",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Graph",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RejectInvitation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to reject an invitation to become a member of a behavior graph",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Graph",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "SearchGraph",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to search the data stored in a behavior graph",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "Graph",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartMonitoringMember",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start data ingest for a member account that has a status of ACCEPTED_BUT_DISABLED.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Graph",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "detective",
+    "service": "Amazon Detective"
+}

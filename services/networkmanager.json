@@ -1,0 +1,531 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateCustomerGateway",
+            "condition_keys": [
+                "networkmanager:cgwArn"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to associate a customer gateway to a device",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                },
+                {
+                    "name": "global-network",
+                    "required": true
+                },
+                {
+                    "name": "link",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateLink",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate a link to a device",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                },
+                {
+                    "name": "global-network",
+                    "required": true
+                },
+                {
+                    "name": "link",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDevice",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new device",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateGlobalNetwork",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [
+                "iam:CreateServiceLinkedRole"
+            ],
+            "description": "Grants permission to create a new global network",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLink",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new link",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                },
+                {
+                    "name": "site",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSite",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new site",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a device",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                },
+                {
+                    "name": "global-network",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteGlobalNetwork",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a global network",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLink",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a link",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                },
+                {
+                    "name": "link",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSite",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a site",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                },
+                {
+                    "name": "site",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterTransitGateway",
+            "condition_keys": [
+                "networkmanager:tgwArn"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to deregister a transit gateway from a global network",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeGlobalNetworks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe global networks",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateCustomerGateway",
+            "condition_keys": [
+                "networkmanager:cgwArn"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate a customer gateway from a device",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateLink",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate a link from a device",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                },
+                {
+                    "name": "global-network",
+                    "required": true
+                },
+                {
+                    "name": "link",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetCustomerGatewayAssociations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe customer gateway associations",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetDevices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe devices",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                },
+                {
+                    "name": "device",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetLinkAssociations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe link associations",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                },
+                {
+                    "name": "device",
+                    "required": false
+                },
+                {
+                    "name": "link",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetLinks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe links",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                },
+                {
+                    "name": "link",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetSites",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe global networks",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                },
+                {
+                    "name": "site",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetTransitGatewayRegistrations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe transit gateway registrations",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to lists tag for a Network Manager resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": false
+                },
+                {
+                    "name": "global-network",
+                    "required": false
+                },
+                {
+                    "name": "link",
+                    "required": false
+                },
+                {
+                    "name": "site",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterTransitGateway",
+            "condition_keys": [
+                "networkmanager:tgwArn"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to register a transit gateway to a global network",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to tag a Network Manager resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": false
+                },
+                {
+                    "name": "global-network",
+                    "required": false
+                },
+                {
+                    "name": "link",
+                    "required": false
+                },
+                {
+                    "name": "site",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to untag a Network Manager resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": false
+                },
+                {
+                    "name": "global-network",
+                    "required": false
+                },
+                {
+                    "name": "link",
+                    "required": false
+                },
+                {
+                    "name": "site",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a device",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                },
+                {
+                    "name": "global-network",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateGlobalNetwork",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a global network",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateLink",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a link",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                },
+                {
+                    "name": "link",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSite",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a site",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-network",
+                    "required": true
+                },
+                {
+                    "name": "site",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "networkmanager",
+    "service": "Network Manager"
+}

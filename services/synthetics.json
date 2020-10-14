@@ -1,0 +1,145 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateCanary",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a canary.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCanary",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a canary. Amazon Synthetics deletes all the resources except for the Lambda function and the CloudWatch Alarms if you created one.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "canary",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCanaries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information of all canaries.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCanariesLastRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about the last test run associated with all canaries.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCanaryRuns",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about all the test runs associated with a canary.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "canary",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of all tags and values associated with a canary.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "canary",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartCanary",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts a canary, so that Amazon Synthetics starts monitoring a website.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "canary",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopCanary",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops a canary.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "canary",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds one or more tags to a canary.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "canary",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UntagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes one or more tags from a canary.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "canary",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateCanary",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a canary.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "canary",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "synthetics",
+    "service": "Amazon CloudWatch Synthetics"
+}

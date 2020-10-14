@@ -1,0 +1,141 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "BatchDeleteAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Performs multiple DeleteAttributes operations in a single call, which reduces round trips and latencies.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchPutAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "With the BatchPutAttributes operation, you can perform multiple PutAttribute operations in a single call. With the BatchPutAttributes operation, you can perform multiple PutAttribute operations in a single call.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The CreateDomain operation creates a new domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes one or more attributes associated with the item.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DeleteDomain operation deletes a domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DomainMetadata",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about the domain, including when the domain was created, the number of items and attributes, and the size of attribute names and values.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns all of the attributes associated with the item.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDomains",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Description for ListDomains",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The PutAttributes operation creates or replaces attributes in an item.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "Select",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Description for Select",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "sdb",
+    "service": "Amazon SimpleDB"
+}

@@ -1,0 +1,925 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AddFacetToObject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds a new Facet to an object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ApplySchema",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Copies input published schema into Directory with same name and version as that of published schema.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                },
+                {
+                    "name": "publishedSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AttachObject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Attaches an existing object to another existing object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AttachPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Attaches a policy object to any other object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AttachToIndex",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Attaches the specified object to the specified index.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AttachTypedLink",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Attaches a typed link b/w a source & target object reference.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchRead",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Performs all the read operations in a batch. Each individual operation inside BatchRead needs to be granted permissions explicitly.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchWrite",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Performs all the write operations in a batch. Each individual operation inside BatchWrite needs to be granted permissions explicitly.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a Directory by copying the published schema into the directory.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "publishedSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFacet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new Facet in a schema.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "appliedSchema",
+                    "required": true
+                },
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateIndex",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an index object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateObject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an object in a Directory.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSchema",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new schema in a development state.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTypedLinkFacet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new Typed Link facet in a schema.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "appliedSchema",
+                    "required": true
+                },
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a directory. Only disabled directories can be deleted.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFacet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a given Facet. All attributes and Rules associated with the facet will be deleted.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteObject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an object and its associated attributes.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSchema",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a given schema.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                },
+                {
+                    "name": "publishedSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTypedLinkFacet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a given TypedLink Facet. All attributes and Rules associated with the facet will be deleted.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DetachFromIndex",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Detaches the specified object from the specified index.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DetachObject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Detaches a given object from the parent object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DetachPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Detaches a policy from an object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DetachTypedLink",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Detaches a given typed link b/w given source and target object reference.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disables the specified directory.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the specified directory.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves metadata about a directory.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFacet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets details of the Facet, such as Facet Name, Attributes, Rules, or ObjectType.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "appliedSchema",
+                    "required": true
+                },
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                },
+                {
+                    "name": "publishedSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLinkAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves attributes that are associated with a typed link.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetObjectAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves attributes within a facet that are associated with an object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetObjectInformation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves metadata about an object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSchemaAsJson",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves a JSON representation of the schema.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "appliedSchema",
+                    "required": true
+                },
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                },
+                {
+                    "name": "publishedSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTypedLinkFacetInformation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns identity attributes order information associated with a given typed link facet.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "appliedSchema",
+                    "required": true
+                },
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                },
+                {
+                    "name": "publishedSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListAppliedSchemaArns",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists schemas applied to a directory.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListAttachedIndices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists indices attached to an object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDevelopmentSchemaArns",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves the ARNs of schemas in the development state.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDirectories",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists directories created within an account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListFacetAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves attributes attached to the facet.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "appliedSchema",
+                    "required": true
+                },
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                },
+                {
+                    "name": "publishedSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListFacetNames",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves the names of facets that exist in a schema.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "appliedSchema",
+                    "required": true
+                },
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                },
+                {
+                    "name": "publishedSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListIncomingTypedLinks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a paginated list of all incoming TypedLinks for a given object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListIndex",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists objects attached to the specified index.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListObjectAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all attributes associated with an object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListObjectChildren",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a paginated list of child objects associated with a given object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListObjectParentPaths",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves all available parent paths for any object type such as node, leaf node, policy node, and index node objects.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListObjectParents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists parent objects associated with a given object in pagination fashion.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListObjectPolicies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns policies attached to an object in pagination fashion.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListOutgoingTypedLinks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a paginated list of all outgoing TypedLinks for a given object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListPolicyAttachments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns all of the ObjectIdentifiers to which a given policy is attached.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListPublishedSchemaArns",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves published schema ARNs.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns tags for a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTypedLinkFacetAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a paginated list of attributes associated with typed link facet.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "appliedSchema",
+                    "required": true
+                },
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                },
+                {
+                    "name": "publishedSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTypedLinkFacetNames",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a paginated list of typed link facet names that exist in a schema.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "appliedSchema",
+                    "required": true
+                },
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                },
+                {
+                    "name": "publishedSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "LookupPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all policies from the root of the Directory to the object specified.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PublishSchema",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Publishes a development schema with a version.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutSchemaFromJson",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows a schema to be updated using JSON upload. Only available for development schemas.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RemoveFacetFromObject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes the specified facet from the specified object.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds tags to a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes tags from a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFacet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds/Updates/Deletes existing Attributes, Rules, or ObjectType of a Facet.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "appliedSchema",
+                    "required": true
+                },
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateLinkAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a given typed link\u00e2\u0080\u0099s attributes. Attributes to be updated must not contribute to the typed link\u00e2\u0080\u0099s identity, as defined by its IdentityAttributeOrder.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateObjectAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a given object's attributes.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directory",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSchema",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the schema name with a new name.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTypedLinkFacet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds/Updates/Deletes existing Attributes, Rules, identity attribute order of a TypedLink Facet.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "developmentSchema",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "clouddirectory",
+    "service": "Amazon Cloud Directory"
+}

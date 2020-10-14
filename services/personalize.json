@@ -1,0 +1,595 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateBatchInferenceJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a batch inference job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "batchInferenceJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCampaign",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a campaign",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "campaign",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDataset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a dataset",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDatasetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a dataset group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasetGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDatasetImportJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a dataset import job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasetImportJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateEventTracker",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an event tracker",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "eventTracker",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFilter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a filter",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "filter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSchema",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a schema",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSolution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a solution",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "solution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSolutionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a solution version",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "solution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCampaign",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a campaign",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "campaign",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDataset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a dataset",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDatasetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a dataset group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasetGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteEventTracker",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an event tracker",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "eventTracker",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFilter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a filter",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "filter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSchema",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a schema",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSolution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a solution including all versions of the solution",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "solution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAlgorithm",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an algorithm",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "algorithm",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeBatchInferenceJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a batch inference job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "batchInferenceJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCampaign",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a campaign",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "campaign",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDataset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a dataset",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDatasetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a dataset group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasetGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDatasetImportJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a dataset import job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasetImportJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEventTracker",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an event tracker",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "eventTracker",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeFeatureTransformation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a feature transformation",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "featureTransformation",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeFilter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a filter",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "filter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeRecipe",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a recipe",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "recipe",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSchema",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a schema",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSolution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a solution",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "solution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSolutionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a version of a solution",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "solution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "GetPersonalizedRanking",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a re-ranked list of recommendations",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "campaign",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRecommendations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a list of recommendations from a campaign",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "campaign",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSolutionMetrics",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets metrics for a solution version",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "solution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListBatchInferenceJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists batch inference jobs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListCampaigns",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists campaigns",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDatasetGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists dataset groups",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDatasetImportJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists dataset import jobs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDatasets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists datasets",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListEventTrackers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists event trackers",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListFilters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists filters",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListRecipes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists recipes",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSchemas",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists schemas",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSolutionVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists versions of a solution",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSolutions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists solutions",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Records real time event data",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "eventTracker",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateCampaign",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a campaign",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "campaign",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "personalize",
+    "service": "Amazon Personalize"
+}

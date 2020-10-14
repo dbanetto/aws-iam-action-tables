@@ -1,0 +1,132 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AddFlowOutputs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add outputs to any flow.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFlow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create flows.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFlow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete flows.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeFlow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to display the details of a flow including the flow ARN, name, and Availability Zone, as well as details about the source, outputs, and entitlements.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "GrantFlowEntitlements",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to grant entitlements on any flow.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListEntitlements",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to display a list of all entitlements that have been granted to the account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListFlows",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to display a list of flows that are associated with this account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RemoveFlowOutput",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove outputs from any flow.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RevokeFlowEntitlement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to revoke entitlements on any flow.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartFlow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start flows.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StopFlow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop flows.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFlowEntitlement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update entitlements on any flow.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFlowOutput",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update outputs on any flow.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFlowSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the source of any flow.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "mediaconnect",
+    "service": "AWS Elemental MediaConnect"
+}

@@ -1,0 +1,447 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AbortMultipartUpload",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Aborts a multipart upload identified by the upload ID",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "AbortVaultLock",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Aborts the vault locking process if the vault lock is not in the Locked state",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "AddTagsToVault",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds the specified tags to a vault",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CompleteMultipartUpload",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Completes a multipart upload process",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "CompleteVaultLock",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Completes the vault locking process",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateVault",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new vault with the specified name",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteArchive",
+            "condition_keys": [
+                "glacier:ArchiveAgeInDays"
+            ],
+            "dependent_actions": [],
+            "description": "Deletes an archive from a vault",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteVault",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a vault",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "DeleteVaultAccessPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the access policy associated with the specified vault",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteVaultNotifications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the notification configuration set for a vault",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a job you previously initiated",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeVault",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a vault",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDataRetrievalPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the current data retrieval policy for the account and region specified in the GET request",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetJobOutput",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Downloads the output of the job you initiated",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetVaultAccessPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves the access-policy subresource set on the vault",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetVaultLock",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves attributes from the lock-policy subresource set on the specified vault",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetVaultNotifications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves the notification-configuration subresource set on the vault",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "InitiateJob",
+            "condition_keys": [
+                "glacier:ArchiveAgeInDays"
+            ],
+            "dependent_actions": [],
+            "description": "Initiates a job of the specified type",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "InitiateMultipartUpload",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Initiates a multipart upload",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "InitiateVaultLock",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Initiates the vault locking process",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists jobs for a vault that are in-progress and jobs that have recently finished",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListMultipartUploads",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists in-progress multipart uploads for the specified vault",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListParts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the parts of an archive that have been uploaded in a specific multipart upload",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListProvisionedCapacity",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation lists the provisioned capacity for the specified AWS account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForVault",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all the tags attached to a vault",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListVaults",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all vaults",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PurchaseProvisionedCapacity",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation purchases a provisioned capacity unit for an AWS account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "RemoveTagsFromVault",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes one or more tags from the set of tags attached to a vault",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "SetDataRetrievalPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets and then enacts a data retrieval policy in the region specified in the PUT request",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "SetVaultAccessPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Configures an access policy for a vault and will overwrite an existing policy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetVaultNotifications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Configures vault notifications",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UploadArchive",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds an archive to a vault",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UploadMultipartPart",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Uploads a part of an archive",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vault",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "glacier",
+    "service": "Amazon Glacier"
+}

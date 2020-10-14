@@ -1,0 +1,78 @@
+{
+    "actions": [
+        {
+            "access_level": "Read",
+            "action": "DescribeReportCreation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe the status of the StartReportCreation operation.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetComplianceSummary",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get a table that shows counts of resources that are noncompliant with their effective tag policies.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get tagged AWS resources that match the given tag filters",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTagKeys",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get all tagKeys for the account in the specific region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTagValues",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get all tagValues for the account in the specific region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartReportCreation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Generate a report that lists all tagged resources in accounts across your organization, and whether each resource is compliant with the effective tag policy.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Add tags to AWS resources",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Remove tags from AWS resources",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "tag",
+    "service": "Amazon Resource Group Tagging API"
+}

@@ -1,0 +1,654 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateApplication",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an application",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateConfigurationProfile",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a configuration profile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "configurationprofile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDeploymentStrategy",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a deployment strategy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deploymentstrategy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateEnvironment",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an environment",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "environment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateHostedConfigurationVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a hosted configuration version",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "configurationprofile",
+                    "required": true
+                },
+                {
+                    "name": "hostedconfigurationversion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an application",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteConfigurationProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a configuration profile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "configurationprofile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDeploymentStrategy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a deployment strategy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deploymentstrategy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteEnvironment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an environment",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "environment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteHostedConfigurationVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a hosted configuration version",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "configurationprofile",
+                    "required": true
+                },
+                {
+                    "name": "hostedconfigurationversion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetApplication",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about an application",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetConfiguration",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about a configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "configurationprofile",
+                    "required": true
+                },
+                {
+                    "name": "environment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetConfigurationProfile",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about a configuration profile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "configurationprofile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDeployment",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about a deployment",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "deployment",
+                    "required": true
+                },
+                {
+                    "name": "environment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDeploymentStrategy",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about a deployment strategy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deploymentstrategy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetEnvironment",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about an environment",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "environment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetHostedConfigurationVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about a hosted configuration version",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "configurationprofile",
+                    "required": true
+                },
+                {
+                    "name": "hostedconfigurationversion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListApplications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the applications in your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListConfigurationProfiles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the configuration profiles for an application",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDeploymentStrategies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the deployment strategies for your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDeployments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the deployments for an environment",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "environment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListEnvironments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the environments for an application",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListHostedConfigurationVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the hosted configuration versions for a configuration profile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "configurationprofile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to view a list of resource tags for a specified resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": false
+                },
+                {
+                    "name": "configurationprofile",
+                    "required": false
+                },
+                {
+                    "name": "deployment",
+                    "required": false
+                },
+                {
+                    "name": "deploymentstrategy",
+                    "required": false
+                },
+                {
+                    "name": "environment",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartDeployment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to initiate a deployment",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "configurationprofile",
+                    "required": true
+                },
+                {
+                    "name": "deployment",
+                    "required": true
+                },
+                {
+                    "name": "deploymentstrategy",
+                    "required": true
+                },
+                {
+                    "name": "environment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopDeployment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop a deployment",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "deployment",
+                    "required": true
+                },
+                {
+                    "name": "environment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to tag an appconfig resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": false
+                },
+                {
+                    "name": "configurationprofile",
+                    "required": false
+                },
+                {
+                    "name": "deployment",
+                    "required": false
+                },
+                {
+                    "name": "deploymentstrategy",
+                    "required": false
+                },
+                {
+                    "name": "environment",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to untag an appconfig resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": false
+                },
+                {
+                    "name": "configurationprofile",
+                    "required": false
+                },
+                {
+                    "name": "deployment",
+                    "required": false
+                },
+                {
+                    "name": "deploymentstrategy",
+                    "required": false
+                },
+                {
+                    "name": "environment",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApplication",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an application",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateConfigurationProfile",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to modify a configuration profile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "configurationprofile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDeploymentStrategy",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to modify a deployment strategy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deploymentstrategy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateEnvironment",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an environment",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "environment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ValidateConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to validate a configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                },
+                {
+                    "name": "configurationprofile",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "appconfig",
+    "service": "AWS AppConfig"
+}

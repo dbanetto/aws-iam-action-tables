@@ -1,0 +1,198 @@
+{
+    "actions": [
+        {
+            "access_level": "Read",
+            "action": "DescribeAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the AWS Support plan and various AWS Trusted Advisor preferences",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAccountAccess",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view if the AWS account has enabled or disabled AWS Trusted Advisor",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCheckItems",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details for the check items",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "checks",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCheckRefreshStatuses",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the refresh statuses for AWS Trusted Advisor checks",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "checks",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCheckSummaries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view AWS Trusted Advisor check summaries",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "checks",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeChecks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details for AWS Trusted Advisor checks",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeNotificationPreferences",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the notification preferences for the AWS account",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeOrganization",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view if the AWS account meets the requirements to enable the organizational view feature",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeOrganizationAccounts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the linked AWS accounts that are in the organization",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeReports",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details for organizational view reports, such as the report name, runtime, date created, status, and format",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeServiceMetadata",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about organizational view reports, such as the AWS Regions, check categories, check names, and resource statuses",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ExcludeCheckItems",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to exclude recommendations for AWS Trusted Advisor checks",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "checks",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "GenerateReport",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a report for AWS Trusted Advisor checks in your organization",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "IncludeCheckItems",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to include recommendations for AWS Trusted Advisor checks",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "checks",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RefreshCheck",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to refresh an AWS Trusted Advisor check",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "checks",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetAccountAccess",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to enable or disable AWS Trusted Advisor for the account",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SetOrganizationAccess",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to enable the organizational view feature for AWS Trusted Advisor",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateNotificationPreferences",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update notification preferences for AWS Trusted Advisor",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "trustedadvisor",
+    "service": "AWS Trusted Advisor"
+}

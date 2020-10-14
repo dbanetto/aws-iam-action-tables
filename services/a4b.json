@@ -1,0 +1,1020 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "ApproveSkill",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associates a skill with the organization under the customer's AWS account. If a skill is private, the user implicitly accepts access to this skill during enablement.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateContactWithAddressBook",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associates a contact with a given address book.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "addressbook",
+                    "required": true
+                },
+                {
+                    "name": "contact",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateDeviceWithRoom",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associates device with given room.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                },
+                {
+                    "name": "room",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateSkillGroupWithRoom",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associates the skill group with given room. SkillGroup ARN and Room ARN must be specified.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "room",
+                    "required": true
+                },
+                {
+                    "name": "skillgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateSkillWithSkillGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associates a skill with a skill group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "skillgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateSkillWithUsers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Makes a private skill available for enrolled users to enable on their devices.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CompleteRegistration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Completes the operation of registering an Alexa device.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAddressBook",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an address book with the specified details.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateBusinessReportSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a recurring schedule for usage reports to deliver to the specified S3 location with a specified daily or weekly interval.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateConferenceProvider",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds a new conference provider under the user's AWS account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateContact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a contact with the specified details.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new profile.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRoom",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create room with the specified details.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "profile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSkillGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a skill group with given name and description.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAddressBook",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an address book by the address book ARN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "addressbook",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBusinessReportSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the recurring report delivery schedule with the specified schedule ARN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schedule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteConferenceProvider",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a conference provider.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "conferenceprovider",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteContact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a contact by the contact ARN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "contact",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes a device from Alexa For Business.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete profile by profile ARN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "profile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRoom",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete room.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "room",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRoomSkillParameter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a parameter from a skill and room.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "room",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSkillAuthorization",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Unlinks a third-party account from a skill.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "room",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSkillGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes skill group with skill group ARN. Skillgroup ARN must be specified.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "skillgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateContactFromAddressBook",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociates a contact from a given address book.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "addressbook",
+                    "required": true
+                },
+                {
+                    "name": "contact",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateDeviceFromRoom",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociates device from its current room.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateSkillFromSkillGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociates a skill from a skill group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "skillgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateSkillFromUsers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Makes a private skill unavailable for enrolled users and prevents them from enabling it on their devices.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateSkillGroupFromRoom",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociates the skill group from given room. SkillGroup ARN and Room ARN must be specified.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "room",
+                    "required": true
+                },
+                {
+                    "name": "skillgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ForgetSmartHomeAppliances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Forgets smart home appliances associated to a room.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "room",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAddressBook",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the address book details by the address book ARN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "addressbook",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetConferencePreference",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves the existing conference preferences.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetConferenceProvider",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets details about a specific conference provider.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "conferenceprovider",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetContact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the contact details by the contact ARN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "contact",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get device details.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetNetworkProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the network profile details by the network profile ARN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "networkprofile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets profile when provided with Profile ARN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "profile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRoom",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get room details.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "room",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRoomSkillParameter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get an existing parameter that has been set for a skill and room.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "room",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSkillGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets skill group details with skill group ARN. Skillgroup ARN must be specified.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "skillgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListBusinessReportSchedules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the details of the schedules that a user configured.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListConferenceProviders",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists conference providers under a specific AWS account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDeviceEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the device event history, including device connection status, for up to 30 days.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListSkills",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists skills.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSkillsStoreCategories",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all categories in the Alexa skill store.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSkillsStoreSkillsByCategory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all skills in the Alexa skill store by category.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSmartHomeAppliances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all of the smart home appliances associated with a room.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "room",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all tags on a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": false
+                },
+                {
+                    "name": "room",
+                    "required": false
+                },
+                {
+                    "name": "user",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutConferencePreference",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets the conference preferences on a specific conference provider at the account level.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutDeviceSetupEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Publishes Alexa device setup events.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutRoomSkillParameter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Put a room specific parameter for a skill.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "room",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutSkillAuthorization",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Links a user's account to a third-party skill provider. If this API operation is called by an assumed IAM role, the skill being linked must be a private skill. Also, the skill must be owned by the AWS account that assumed the IAM role.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "room",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterAVSDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Registers an Alexa-enabled device built by an Original Equipment Manufacturer (OEM) using Alexa Voice Service (AVS).",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Registers an Alexa device.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RejectSkill",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociates a skill from the organization under a user's AWS account. If the skill is a private skill, it moves to an AcceptStatus of PENDING.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ResolveRoom",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns resolved room information.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RevokeInvitation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Revoke an invitation.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "SearchAddressBooks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Searches address books and lists the ones that meet a set of filter and sort criteria.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "SearchContacts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Searches contacts and lists the ones that meet a set of filter and sort criteria.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "SearchDevices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Search for devices.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "SearchNetworkProfiles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Searches network profiles and lists the ones that meet a set of filter and sort criteria.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "SearchProfiles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Search for profiles.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "SearchRooms",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Search for rooms.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "SearchSkillGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Search for skill groups.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "SearchUsers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Search for users.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SendInvitation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Send an invitation to a user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartDeviceSync",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Restore the device and its account to its known, default settings by clearing all information and settings set by its previous users.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "StartSmartHomeApplianceDiscovery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Initiates the discovery of any smart home appliances associated with the room.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "room",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds metadata tags to a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": false
+                },
+                {
+                    "name": "room",
+                    "required": false
+                },
+                {
+                    "name": "user",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes metadata tags from a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": false
+                },
+                {
+                    "name": "room",
+                    "required": false
+                },
+                {
+                    "name": "user",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateAddressBook",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates address book details by the address book ARN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "addressbook",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateBusinessReportSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the configuration of the report delivery schedule with the specified schedule ARN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schedule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateConferenceProvider",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing conference provider's settings.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "conferenceprovider",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateContact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the contact details by the contact ARN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "contact",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates device name.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing profile.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "profile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRoom",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update room details.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "room",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSkillGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates skill group details with skill group ARN. Skillgroup ARN must be specified.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "skillgroup",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "a4b",
+    "service": "Alexa for Business"
+}

@@ -1,0 +1,303 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "BatchPutMessage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sends a set of messages to the AWS IoT Events system.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchUpdateDetector",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update an detector within the AWS IoT Events system.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDetectorModel",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a detector model.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detectorModel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateInput",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an input.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDetectorModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a detector model.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detectorModel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteInput",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an input.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDetector",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about the specified detector (instance).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detectorModel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDetectorModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a detector model.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detectorModel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeInput",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an input.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLoggingOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves the current settings of the AWS IoT Events logging options.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDetectorModelVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all the versions of a detector model. Only the metadata associated with each detector model version is returned.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detectorModel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDetectorModels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the detector models you have created. Only the metadata associated with each detector model is returned.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDetectors",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists detectors (the instances of a detector model).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detectorModel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListInputs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the inputs you have created.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the tags (metadata) which you have assigned to the resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detectorModel",
+                    "required": false
+                },
+                {
+                    "name": "input",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutLoggingOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets or updates the AWS IoT Events logging options.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Adds to or modifies the tags of the given resource. Tags are metadata which can be used to manage a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detectorModel",
+                    "required": false
+                },
+                {
+                    "name": "input",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Removes the given tags (metadata) from the resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detectorModel",
+                    "required": false
+                },
+                {
+                    "name": "input",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDetectorModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a detector model.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detectorModel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateInput",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an input.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateInputRouting",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates input routing.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "input",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "iotevents",
+    "service": "AWS IoT Events"
+}

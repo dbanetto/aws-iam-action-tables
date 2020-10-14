@@ -1,0 +1,116 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "DELETE",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Used to delete resources",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apigateway-general",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GET",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Used to get information about resources",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apigateway-general",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PATCH",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Used to update resources",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apigateway-general",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "POST",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Used to create child resources",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apigateway-general",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PUT",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Used to update resources (and, although not recommended, can be used to create child resources)",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apigateway-general",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetWebACL",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gives WebAcl permissions to WAF",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apigateway-general",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRestApiPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Used to update the Resource Policy for a given API",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "apigateway-general",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "apigateway",
+    "service": "Manage Amazon API Gateway"
+}

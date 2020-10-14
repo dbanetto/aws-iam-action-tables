@@ -1,0 +1,185 @@
+{
+    "actions": [
+        {
+            "access_level": "Tagging",
+            "action": "AddTagsToCertificate",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Adds one or more tags to a certificate.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "certificate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a certificate and its associated private key.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "certificate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of the fields contained in the specified certificate.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "certificate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ExportCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Exports a private certificate issued by a private certificate authority (CA) for use anywhere.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "certificate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves a certificate and certificate chain for the certificate specified by an ARN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "certificate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ImportCertificate",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Imports a 3rd party SSL/TLS certificate into AWS Certificate Manager (ACM).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "certificate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListCertificates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves a list of the certificate ARNs and the domain name for each ARN.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the tags that have been applied to the certificate.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "RemoveTagsFromCertificate",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Remove one or more tags from a certificate. A tag consists of a key-value pair",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "certificate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RenewCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Renews an eligable private certificate.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "certificate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RequestCertificate",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Requests a public or private certificate.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ResendValidationEmail",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Resends an email to request domain ownership validation.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "certificate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateCertificateOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a certificate. Use to specify whether to opt in to or out of certificate transparency logging.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "certificate",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "acm",
+    "service": "AWS Certificate Manager"
+}

@@ -1,0 +1,177 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateDeliveryStream",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a delivery stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deliverystream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDeliveryStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a delivery stream and its data.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deliverystream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDeliveryStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the specified delivery stream and gets the status.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deliverystream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDeliveryStreams",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists your delivery streams.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForDeliveryStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the tags for the specified delivery stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deliverystream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutRecord",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Writes a single data record into an Amazon Kinesis Firehose delivery stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deliverystream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutRecordBatch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Writes multiple data records into a delivery stream in a single call, which can achieve higher throughput per producer than when writing single records.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deliverystream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartDeliveryStreamEncryption",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables server-side encryption (SSE) for the delivery stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deliverystream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopDeliveryStreamEncryption",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disables the specified destination of the specified delivery stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deliverystream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TagDeliveryStream",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Adds or updates tags for the specified delivery stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deliverystream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UntagDeliveryStream",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Removes tags from the specified delivery stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deliverystream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDestination",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the specified destination of the specified delivery stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deliverystream",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "firehose",
+    "service": "Amazon Kinesis Firehose"
+}

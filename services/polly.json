@@ -1,0 +1,109 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "DeleteLexicon",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified pronunciation lexicon stored in an AWS Region",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "lexicon",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeVoices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the list of voices that are available for use when requesting speech synthesis.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLexicon",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the content of the specified pronunciation lexicon stored in an AWS Region.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "lexicon",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSpeechSynthesisTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the user to get information about specific speech synthesis task.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListLexicons",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of pronunciation lexicons stored in an AWS Region.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSpeechSynthesisTasks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the user to list requested speech synthesis tasks.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutLexicon",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stores a pronunciation lexicon in an AWS Region.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartSpeechSynthesisTask",
+            "condition_keys": [],
+            "dependent_actions": [
+                "s3:PutObject"
+            ],
+            "description": "Enables the user to synthesize long inputs to provided S3 location.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "lexicon",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "SynthesizeSpeech",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Synthesizes UTF-8 input, plain text or SSML, to a stream of bytes.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "lexicon",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "prefix": "polly",
+    "service": "Amazon Polly"
+}

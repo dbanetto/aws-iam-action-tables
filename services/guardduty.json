@@ -1,0 +1,838 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AcceptInvitation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to accept invitations to become a GuardDuty member account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ArchiveFindings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to archive GuardDuty findings",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDetector",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a detector",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFilter",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create GuardDuty filters. A filters defines finding attributes and conditions used to filter findings",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateIPSet",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an IPSet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create GuardDuty member accounts, where the account used to create a member becomes the GuardDuty administrator account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePublishingDestination",
+            "condition_keys": [],
+            "dependent_actions": [
+                "s3:GetObject",
+                "s3:ListBucket"
+            ],
+            "description": "Grants permission to create a publishing destination",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSampleFindings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create sample findings",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateThreatIntelSet",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create GuardDuty ThreatIntelSets, where a ThreatIntelSet consists of known malicious IP addresses used by GuardDuty to generate findings",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeclineInvitations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to decline invitations to become a GuardDuty member account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDetector",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete GuardDuty detectors",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFilter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete GuardDuty filters",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                },
+                {
+                    "name": "filter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteIPSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete GuardDuty IPSets",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                },
+                {
+                    "name": "ipset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteInvitations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete invitations to become a GuardDuty member account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete GuardDuty member accounts",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePublishingDestination",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a publishing destination",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                },
+                {
+                    "name": "publishingDestination",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteThreatIntelSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete GuardDuty ThreatIntelSets",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                },
+                {
+                    "name": "threatintelset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeOrganizationConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve details about the delegated administrator associated with a GuardDuty detector",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribePublishingDestination",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve details about a publishing destination",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                },
+                {
+                    "name": "publishingDestination",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableOrganizationAdminAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disable the organization delegated administrator for GuardDuty",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateFromMasterAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate a GuardDuty member account from its GuardDuty master account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate GuardDuty member accounts from their master GuardDuty account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableOrganizationAdminAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to enable an organization delegated administrator for GuardDuty",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDetector",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve GuardDuty detectors",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFilter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve GuardDuty filters",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                },
+                {
+                    "name": "filter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFindings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve GuardDuty findings",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFindingsStatistics",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of GuardDuty finding statistics",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetIPSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permsission to retrieve GuardDuty IPSets",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                },
+                {
+                    "name": "ipset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInvitationsCount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the count of all GuardDuty invitations sent to a specified account, which does not include the accepted invitation",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMasterAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve details of the GuardDuty master account associated with a member account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the member accounts associated with a master account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetThreatIntelSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve GuardDuty ThreatIntelSets",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                },
+                {
+                    "name": "threatintelset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "InviteMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to invite other AWS accounts to enable GuardDuty and become GuardDuty member accounts",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDetectors",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of GuardDuty detectors",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListFilters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of GuardDuty filters",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListFindings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of GuardDuty findings",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListIPSets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of GuardDuty IPSets",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListInvitations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a lists of all of the GuardDuty membership invitations that were sent to an AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrierve a lsit of GuardDuty member accounts associated with a master account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListOrganizationAdminAccounts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list details about the organization delegated administrator for GuardDuty",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListPublishingDestinations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of publishing destinations",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of tags associated with a GuardDuty resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": false
+                },
+                {
+                    "name": "filter",
+                    "required": false
+                },
+                {
+                    "name": "ipset",
+                    "required": false
+                },
+                {
+                    "name": "threatintelset",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListThreatIntelSets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of GuardDuty ThreatIntelSets",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartMonitoringMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to a GuardDuty administrator account to monitor findings from GuardDuty member accounts",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopMonitoringMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disable monitoring findings from member accounts",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add tags to a GuardDuty resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": false
+                },
+                {
+                    "name": "filter",
+                    "required": false
+                },
+                {
+                    "name": "ipset",
+                    "required": false
+                },
+                {
+                    "name": "threatintelset",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UnarchiveFindings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to unarchive GuardDuty findings",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove tags from a GuardDuty resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": false
+                },
+                {
+                    "name": "filter",
+                    "required": false
+                },
+                {
+                    "name": "ipset",
+                    "required": false
+                },
+                {
+                    "name": "threatintelset",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDetector",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update GuardDuty detectors",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFilter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to updates GuardDuty filters",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                },
+                {
+                    "name": "filter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFindingsFeedback",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update findings feedback to mark GuardDuty findings as useful or not useful",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateIPSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update GuardDuty IPSets",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                },
+                {
+                    "name": "ipset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateOrganizationConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the delegated administrator configuration associated with a GuardDuty detector",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePublishingDestination",
+            "condition_keys": [],
+            "dependent_actions": [
+                "s3:GetObject",
+                "s3:ListBucket"
+            ],
+            "description": "Grants permission to update a publishing destination",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                },
+                {
+                    "name": "publishingDestination",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateThreatIntelSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to updates the GuardDuty ThreatIntelSets",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "detector",
+                    "required": true
+                },
+                {
+                    "name": "threatintelset",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty"
+}

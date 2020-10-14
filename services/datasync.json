@@ -1,0 +1,433 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CancelTaskExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Cancels execution of a sync task.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "taskexecution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAgent",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Activates an agent that you have deployed on your host.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLocationEfs",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an endpoint for an Amazon EFS file system.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLocationFsxWindows",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an endpoint for an Amazon FSx Windows File Server file system.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLocationNfs",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an endpoint for a NFS file system.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLocationObjectStorage",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an endpoint for a self-managed object storage bucket.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLocationS3",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an endpoint for an Amazon S3 bucket.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLocationSmb",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an endpoint for an SMB file system.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTask",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a sync task.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAgent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an agent.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "agent",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLocation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the configuration of a location used by AWS DataSync.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "location",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a sync task.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "task",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAgent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns metadata such as name, network interfaces, and the status (that is, whether the agent is running or not) about a sync agent.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "agent",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLocationEfs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns metadata, such as the path information about an Amazon EFS sync location.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "location",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLocationFsxWindows",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns metadata, such as the path information about an Amazon FSx Windows sync location.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "location",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLocationNfs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns metadata, such as the path information, about a NFS sync location.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "location",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLocationObjectStorage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns metadata about a self-managed object storage server location.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "location",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLocationS3",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns metadata, such as bucket name, about an Amazon S3 bucket sync location.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "location",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLocationSmb",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns metadata, such as the path information, about an SMB sync location.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "location",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns metadata about a sync task.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "task",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTaskExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns detailed metadata about a sync task that is being executed.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "taskexecution",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListAgents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of agents owned by an AWS account in a region specified in the request.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListLocations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a lists of source and destination sync locations.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation lists the tags that have been added to the specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "agent",
+                    "required": false
+                },
+                {
+                    "name": "location",
+                    "required": false
+                },
+                {
+                    "name": "task",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTaskExecutions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of executed sync tasks.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTasks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of all the sync tasks.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartTaskExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts a specific invocation of a sync task.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "task",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Applies a key-value pair to an AWS resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "agent",
+                    "required": false
+                },
+                {
+                    "name": "location",
+                    "required": false
+                },
+                {
+                    "name": "task",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This operation removes one or more tags from the specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "agent",
+                    "required": false
+                },
+                {
+                    "name": "location",
+                    "required": false
+                },
+                {
+                    "name": "task",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateAgent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the name of an agent.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "agent",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the metadata associated with a sync task.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "task",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "datasync",
+    "service": "DataSync"
+}

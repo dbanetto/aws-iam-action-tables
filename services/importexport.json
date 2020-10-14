@@ -1,0 +1,60 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CancelJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action cancels a specified job. Only the job owner can cancel it. The action fails if the job has already started or is complete.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action initiates the process of scheduling an upload or download of your data.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetShippingLabel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action generates a pre-paid shipping label that you will use to ship your device to AWS for processing.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action returns information about a job, including where the job is in the processing pipeline, the status of the results, and the signature value associated with the job.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action returns the jobs associated with the requester.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "You use this action to change the parameters specified in the original manifest file by supplying a new manifest file.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "importexport",
+    "service": "AWS Import Export Disk Service"
+}

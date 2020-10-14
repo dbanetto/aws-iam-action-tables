@@ -1,0 +1,68 @@
+{
+    "actions": [
+        {
+            "access_level": "Read",
+            "action": "AnalyzeDocument",
+            "condition_keys": [],
+            "dependent_actions": [
+                "s3:GetObject"
+            ],
+            "description": "Detects instances of real-world document entities within an image provided as input.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DetectDocumentText",
+            "condition_keys": [],
+            "dependent_actions": [
+                "s3:GetObject"
+            ],
+            "description": "Detects text in document images.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDocumentAnalysis",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a document analysis job.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDocumentTextDetection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a document text detection job.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartDocumentAnalysis",
+            "condition_keys": [],
+            "dependent_actions": [
+                "s3:GetObject"
+            ],
+            "description": "Starts an asynchronous job to detect instances of real-world document entities within an image or pdf provided as input.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartDocumentTextDetection",
+            "condition_keys": [],
+            "dependent_actions": [
+                "s3:GetObject"
+            ],
+            "description": "Starts an asynchronous job to detect text in document images or pdfs.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "textract",
+    "service": "Amazon Textract"
+}

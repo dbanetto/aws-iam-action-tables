@@ -1,0 +1,425 @@
+{
+    "actions": [
+        {
+            "access_level": "Read",
+            "action": "BatchGetNamedQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to get information about one or more named queries.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetQueryExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to get information about one or more query executions.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateDataCatalog",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permissions to create a datacatalog.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datacatalog",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateNamedQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to create a named query.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateWorkGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permissions to create a workgroup.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDataCatalog",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to delete a datacatalog.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datacatalog",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteNamedQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to delete a named query specified.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteWorkGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to delete a workgroup.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDataCatalog",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to get a datacatalog.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datacatalog",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDatabase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to get a database for a given datacatalog.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datacatalog",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetNamedQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to get information about the specified named query.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetQueryExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to get information about the specified query execution.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetQueryResults",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to get the query results.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetQueryResultsStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to get the query results stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTableMetadata",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to get a metadata about a table for a given datacatalog.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datacatalog",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetWorkGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to get a workgroup.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDataCatalogs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to return a list of datacatalogs for the specified AWS account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDatabases",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to return a list of databases for a given datacatalog.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datacatalog",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListNamedQueries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to return a list of named queries in Amazon Athena for the specified AWS account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListQueryExecutions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to return a list of query executions for the specified AWS account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTableMetadata",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to return a list of table metadata in a database for a given datacatalog.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datacatalog",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to return a list of tags for a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datacatalog",
+                    "required": true
+                },
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListWorkGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to return a list of workgroups for the specified AWS account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartQueryExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to start a query execution using an SQL query provided as a string.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopQueryExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to stop the specified query execution.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permissions to add a tag to a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datacatalog",
+                    "required": true
+                },
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permissions to remove a tag from a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datacatalog",
+                    "required": true
+                },
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDataCatalog",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to update a datacatalog.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datacatalog",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateWorkGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to update a workgroup.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workgroup",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "athena",
+    "service": "Amazon Athena"
+}

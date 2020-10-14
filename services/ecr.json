@@ -1,0 +1,413 @@
+{
+    "actions": [
+        {
+            "access_level": "Read",
+            "action": "BatchCheckLayerAvailability",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to check the availability of multiple image layers in a specified registry and repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchDeleteImage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a list of specified images within a specified repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetImage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get detailed information for specified images within a specified repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CompleteLayerUpload",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to inform Amazon ECR that the image layer upload for a specified registry, repository name, and upload ID, has completed",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRepository",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an image repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLifecyclePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the specified lifecycle policy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an existing image repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRepositoryPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the repository policy from a specified repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeImageScanFindings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the image scan findings for the specified image",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeImages",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get metadata about the images in a repository, including image size, image tags, and creation date",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeRepositories",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe image repositories in a registry",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAuthorizationToken",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a token that is valid for a specified registry for 12 hours",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDownloadUrlForLayer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the download URL corresponding to an image layer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLifecyclePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the specified lifecycle policy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLifecyclePolicyPreview",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the results of the specified lifecycle policy preview request",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRepositoryPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the repository policy for a specified repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "InitiateLayerUpload",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to notify Amazon ECR that you intend to upload an image layer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListImages",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all the image IDs for a given repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the tags for an Amazon ECR resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutImage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create or update the image manifest associated with an image",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutImageScanningConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the image scanning configuration for a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutImageTagMutability",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the image tag mutability settings for a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutLifecyclePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create or update a lifecycle policy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "SetRepositoryPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to apply a repository policy on a specified repository to control access permissions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartImageScan",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start an image scan",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartLifecyclePolicyPreview",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start a preview of the specified lifecycle policy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to tag an Amazon ECR resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to untag an Amazon ECR resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UploadLayerPart",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to upload an image layer part to Amazon ECR",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "ecr",
+    "service": "Amazon Elastic Container Registry"
+}

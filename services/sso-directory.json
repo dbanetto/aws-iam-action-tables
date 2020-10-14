@@ -1,0 +1,339 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AddMemberToGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds member to the group in the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CompleteVirtualMfaDeviceRegistration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Completes the creation process of a virtual MFA device",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAlias",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an alias for the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateBearerToken",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a bearer token for a given provisioning tenant.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateExternalIdPConfigurationForDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create an External Identity Provider configuration for the directory",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a group in the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateProvisioningTenant",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a provisioning tenant for a given directory.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a user in the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBearerToken",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the bearer token.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteExternalIdPConfigurationForDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete an External Identity Provider configuration associated with the directory",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a group from the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMfaDeviceForUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a MFA device by device name for a given user",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProvisioningTenant",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the provisioning tenant.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a user from the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve information about the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves information about group from the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeUsers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves information about user from the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableExternalIdPConfigurationForDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disable authentication of end users with an External Identity Provider",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deactivates user in the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableExternalIdPConfigurationForDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enable authentication of end users with an External Identity Provider",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Activates user in the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAWSSPConfigurationForDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve the AWS SSO Service Provider configurations for the directory",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListBearerTokens",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists bearer tokens for a given provisioning tenant.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListExternalIdPConfigurationsForDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all the External Identity Provider configurations created for the directory",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListGroupsForUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists groups for a user from the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListMembersInGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves all members that are part of the group in the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListMfaDevicesForUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all active MFA devices and their MFA device metadata for a user",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListProvisioningTenants",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists provisioning tenants for a given directory.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RemoveMemberFromGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes member that are part of the group in the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "SearchGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Search for groups within the associated directory",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "SearchUsers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Search for users within the associated directory",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartVirtualMfaDeviceRegistration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Begins the creation process of virtual mfa device",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateExternalIdPConfigurationForDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update an External Identity Provider configuration associated with the directory",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates information about group in the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePassword",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates password by sending password reset link via email or generating one time password for a user in the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates user information in the directory that AWS SSO provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "VerifyEmail",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Verify email address of an User",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "sso-directory",
+    "service": "AWS SSO Directory"
+}

@@ -1,0 +1,374 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate an AWS Certificate Manager (ACM) Amazon Resource Name (ARN) with AWS Elemental MediaConvert.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to cancel an AWS Elemental MediaConvert job that is waiting in queue",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create and submit an AWS Elemental MediaConvert job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "JobTemplate",
+                    "required": false
+                },
+                {
+                    "name": "Preset",
+                    "required": false
+                },
+                {
+                    "name": "Queue",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateJobTemplate",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an AWS Elemental MediaConvert custom job template",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Preset",
+                    "required": false
+                },
+                {
+                    "name": "Queue",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePreset",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an AWS Elemental MediaConvert custom output preset",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateQueue",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an AWS Elemental MediaConvert job queue",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteJobTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an AWS Elemental MediaConvert custom job template",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "JobTemplate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePreset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an AWS Elemental MediaConvert custom output preset",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Preset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteQueue",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an AWS Elemental MediaConvert job queue",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeEndpoints",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to subscribe to the AWS Elemental MediaConvert service, by sending a request for an account-specific endpoint. All transcoding requests must be sent to the endpoint that the service returns.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove an association between the Amazon Resource Name (ARN) of an AWS Certificate Manager (ACM) certificate and an AWS Elemental MediaConvert resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get an AWS Elemental MediaConvert job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetJobTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get an AWS Elemental MediaConvert job template",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "JobTemplate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPreset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get an AWS Elemental MediaConvert output preset",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Preset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetQueue",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get an AWS Elemental MediaConvert job queue",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListJobTemplates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list AWS Elemental MediaConvert job templates",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list AWS Elemental MediaConvert jobs",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Queue",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListPresets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list AWS Elemental MediaConvert output presets",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListQueues",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list AWS Elemental MediaConvert job queues",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the tags for a MediaConvert queue, preset, or job template",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "JobTemplate",
+                    "required": false
+                },
+                {
+                    "name": "Preset",
+                    "required": false
+                },
+                {
+                    "name": "Queue",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add tags to a MediaConvert queue, preset, or job template",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "JobTemplate",
+                    "required": false
+                },
+                {
+                    "name": "Preset",
+                    "required": false
+                },
+                {
+                    "name": "Queue",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove tags from a MediaConvert queue, preset, or job template",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "JobTemplate",
+                    "required": false
+                },
+                {
+                    "name": "Preset",
+                    "required": false
+                },
+                {
+                    "name": "Queue",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateJobTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an AWS Elemental MediaConvert custom job template",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "JobTemplate",
+                    "required": true
+                },
+                {
+                    "name": "Preset",
+                    "required": false
+                },
+                {
+                    "name": "Queue",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePreset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an AWS Elemental MediaConvert custom output preset",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Preset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateQueue",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an AWS Elemental MediaConvert job queue",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Queue",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert"
+}

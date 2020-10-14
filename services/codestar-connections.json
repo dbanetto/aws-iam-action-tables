@@ -1,0 +1,208 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateConnection",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "codestar-connections:ProviderType"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a Connection resource",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a Connection resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Connection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get details about a Connection resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Connection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetIndividualAccessToken",
+            "condition_keys": [
+                "codestar-connections:ProviderType"
+            ],
+            "dependent_actions": [
+                "codestar-connections:StartOAuthHandshake"
+            ],
+            "description": "Grants permission to associate a third party, such as a Bitbucket App installation, with a Connection",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInstallationUrl",
+            "condition_keys": [
+                "codestar-connections:ProviderType"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to associate a third party, such as a Bitbucket App installation, with a Connection",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListConnections",
+            "condition_keys": [
+                "codestar-connections:ProviderTypeFilter"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to list Connection resources",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListInstallationTargets",
+            "condition_keys": [],
+            "dependent_actions": [
+                "codestar-connections:GetIndividualAccessToken",
+                "codestar-connections:StartOAuthHandshake"
+            ],
+            "description": "Grants permission to associate a third party, such as a Bitbucket App installation, with a Connection",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the set of key-value pairs that are used to manage the resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Connection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "PassConnection",
+            "condition_keys": [
+                "codestar-connections:PassedToService"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to pass a Connection resource to an AWS service that accepts a Connection ARN as input, such as codepipeline:CreatePipeline",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "Connection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "StartOAuthHandshake",
+            "condition_keys": [
+                "codestar-connections:ProviderType"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to associate a third party, such as a Bitbucket App installation, with a Connection",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Adds to or modifies the tags of the given resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Connection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Removes tags from an AWS resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Connection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateConnectionInstallation",
+            "condition_keys": [
+                "codestar-connections:InstallationId"
+            ],
+            "dependent_actions": [
+                "codestar-connections:GetIndividualAccessToken",
+                "codestar-connections:GetInstallationUrl",
+                "codestar-connections:ListInstallationTargets",
+                "codestar-connections:StartOAuthHandshake"
+            ],
+            "description": "Grants permission to update a Connection resource with an installation of the CodeStar Connections App",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Connection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "UseConnection",
+            "condition_keys": [
+                "codestar-connections:FullRepositoryId",
+                "codestar-connections:ProviderAction",
+                "codestar-connections:ProviderPermissionsRequired"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to use a Connection resource to call provider actions",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "Connection",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections"
+}

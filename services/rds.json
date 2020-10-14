@@ -1,0 +1,2062 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AddRoleToDBCluster",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to associate an Identity and Access Management (IAM) role from an Aurora DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AddRoleToDBInstance",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to associate an AWS Identity and Access Management (IAM) role with a DB instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AddSourceIdentifierToSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add a source identifier to an existing RDS event notification subscription",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "es",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "AddTagsToResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add metadata tags to an Amazon RDS resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": false
+                },
+                {
+                    "name": "es",
+                    "required": false
+                },
+                {
+                    "name": "og",
+                    "required": false
+                },
+                {
+                    "name": "pg",
+                    "required": false
+                },
+                {
+                    "name": "proxy",
+                    "required": false
+                },
+                {
+                    "name": "ri",
+                    "required": false
+                },
+                {
+                    "name": "secgrp",
+                    "required": false
+                },
+                {
+                    "name": "snapshot",
+                    "required": false
+                },
+                {
+                    "name": "subgrp",
+                    "required": false
+                },
+                {
+                    "name": "target-group",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ApplyPendingMaintenanceAction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to apply a pending maintenance action to a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "db",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "AuthorizeDBSecurityGroupIngress",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to enable ingress to a DBSecurityGroup using one of two forms of authorization",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "secgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BacktrackDBCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to backtrack a DB cluster to a specific time, without creating a new DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelExportTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to cancel an export task in progress",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CopyDBClusterParameterGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to copy the specified DB cluster parameter group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster-pg",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CopyDBClusterSnapshot",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a snapshot of a DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster-snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CopyDBParameterGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to copy the specified DB parameter group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pg",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CopyDBSnapshot",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to copy the specified DB snapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CopyOptionGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to copy the specified option group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "og",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDBCluster",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}",
+                "rds:DatabaseEngine",
+                "rds:DatabaseName",
+                "rds:StorageEncrypted"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to create a new Amazon Aurora DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "cluster-pg",
+                    "required": true
+                },
+                {
+                    "name": "og",
+                    "required": true
+                },
+                {
+                    "name": "subgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDBClusterEndpoint",
+            "condition_keys": [
+                "rds:EndpointType",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new custom endpoint and associates it with an Amazon Aurora DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "cluster-endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDBClusterParameterGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new DB cluster parameter group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster-pg",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDBClusterSnapshot",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a snapshot of a DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "cluster-snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDBInstance",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to create a new DB instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                },
+                {
+                    "name": "og",
+                    "required": true
+                },
+                {
+                    "name": "pg",
+                    "required": true
+                },
+                {
+                    "name": "secgrp",
+                    "required": true
+                },
+                {
+                    "name": "subgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDBInstanceReadReplica",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to create a DB instance that acts as a Read Replica of a source DB instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                },
+                {
+                    "name": "og",
+                    "required": true
+                },
+                {
+                    "name": "subgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDBParameterGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new DB parameter group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pg",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDBProxy",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to create a database proxy",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDBSecurityGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new DB security group. DB security groups control access to a DB instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "secgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDBSnapshot",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a DBSnapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                },
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDBSubnetGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new DB subnet group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateEventSubscription",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an RDS event notification subscription",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "es",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateGlobalCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an Aurora global database spread across multiple regions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "global-cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateOptionGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new option group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "og",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDBCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a previously provisioned DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "cluster-snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDBClusterEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a custom endpoint and removes it from an Amazon Aurora DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster-endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDBClusterParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a specified DB cluster parameter group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster-pg",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDBClusterSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a DB cluster snapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster-snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDBInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a previously provisioned DB instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDBInstanceAutomatedBackup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to deletes automated backups based on the source instance's DbiResourceId value or the restorable instance's resource ID",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDBParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a specified DBParameterGroup",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pg",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDBProxy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a database proxy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "proxy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDBSecurityGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a DB security group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "secgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDBSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a DBSnapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDBSubnetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a DB subnet group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteEventSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an RDS event notification subscription",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "es",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteGlobalCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a global database cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteOptionGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an existing option group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "og",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterDBProxyTargets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove targets from a database proxy target group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "db",
+                    "required": true
+                },
+                {
+                    "name": "proxy",
+                    "required": true
+                },
+                {
+                    "name": "target-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeAccountAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all of the attributes for a customer account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeCertificates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the set of CA certificates provided by Amazon RDS for this AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBClusterBacktracks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about backtracks for a DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBClusterEndpoints",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about endpoints for an Amazon Aurora DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster-endpoint",
+                    "required": true
+                },
+                {
+                    "name": "cluster",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBClusterParameterGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of DBClusterParameterGroup descriptions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster-pg",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBClusterParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return the detailed parameter list for a particular DB cluster parameter group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster-pg",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBClusterSnapshotAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of DB cluster snapshot attribute names and values for a manual DB cluster snapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster-snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBClusterSnapshots",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about DB cluster snapshots",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster-snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBClusters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about provisioned Aurora DB clusters",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBEngineVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of the available DB engines",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBInstanceAutomatedBackups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of automated backups for both current and deleted instances",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBInstances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about provisioned RDS instances",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBLogFiles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of DB log files for the DB instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBParameterGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of DBParameterGroup descriptions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pg",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return the detailed parameter list for a particular DB parameter group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pg",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBProxies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view proxies",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "proxy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBProxyTargetGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view database proxy target group details",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "proxy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBProxyTargets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view database proxy target details",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "db",
+                    "required": true
+                },
+                {
+                    "name": "proxy",
+                    "required": true
+                },
+                {
+                    "name": "target-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBSecurityGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of DBSecurityGroup descriptions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "secgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBSnapshotAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of DB snapshot attribute names and values for a manual DB snapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBSnapshots",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about DB snapshots",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                },
+                {
+                    "name": "db",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDBSubnetGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of DBSubnetGroup descriptions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeEngineDefaultClusterParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return the default engine and system parameter information for the cluster database engine",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeEngineDefaultParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return the default engine and system parameter information for the specified database engine",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeEventCategories",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to display a list of categories for all event source types, or, if specified, for a specified source type",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeEventSubscriptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all the subscription descriptions for a customer account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "es",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return events related to DB instances, DB security groups, DB snapshots, and DB parameter groups for the past 14 days",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeExportTasks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about the export tasks",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeGlobalClusters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about Aurora global database clusters",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeOptionGroupOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe all available options",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "og",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeOptionGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the available option groups",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "og",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeOrderableDBInstanceOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of orderable DB instance options for the specified engine",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribePendingMaintenanceActions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of resources (for example, DB instances) that have at least one pending maintenance action",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "db",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeReservedDBInstances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about reserved DB instances for this account, or about a specified reserved DB instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ri",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeReservedDBInstancesOfferings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list available reserved DB instance offerings",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeSourceRegions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of the source AWS Regions where the current AWS Region can create a Read Replica or copy a DB snapshot from",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeValidDBInstanceModifications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list available modifications you can make to your DB instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DownloadDBLogFilePortion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to download all or a portion of the specified log file, up to 1 MB in size",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "FailoverDBCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to force a failover for a DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all tags on an Amazon RDS resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": false
+                },
+                {
+                    "name": "es",
+                    "required": false
+                },
+                {
+                    "name": "og",
+                    "required": false
+                },
+                {
+                    "name": "pg",
+                    "required": false
+                },
+                {
+                    "name": "proxy",
+                    "required": false
+                },
+                {
+                    "name": "ri",
+                    "required": false
+                },
+                {
+                    "name": "secgrp",
+                    "required": false
+                },
+                {
+                    "name": "snapshot",
+                    "required": false
+                },
+                {
+                    "name": "subgrp",
+                    "required": false
+                },
+                {
+                    "name": "target-group",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyCurrentDBClusterCapacity",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify current cluster capacity for an Amazon Aurora Severless DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyDBCluster",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to modify a setting for an Amazon Aurora DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "cluster-pg",
+                    "required": true
+                },
+                {
+                    "name": "og",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyDBClusterEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the properties of an endpoint in an Amazon Aurora DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster-endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyDBClusterParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the parameters of a DB cluster parameter group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster-pg",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyDBClusterSnapshotAttribute",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add an attribute and values to, or removes an attribute and values from, a manual DB cluster snapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster-snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyDBInstance",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to modify settings for a DB instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                },
+                {
+                    "name": "og",
+                    "required": true
+                },
+                {
+                    "name": "pg",
+                    "required": true
+                },
+                {
+                    "name": "secgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyDBParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the parameters of a DB parameter group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pg",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyDBProxy",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to modify database proxy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "proxy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyDBProxyTargetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify target group for a database proxy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "target-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyDBSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a manual DB snapshot, which can be encrypted or not encrypted, with a new engine version",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyDBSnapshotAttribute",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add an attribute and values to, or removes an attribute and values from, a manual DB snapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "snapshot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyDBSubnetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an existing DB subnet group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyEventSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an existing RDS event notification subscription",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "es",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyGlobalCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify a setting for an Amazon Aurora global cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyOptionGroup",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to modify an existing option group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "og",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PromoteReadReplica",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to promote a Read Replica DB instance to a standalone DB instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PromoteReadReplicaDBCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to promote a Read Replica DB cluster to a standalone DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PurchaseReservedDBInstancesOffering",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to purchase a reserved DB instance offering",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ri",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RebootDBInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to restart the database engine service",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterDBProxyTargets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add targets to a database proxy target group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "target-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RemoveFromGlobalCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to detach an Aurora secondary cluster from an Aurora global database cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "global-cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RemoveRoleFromDBCluster",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to disassociate an AWS Identity and Access Management (IAM) role from an Amazon Aurora DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RemoveRoleFromDBInstance",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to disassociate an AWS Identity and Access Management (IAM) role from a DB instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RemoveSourceIdentifierFromSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove a source identifier from an existing RDS event notification subscription",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "es",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "RemoveTagsFromResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove metadata tags from an Amazon RDS resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": false
+                },
+                {
+                    "name": "es",
+                    "required": false
+                },
+                {
+                    "name": "og",
+                    "required": false
+                },
+                {
+                    "name": "pg",
+                    "required": false
+                },
+                {
+                    "name": "proxy",
+                    "required": false
+                },
+                {
+                    "name": "ri",
+                    "required": false
+                },
+                {
+                    "name": "secgrp",
+                    "required": false
+                },
+                {
+                    "name": "snapshot",
+                    "required": false
+                },
+                {
+                    "name": "subgrp",
+                    "required": false
+                },
+                {
+                    "name": "target-group",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ResetDBClusterParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the parameters of a DB cluster parameter group to the default value",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster-pg",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ResetDBParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the parameters of a DB parameter group to the engine/system default value",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pg",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RestoreDBClusterFromS3",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}",
+                "rds:DatabaseEngine",
+                "rds:DatabaseName",
+                "rds:StorageEncrypted"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to create an Amazon Aurora DB cluster from data stored in an Amazon S3 bucket",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RestoreDBClusterFromSnapshot",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to create a new DB cluster from a DB cluster snapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "cluster-snapshot",
+                    "required": true
+                },
+                {
+                    "name": "og",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RestoreDBClusterToPointInTime",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to restore a DB cluster to an arbitrary point in time",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "og",
+                    "required": true
+                },
+                {
+                    "name": "subgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RestoreDBInstanceFromDBSnapshot",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to create a new DB instance from a DB snapshot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                },
+                {
+                    "name": "og",
+                    "required": true
+                },
+                {
+                    "name": "snapshot",
+                    "required": true
+                },
+                {
+                    "name": "subgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RestoreDBInstanceFromS3",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to create a new DB instance from an Amazon S3 bucket",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RestoreDBInstanceToPointInTime",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to restore a DB instance to an arbitrary point in time",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                },
+                {
+                    "name": "og",
+                    "required": true
+                },
+                {
+                    "name": "subgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RevokeDBSecurityGroupIngress",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to revoke ingress from a DBSecurityGroup for previously authorized IP ranges or EC2 or VPC Security Groups",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "secgrp",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartActivityStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start Activity Stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartDBCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts the DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartDBInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start the DB instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartExportTask",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to start a new Export task for a DB snapshot",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StopActivityStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop Activity Stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopDBCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop the DB cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopDBInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop the DB instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "db",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "rds",
+    "service": "Amazon RDS"
+}

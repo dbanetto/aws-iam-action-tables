@@ -1,0 +1,789 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateBotVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new version based on the $LATEST version of the specified bot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateIntentVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new version based on the $LATEST version of the specified intent.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "intent",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSlotTypeVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new version based on the $LATEST version of the specified slot type.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "slottype",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes all versions of a bot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBotAlias",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an alias for a specific bot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "alias",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBotChannelAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the association between a Amazon Lex bot alias and a messaging platform.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBotVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a specific version of a bot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteIntent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes all versions of an intent.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "intent",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteIntentVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a specific version of an intent.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "intent",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSession",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes session information for a specified bot, alias, and user ID.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "alias",
+                    "required": false
+                },
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSlotType",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes all versions of a slot type.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "slottype",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSlotTypeVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a specific version of a slot type.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "slottype",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUtterances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the information Amazon Lex maintains for utterances on a specific bot and userId.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information for a specific bot. In addition to the bot name, the bot version or alias is required.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "alias",
+                    "required": false
+                },
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBotAlias",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a Amazon Lex bot alias.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "alias",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetBotAliases",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of aliases for a given Amazon Lex bot.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBotChannelAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about the association between a Amazon Lex bot and a messaging platform.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetBotChannelAssociations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of all of the channels associated with a single bot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetBotVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information for all versions of a specific bot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetBots",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information for the $LATEST version of all bots, subject to filters provided by the client.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBuiltinIntent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a built-in intent.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBuiltinIntents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a list of built-in intents that meet the specified criteria.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBuiltinSlotTypes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a list of built-in slot types that meet the specified criteria.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetExport",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Exports Amazon Lex Resource in a requested format.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetImport",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about an import job started with StartImport.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetIntent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information for a specific intent. In addition to the intent name, you must also specify the intent version.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "intent",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetIntentVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information for all versions of a specific intent.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "intent",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetIntents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information for the $LATEST version of all intents, subject to filters provided by the client.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSession",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns session information for a specified bot, alias, and user ID.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "alias",
+                    "required": false
+                },
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSlotType",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a specific version of a slot type. In addition to specifying the slot type name, you must also specify the slot type version.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "slottype",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetSlotTypeVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information for all versions of a specific slot type.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "slottype",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetSlotTypes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information for the $LATEST version of all slot types, subject to filters provided by the client.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "GetUtterancesView",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a view of aggregate utterance data for versions of a bot for a recent time period.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists tags for a Lex resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "alias",
+                    "required": false
+                },
+                {
+                    "name": "channel",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PostContent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sends user input (text or speech) to Amazon Lex.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "alias",
+                    "required": false
+                },
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PostText",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sends user input (text-only) to Amazon Lex.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "alias",
+                    "required": false
+                },
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutBot",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Creates or updates the $LATEST version of a Amazon Lex conversational bot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutBotAlias",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Creates or updates an alias for the specific bot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "alias",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutIntent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates or updates the $LATEST version of an intent.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "intent",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutSession",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new session or modifies an existing session with an Amazon Lex bot.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "alias",
+                    "required": false
+                },
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutSlotType",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates or updates the $LATEST version of a slot type.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "slottype",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartImport",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts a job to import a resource to Amazon Lex.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Adds or overwrites tags to a Lex resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "alias",
+                    "required": false
+                },
+                {
+                    "name": "channel",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Removes tags from a Lex resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "bot",
+                    "required": false
+                },
+                {
+                    "name": "alias",
+                    "required": false
+                },
+                {
+                    "name": "channel",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "prefix": "lex",
+    "service": "Amazon Lex"
+}

@@ -1,0 +1,354 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CancelContact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to cancel a contact",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Contact",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateConfig",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDataflowEndpointGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a data flow endpoint group",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateMissionProfile",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a mission profile",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a config",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDataflowEndpointGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a data flow endpoint group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "DataflowEndpointGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMissionProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a mission profile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "MissionProfile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeContact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a contact",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Contact",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDataflowEndpointGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a data flow endpoint group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "DataflowEndpointGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMinuteUsage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return minutes usage",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMissionProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a mission profile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "MissionProfile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSatellite",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about a satellite",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Satellite",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListConfigs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permisson to return a list of past configurations",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListContacts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of contacts",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDataflowEndpointGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list data flow endpoint groups",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListGroundStations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list ground stations",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListMissionProfiles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of mission profiles",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSatellites",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list satellites",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list tags for a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Config",
+                    "required": false
+                },
+                {
+                    "name": "Contact",
+                    "required": false
+                },
+                {
+                    "name": "DataflowEndpointGroup",
+                    "required": false
+                },
+                {
+                    "name": "MissionProfile",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ReserveContact",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to reserve a contact",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to assign a resource tag",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Config",
+                    "required": false
+                },
+                {
+                    "name": "Contact",
+                    "required": false
+                },
+                {
+                    "name": "DataflowEndpointGroup",
+                    "required": false
+                },
+                {
+                    "name": "MissionProfile",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to deassign a resource tag",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Config",
+                    "required": false
+                },
+                {
+                    "name": "Contact",
+                    "required": false
+                },
+                {
+                    "name": "DataflowEndpointGroup",
+                    "required": false
+                },
+                {
+                    "name": "MissionProfile",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateMissionProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a mission profile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "MissionProfile",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "groundstation",
+    "service": "AWS Ground Station"
+}

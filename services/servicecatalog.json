@@ -1,0 +1,957 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AcceptPortfolioShare",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to accept a portfolio that has been shared with you",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Portfolio",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateBudgetWithResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate a budget with a resource",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociatePrincipalWithPortfolio",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate an IAM principal with a portfolio, giving the specified principal access to any products associated with the specified portfolio",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Portfolio",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateProductWithPortfolio",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate a product with a portfolio",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateServiceActionWithProvisioningArtifact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate an action with a provisioning artifact",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateTagOptionWithResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate the specified TagOption with the specified portfolio or product",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Portfolio",
+                    "required": false
+                },
+                {
+                    "name": "Product",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchAssociateServiceActionWithProvisioningArtifact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate multiple self-service actions with provisioning artifacts",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchDisassociateServiceActionFromProvisioningArtifact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate a batch of self-service actions from the specified provisioning artifact",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CopyProduct",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to copy the specified source product to the specified target product or a new product",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateConstraint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a constraint on an associated product and portfolio",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePortfolio",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a portfolio",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Portfolio",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "CreatePortfolioShare",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to share a portfolio you own with another AWS account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Portfolio",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateProduct",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a product and that product's first provisioning artifact",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateProvisionedProductPlan",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add a new provisioned product plan",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateProvisioningArtifact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add a new provisioning artifact to an existing product",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateServiceAction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a self-service action",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTagOption",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a TagOption",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteConstraint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove and delete an existing constraint from an associated product and portfolio",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePortfolio",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a portfolio if all associations and shares have been removed from the portfolio",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Portfolio",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "DeletePortfolioShare",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to unshare a portfolio you own from an AWS account you previously shared the portfolio with",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Portfolio",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProduct",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a product if all associations have been removed from the product",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProvisionedProductPlan",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a provisioned product plan",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProvisioningArtifact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a provisioning artifact from a product",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteServiceAction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a self-service action",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTagOption",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the specified TagOption",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeConstraint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a constraint",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCopyProductStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get the status of the specified copy product operation",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribePortfolio",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a portfolio",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Portfolio",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribePortfolioShareStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get the status of the specified portfolio share operation",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProduct",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a product as an end-user",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProductAsAdmin",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a product as an admin",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProductView",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a product as an end-user",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProvisionedProduct",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a provisioned product",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProvisionedProductPlan",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a provisioned product plan",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProvisioningArtifact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a provisioning artifact",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProvisioningParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the parameters that you need to specify to successfully provision a specified provisioning artifact",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeRecord",
+            "condition_keys": [
+                "servicecatalog:accountLevel",
+                "servicecatalog:roleLevel",
+                "servicecatalog:userLevel"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a record and lists any outputs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeServiceAction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a self-service action",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeServiceActionExecutionParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get the default parameters if you executed the specified Service Action on the specified Provisioned Product",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTagOption",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about the specified TagOption",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableAWSOrganizationsAccess",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disable portfolio sharing through AWS Organizations feature",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateBudgetFromResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate a budget from a resource",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociatePrincipalFromPortfolio",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate an IAM principal from a portfolio",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Portfolio",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateProductFromPortfolio",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate a product from a portfolio",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateServiceActionFromProvisioningArtifact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate the specified self-service action association from the specified provisioning artifact",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateTagOptionFromResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate the specified TagOption from the specified resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Portfolio",
+                    "required": false
+                },
+                {
+                    "name": "Product",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableAWSOrganizationsAccess",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to enable portfolio sharing feature through AWS Organizations",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ExecuteProvisionedProductPlan",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to execute a provisioned product plan",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ExecuteProvisionedProductServiceAction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to executes a provisioned product plan",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAWSOrganizationsAccessStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get the access status of AWS Organization portfolio share feature",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListAcceptedPortfolioShares",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the portfolios that have been shared with you and you have accepted",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListBudgetsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all the budgets associated to a resource",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListConstraintsForPortfolio",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list constraints associated with a given portfolio",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListLaunchPaths",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the different ways to launch a given product as an end-user",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListOrganizationPortfolioAccess",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the organization nodes that have access to the specified portfolio",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListPortfolioAccess",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the AWS accounts you have shared a given portfolio with",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Portfolio",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListPortfolios",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the portfolios in your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListPortfoliosForProduct",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the portfolios associated with a given product",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListPrincipalsForPortfolio",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the IAM principals associated with a given portfolio",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Portfolio",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListProvisionedProductPlans",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the provisioned product plans",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListProvisioningArtifacts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the provisioning artifacts associated with a given product",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListProvisioningArtifactsForServiceAction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all provisioning artifacts for the specified self-service action",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListRecordHistory",
+            "condition_keys": [
+                "servicecatalog:accountLevel",
+                "servicecatalog:roleLevel",
+                "servicecatalog:userLevel"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to list all the records in your account or all the records related to a given provisioned product",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListResourcesForTagOption",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the resources associated with the specified TagOption",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListServiceActions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all self-service actions",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListServiceActionsForProvisioningArtifact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all the service actions associated with the specified provisioning artifact in your account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListStackInstancesForProvisionedProduct",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list account, region and status of each stack instances that are associated with a CFN_STACKSET type provisioned product",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the specified TagOptions or all TagOptions",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ProvisionProduct",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to provision a product with a specified provisioning artifact and launch parameters",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RejectPortfolioShare",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to reject a portfolio that has been shared with you that you previously accepted",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Portfolio",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ScanProvisionedProducts",
+            "condition_keys": [
+                "servicecatalog:accountLevel",
+                "servicecatalog:roleLevel",
+                "servicecatalog:userLevel"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to list all the provisioned products in your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "SearchProducts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the products available to you as an end-user",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "SearchProductsAsAdmin",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all the products in your account or all the products associated with a given portfolio",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "SearchProvisionedProducts",
+            "condition_keys": [
+                "servicecatalog:accountLevel",
+                "servicecatalog:roleLevel",
+                "servicecatalog:userLevel"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to list all the provisioned products in your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "TerminateProvisionedProduct",
+            "condition_keys": [
+                "servicecatalog:accountLevel",
+                "servicecatalog:roleLevel",
+                "servicecatalog:userLevel"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to terminate an existing provisioned product",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateConstraint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the metadata fields of an existing constraint",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePortfolio",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to update the metadata fields and/or tags of an existing portfolio",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Portfolio",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateProduct",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to update the metadata fields and/or tags of an existing product",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateProvisionedProduct",
+            "condition_keys": [
+                "servicecatalog:accountLevel",
+                "servicecatalog:roleLevel",
+                "servicecatalog:userLevel"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to update an existing provisioned product",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateProvisionedProductProperties",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the properties of an existing provisioned product",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateProvisioningArtifact",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the metadata fields of an existing provisioning artifact",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateServiceAction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a self-service action",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTagOption",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the specified TagOption",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog"
+}

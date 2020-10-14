@@ -1,0 +1,465 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AbortDocumentVersionUpload",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to abort the upload of the specified document version that was previously initiated by InitiateDocumentVersionUpload.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ActivateUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to activate the specified user. Only active users can access Amazon WorkDocs.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "AddResourcePermissions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a set of permissions for the specified folder or document.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "AddUserToGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add a user to a group.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "CheckAlias",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to check an alias.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateComment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add a new comment to the specified document version.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCustomMetadata",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add one or more custom properties to the specified resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFolder",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a folder with the specified name and parent folder.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an instance.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLabels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add labels to the given resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateNotificationSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to configure WorkDocs to use Amazon SNS notifications.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a user in a Simple AD or Microsoft AD directory.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeactivateUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to deactivate the specified user, which revokes the user's access to Amazon WorkDocs.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteComment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the specified comment from the document version.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCustomMetadata",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete custom metadata from the specified resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDocument",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to permanently delete the specified document and its associated metadata.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFolder",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to permanently delete the specified folder and its contents.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFolderContents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the contents of the specified folder.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an instance.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLabels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete one or more labels from a resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteNotificationSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the specified subscription from the specified organization.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the specified user from a Simple AD or Microsoft AD directory.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to deregister a directory.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeActivities",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to fetch user activities in a specified time period.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeAvailableDirectories",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe available directories.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeComments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all the comments for the specified document version.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDocumentVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the document versions for the specified document.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeFolderContents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the contents of the specified folder, including its documents and sub-folders.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the user groups.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeInstances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe instances.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeNotificationSubscriptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the specified notification subscriptions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeResourcePermissions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view a description of a specified resource's permissions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeRootFolders",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the root folders.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeUsers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view a description of the specified users. You can describe all users or filter the results (for example, by status or organization).",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DownloadDocumentVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to download a specified document version.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCurrentUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the details of the current user.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDocument",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the specified document object.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDocumentPath",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the path information (the hierarchy from the root folder) for the requested document.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDocumentVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve version metadata for the specified document.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFolder",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the metadata of the specified folder.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFolderPath",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the path information (the hierarchy from the root folder) for the specified folder.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get a collection of resources.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "InitiateDocumentVersionUpload",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new document object and version object.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to register a directory.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RemoveAllResourcePermissions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove all the permissions from the specified resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RemoveResourcePermission",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove the permission for the specified principal from the specified resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDocument",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the specified attributes of the specified document.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDocumentVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to change the status of the document version to ACTIVE.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFolder",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the specified attributes of the specified folder.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateInstanceAlias",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an instance alias.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the specified attributes of the specified user, and grants or revokes administrative privileges to the Amazon WorkDocs site.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "workdocs",
+    "service": "Amazon WorkDocs"
+}

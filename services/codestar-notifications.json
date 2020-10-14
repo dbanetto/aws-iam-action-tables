@@ -1,0 +1,213 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateNotificationRule",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "codestar-notifications:NotificationsForResource"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a notification rule for a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notificationrule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteNotificationRule",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "codestar-notifications:NotificationsForResource"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a notification rule for a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notificationrule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTarget",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a target for a notification rule",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeNotificationRule",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "codestar-notifications:NotificationsForResource"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about a notification rule",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notificationrule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListEventTypes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list notifications event types",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListNotificationRules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list notification rules in an AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to list the tags attached to a notification rule resource ARN",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notificationrule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTargets",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to list the notification rule targets for an AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "Subscribe",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "codestar-notifications:NotificationsForResource"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an association between a notification rule and an Amazon SNS topic",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notificationrule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to attach resource tags to a notification rule resource ARN",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notificationrule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "Unsubscribe",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "codestar-notifications:NotificationsForResource"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove an association between a notification rule and an Amazon SNS topic",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notificationrule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate resource tags from a notification rule resource ARN",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notificationrule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateNotificationRule",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "codestar-notifications:NotificationsForResource"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to change a notification rule for a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notificationrule",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "codestar-notifications",
+    "service": "AWS CodeStar Notifications"
+}

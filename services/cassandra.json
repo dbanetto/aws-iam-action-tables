@@ -1,0 +1,153 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "Alter",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to alter a keyspace or table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "keyspace",
+                    "required": false
+                },
+                {
+                    "name": "table",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "Create",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a keyspace or table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "keyspace",
+                    "required": false
+                },
+                {
+                    "name": "table",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "Drop",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to drop a keyspace or table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "keyspace",
+                    "required": false
+                },
+                {
+                    "name": "table",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "Modify",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to INSERT, UPDATE or DELETE data in a table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "Restore",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to restore table from a backup",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "Select",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to SELECT data from a table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to tag a keyspace or table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "keyspace",
+                    "required": false
+                },
+                {
+                    "name": "table",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to untag a keyspace or table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "keyspace",
+                    "required": false
+                },
+                {
+                    "name": "table",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "prefix": "cassandra",
+    "service": "Amazon Keyspaces (for Apache Cassandra)"
+}

@@ -1,0 +1,591 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AddListenerCertificates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds the specified certificates to the specified secure listener",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener/app",
+                    "required": true
+                },
+                {
+                    "name": "listener/net",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "AddTags",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Adds the specified tags to the specified load balancer. Each load balancer can have a maximum of 10 tags",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener-rule/app",
+                    "required": false
+                },
+                {
+                    "name": "listener-rule/net",
+                    "required": false
+                },
+                {
+                    "name": "listener/app",
+                    "required": false
+                },
+                {
+                    "name": "listener/net",
+                    "required": false
+                },
+                {
+                    "name": "loadbalancer/app/",
+                    "required": false
+                },
+                {
+                    "name": "loadbalancer/net/",
+                    "required": false
+                },
+                {
+                    "name": "targetgroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateListener",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a listener for the specified Application Load Balancer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "loadbalancer/app/",
+                    "required": false
+                },
+                {
+                    "name": "loadbalancer/net/",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLoadBalancer",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a load balancer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "loadbalancer/app/",
+                    "required": false
+                },
+                {
+                    "name": "loadbalancer/net/",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRule",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a rule for the specified listener",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener/app",
+                    "required": true
+                },
+                {
+                    "name": "listener/net",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTargetGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a target group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "targetgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteListener",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified listener",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener/app",
+                    "required": true
+                },
+                {
+                    "name": "listener/net",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLoadBalancer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified load balancer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "loadbalancer/app/",
+                    "required": false
+                },
+                {
+                    "name": "loadbalancer/net/",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified rule",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener-rule/app",
+                    "required": true
+                },
+                {
+                    "name": "listener-rule/net",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTargetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified target group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "targetgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterTargets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deregisters the specified targets from the specified target group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "targetgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAccountLimits",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the Elastic Load Balancing resource limits for the AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeListenerCertificates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the certificates for the specified secure listener",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeListeners",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the specified listeners or the listeners for the specified Application Load Balancer",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLoadBalancerAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the attributes for the specified load balancer",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLoadBalancers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the specified the load balancers. If no load balancers are specified, the call describes all of your load balancers",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeRules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the specified rules or the rules for the specified listener",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSSLPolicies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the specified policies or all policies used for SSL negotiation",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the tags associated with the specified resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener-rule/app",
+                    "required": false
+                },
+                {
+                    "name": "listener-rule/net",
+                    "required": false
+                },
+                {
+                    "name": "listener/app",
+                    "required": false
+                },
+                {
+                    "name": "listener/net",
+                    "required": false
+                },
+                {
+                    "name": "loadbalancer/app/",
+                    "required": false
+                },
+                {
+                    "name": "loadbalancer/net/",
+                    "required": false
+                },
+                {
+                    "name": "targetgroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTargetGroupAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the attributes for the specified target group",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTargetGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the specified target groups or all of your target groups",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTargetHealth",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the health of the specified targets or all of your targets",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyListener",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies the specified properties of the specified listener",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener/app",
+                    "required": true
+                },
+                {
+                    "name": "listener/net",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyLoadBalancerAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies the attributes of the specified load balancer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "loadbalancer/app/",
+                    "required": false
+                },
+                {
+                    "name": "loadbalancer/net/",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies the specified rule",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener-rule/app",
+                    "required": true
+                },
+                {
+                    "name": "listener-rule/net",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyTargetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies the health checks used when evaluating the health state of the targets in the specified target group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "targetgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyTargetGroupAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies the specified attributes of the specified target group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "targetgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterTargets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Registers the specified targets with the specified target group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "targetgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RemoveListenerCertificates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes the specified certificates of the specified secure listener",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener/app",
+                    "required": true
+                },
+                {
+                    "name": "listener/net",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "RemoveTags",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Removes one or more tags from the specified load balancer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener-rule/app",
+                    "required": false
+                },
+                {
+                    "name": "listener-rule/net",
+                    "required": false
+                },
+                {
+                    "name": "listener/app",
+                    "required": false
+                },
+                {
+                    "name": "listener/net",
+                    "required": false
+                },
+                {
+                    "name": "loadbalancer/app/",
+                    "required": false
+                },
+                {
+                    "name": "loadbalancer/net/",
+                    "required": false
+                },
+                {
+                    "name": "targetgroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetIpAddressType",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Not found",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "loadbalancer/app/",
+                    "required": false
+                },
+                {
+                    "name": "loadbalancer/net/",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetRulePriorities",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets the priorities of the specified rules",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener-rule/app",
+                    "required": true
+                },
+                {
+                    "name": "listener-rule/net",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetSecurityGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associates the specified security groups with the specified load balancer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "loadbalancer/app/",
+                    "required": false
+                },
+                {
+                    "name": "loadbalancer/net/",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetSubnets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the Availability Zone for the specified subnets for the specified load balancer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "loadbalancer/app/",
+                    "required": false
+                },
+                {
+                    "name": "loadbalancer/net/",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetWebAcl",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gives WebAcl permission to WAF",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing V2"
+}

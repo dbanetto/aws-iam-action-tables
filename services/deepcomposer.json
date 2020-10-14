@@ -1,0 +1,250 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateCoupon",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associates a DeepComposer coupon (or DSN) with the account associated with the sender of the request.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAudio",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an audio file by converting the midi composition into a wav or mp3 file.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "composition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateComposition",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a multi-track midi composition.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateModel",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Starts creating/training a generative-model that is able to perform inference against the user-provided piano-melody to create a multi-track midi composition.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteComposition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the composition.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "composition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the model.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "model",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetComposition",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Returns information about the composition.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "composition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetModel",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Returns information about the model.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "model",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSampleModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about the sample/pre-trained DeepComposer model.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListCompositions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of all the compositions owned by the sender of the request.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListModels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of all the models owned by the sender of the request.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSampleModels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of all the sample/pre-trained models provided by the DeepComposer service.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to lists tag for a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "composition",
+                    "required": false
+                },
+                {
+                    "name": "model",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTrainingTopics",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of all the training options or topic for creating/training a model.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to tag a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "composition",
+                    "required": false
+                },
+                {
+                    "name": "model",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to untag a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "composition",
+                    "required": false
+                },
+                {
+                    "name": "model",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateComposition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies the mutable properties associated with a composition.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "composition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies the mutable properties associated with a model.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "model",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer"
+}

@@ -1,0 +1,511 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AcknowledgeJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about a specified job and whether that job has been received by the job worker",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "AcknowledgeThirdPartyJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to confirm that a job worker has received the specified job (partner actions only)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateCustomActionType",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a custom action that you can use in the pipelines associated with your AWS account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "actiontype",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreatePipeline",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a uniquely named pipeline",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCustomActionType",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a custom action",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "actiontype",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePipeline",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a specified pipeline",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteWebhook",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a specified webhook",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "webhook",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterWebhookWithThirdParty",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove the registration of a webhook with the third party specified in its configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "webhook",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableStageTransition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to prevent revisions from transitioning to the next stage in a pipeline",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stage",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableStageTransition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to allow revisions to transition to the next stage in a pipeline",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stage",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetJobDetails",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about a job (custom actions only)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPipeline",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a pipeline structure",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPipelineExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about an execution of a pipeline, including details about artifacts, the pipeline execution ID, and the name, version, and status of the pipeline",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPipelineState",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about the current state of the stages and actions of a pipeline",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetThirdPartyJobDetails",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the details of a job for a third-party action (partner actions only)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListActionExecutions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the action executions that have occurred in a pipeline",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListActionTypes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list a summary of all the action types available for pipelines in your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListPipelineExecutions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list a summary of the most recent executions for a pipeline",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListPipelines",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list a summary of all the pipelines associated with your AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list tags for a CodePipeline resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "actiontype",
+                    "required": false
+                },
+                {
+                    "name": "pipeline",
+                    "required": false
+                },
+                {
+                    "name": "webhook",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListWebhooks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all of the webhooks associated with your AWS account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "webhook",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PollForJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about any jobs for CodePipeline to act on",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "actiontype",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PollForThirdPartyJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to determine whether there are any third-party jobs for a job worker to act on (partner actions only)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutActionRevision",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to edit actions in a pipeline",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "action",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutApprovalResult",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to provide a response (Approved or Rejected) to a manual approval request in CodePipeline",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "action",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutJobFailureResult",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to represent the failure of a job as returned to the pipeline by a job worker (custom actions only)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutJobSuccessResult",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to represent the success of a job as returned to the pipeline by a job worker (custom actions only)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutThirdPartyJobFailureResult",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to represent the failure of a third-party job as returned to the pipeline by a job worker (partner actions only)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutThirdPartyJobSuccessResult",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to represent the success of a third-party job as returned to the pipeline by a job worker (partner actions only)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "PutWebhook",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create or update a webhook",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                },
+                {
+                    "name": "webhook",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterWebhookWithThirdParty",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to register a webhook with the third party specified in its configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "webhook",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RetryStageExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to resume the pipeline execution by retrying the last failed actions in a stage",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stage",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartPipelineExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to run the most recent revision through the pipeline",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopPipelineExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop an in-progress pipeline execution",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to tag a CodePipeline resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "actiontype",
+                    "required": false
+                },
+                {
+                    "name": "pipeline",
+                    "required": false
+                },
+                {
+                    "name": "webhook",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove a tag from a CodePipeline resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "actiontype",
+                    "required": false
+                },
+                {
+                    "name": "pipeline",
+                    "required": false
+                },
+                {
+                    "name": "webhook",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePipeline",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a pipeline with changes to the structure of the pipeline",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "codepipeline",
+    "service": "AWS CodePipeline"
+}

@@ -1,0 +1,205 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateChannel",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a channel in AWS Elemental MediaPackage.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateOriginEndpoint",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an endpoint in AWS Elemental MediaPackage.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a channel in AWS Elemental MediaPackage.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channels",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteOriginEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an endpoint in AWS Elemental MediaPackage.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "origin_endpoints",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the details of a channel in AWS Elemental MediaPackage.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channels",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeOriginEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the details of an endpoint in AWS Elemental MediaPackage.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "origin_endpoints",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListChannels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view a list of channels in AWS Elemental MediaPackage.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListOriginEndpoints",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view a list of endpoints in AWS Elemental MediaPackage.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the tags assigned to a Channel or OriginEndpoint.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channels",
+                    "required": false
+                },
+                {
+                    "name": "origin_endpoints",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RotateIngestEndpointCredentials",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to rotate IngestEndpoint credentials for a Channel in AWS Elemental MediaPackage.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channels",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to assign tags to a Channel or OriginEndpoint.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channels",
+                    "required": false
+                },
+                {
+                    "name": "origin_endpoints",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete tags to a Channel or OriginEndpoint.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channels",
+                    "required": false
+                },
+                {
+                    "name": "origin_endpoints",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to make changes to a channel in AWS Elemental MediaPackage.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channels",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateOriginEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to make changes to an endpoint in AWS Elemental MediaPackage.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "origin_endpoints",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage"
+}

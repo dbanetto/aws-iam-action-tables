@@ -1,0 +1,60 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CancelQuantumTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to cancel a quantum task.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateQuantumTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a quantum task.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about the devices available in Amazon Braket.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetQuantumTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve quantum tasks.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "SearchDevices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to search for devices available in Amazon Braket.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "SearchQuantumTasks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to search for quantum tasks.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "braket",
+    "service": "Amazon Braket"
+}

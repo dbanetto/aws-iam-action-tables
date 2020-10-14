@@ -1,0 +1,167 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a group with a specified name, description, and resource query.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a specified resource group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information of a specified resource group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetGroupQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the query associated with a specified resource group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the tags associated with a specified resource group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListGroupResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the resources that are member of a specified resource group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all resource groups",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "SearchResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of AWS resource identifiers matching the given query",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "Tag",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Tags a specified resource group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "Untag",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Removes tags associated with a specified resource group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a specified resource group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateGroupQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the query associated with a specified resource group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "resource-groups",
+    "service": "AWS Resource Groups"
+}

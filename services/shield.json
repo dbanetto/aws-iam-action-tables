@@ -1,0 +1,199 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateDRTLogBucket",
+            "condition_keys": [],
+            "dependent_actions": [
+                "s3:GetBucketPolicy",
+                "s3:PutBucketPolicy"
+            ],
+            "description": "Authorizes the DDoS Response team to access the specified Amazon S3 bucket containing your flow logs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateDRTRole",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:GetRole",
+                "iam:ListAttachedRolePolicies",
+                "iam:PassRole"
+            ],
+            "description": "Authorizes the DDoS Response team using the specified role, to access your AWS account to assist with DDoS attack mitigation during potential attacks",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateProtection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Activate DDoS protection service for a given resource ARN",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "protection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Activate subscription",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProtection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete an existing protection",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "protection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deactivate subscription",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAttack",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get attack details",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "attack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDRTAccess",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the current role and list of Amazon S3 log buckets used by the DDoS Response team to access your AWS account while assisting with attack mitigation",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEmergencyContactSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the email addresses that the DRT can use to contact you during a suspected attack",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProtection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get protection details",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "protection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get subscription details, such as start time",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateDRTLogBucket",
+            "condition_keys": [],
+            "dependent_actions": [
+                "s3:DeleteBucketPolicy",
+                "s3:GetBucketPolicy",
+                "s3:PutBucketPolicy"
+            ],
+            "description": "Removes the DDoS Response team's access to the specified Amazon S3 bucket containing your flow logs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateDRTRole",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes the DDoS Response team's access to your AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSubscriptionState",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get subscription state",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListAttacks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all existing attacks",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListProtections",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all existing protections",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateEmergencyContactSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the details of the list of email addresses that the DRT can use to contact you during a suspected attack",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the details of an existing subscription",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "shield",
+    "service": "AWS Shield"
+}

@@ -1,0 +1,15 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "RegisterOnPremisesAgent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to register AWS provided data collectors to the Application Discovery Service",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "arsenal",
+    "service": "Application Discovery Arsenal"
+}

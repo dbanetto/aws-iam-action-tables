@@ -1,0 +1,141 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateNode",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associate a node to a configuration management server.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateBackup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a backup for the specified server.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateServer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a new server.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBackup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete the specified backup and possibly its S3 bucket.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteServer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified server with his corresponding CF stack and possibly the S3 bucket.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeAccountAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe the service limits for the user's account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeBackups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a single backup, all backups of a specified server or all backups of the user's account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe all events of the specified server.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeNodeAssociationStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe the association status for the specified node token and the specified server.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeServers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the specified server or all servers of the user's account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateNode",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociates a specified node from a server.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RestoreServer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Applies a backup to specified server. Possibly swaps out the ec2-instance if specified.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartMaintenance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Start the server maintenance immediately.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateServer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update general server settings.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateServerEngineAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update server settings specific to the configuration management type.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "opsworks-cm",
+    "service": "AWS OpsWorks Configuration Management"
+}

@@ -1,0 +1,192 @@
+{
+    "actions": [
+        {
+            "access_level": "Tagging",
+            "action": "CreateLicenseConfiguration",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new license configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLicenseConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Permanently deletes a license configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "license-configuration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetLicenseConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a license configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "license-configuration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetServiceSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets service settings",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListAssociationsForLicenseConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists associations for a selected license configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "license-configuration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListLicenseConfigurations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists license configurations",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListLicenseSpecificationsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists license specifications associated with a selected resource",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListResourceInventory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists resource inventory",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists tags for a selected resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "license-configuration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListUsageForLicenseConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists usage records for selected license configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "license-configuration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Tags a selected resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "license-configuration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Untags a selected resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "license-configuration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateLicenseConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing license configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "license-configuration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateLicenseSpecificationsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates license specifications for a selected resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "license-configuration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "UpdateServiceSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates service settings",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "license-manager",
+    "service": "AWS License Manager"
+}

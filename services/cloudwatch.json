@@ -1,0 +1,406 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "DeleteAlarms",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes all specified alarms. In the event of an error, no alarms are deleted",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "alarm",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAnomalyDetector",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified anomaly detection model from your account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDashboards",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes all CloudWatch dashboards that you specify",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dashboard",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteInsightRules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a collection of insight rules.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "insight-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAlarmHistory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves history for the specified alarm",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "alarm",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAlarms",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves alarms with the specified names",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "alarm",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAlarmsForMetric",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves all alarms for a single metric",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAnomalyDetectors",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the anomaly detection models that you have created in your account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeInsightRules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe all insight rules, currently owned by the user's account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableAlarmActions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disables actions for the specified alarms",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "alarm",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableInsightRules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disable a collection of insight rules.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "insight-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableAlarmActions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables actions for the specified alarms",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "alarm",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableInsightRules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to enable a collection of insight rules.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "insight-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDashboard",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Displays the details of the CloudWatch dashboard you specify",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dashboard",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInsightRuleReport",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return the top-N report of unique contributors over a time range for a given insight rule.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "insight-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMetricData",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Required to retrieve batch amounts of CloudWatch metric data and perform metric math on retrieved data",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMetricStatistics",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets statistics for the specified metric",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMetricWidgetImage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Required to retrieve snapshots of metric widgets",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDashboards",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of all CloudWatch dashboards in your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListMetrics",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of valid metrics stored for the AWS account owner",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action lists tags for an Amazon CloudWatch resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "alarm",
+                    "required": false
+                },
+                {
+                    "name": "insight-rule",
+                    "required": false
+                },
+                {
+                    "name": "alarm",
+                    "required": true
+                },
+                {
+                    "name": "insight-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutAnomalyDetector",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates or updates an anomaly detection model for a CloudWatch metric.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutDashboard",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a CloudWatch dashboard, or updates an existing dashboard if it already exists",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dashboard",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutInsightRule",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new insight rule or replace an existing insight rule.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "insight-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutMetricAlarm",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates or updates an alarm and associates it with the specified Amazon CloudWatch metric",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "alarm",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutMetricData",
+            "condition_keys": [
+                "cloudwatch:namespace"
+            ],
+            "dependent_actions": [],
+            "description": "Publishes metric data points to Amazon CloudWatch",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SetAlarmState",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Temporarily sets the state of an alarm for testing purposes",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "alarm",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "This action tags an Amazon CloudWatch resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "alarm",
+                    "required": false
+                },
+                {
+                    "name": "insight-rule",
+                    "required": false
+                },
+                {
+                    "name": "alarm",
+                    "required": true
+                },
+                {
+                    "name": "insight-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This action removes a tag from an Amazon CloudWatch resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "alarm",
+                    "required": false
+                },
+                {
+                    "name": "insight-rule",
+                    "required": false
+                },
+                {
+                    "name": "alarm",
+                    "required": true
+                },
+                {
+                    "name": "insight-rule",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "cloudwatch",
+    "service": "Amazon CloudWatch"
+}

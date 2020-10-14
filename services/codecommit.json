@@ -1,0 +1,1230 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateApprovalRuleTemplateWithRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate an approval rule template with a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchAssociateApprovalRuleTemplateWithRepositories",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate an approval rule template with multiple repositories in a single operation",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchDescribeMergeConflicts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about multiple merge conflicts when attempting to merge two commits using either the three-way merge or the squash merge option",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchDisassociateApprovalRuleTemplateFromRepositories",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove the association between an approval rule template and multiple repositories in a single operation",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetCommits",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get return information about one or more commits in an AWS CodeCommit repository.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetPullRequests",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about one or more pull requests in an AWS CodeCommit repository",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetRepositories",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about multiple repositories",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "CancelUploadArchive",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to cancel the uploading of an archive to a pipeline in AWS CodePipeline",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateApprovalRuleTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an approval rule template that will automatically create approval rules in pull requests that match the conditions defined in the template; does not grant permission to create approval rules for individual pull requests",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateBranch",
+            "condition_keys": [
+                "codecommit:References"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a branch in an AWS CodeCommit repository with this API; does not control Git create branch actions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCommit",
+            "condition_keys": [
+                "codecommit:References"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add, copy, move or update single or multiple files in a branch in an AWS CodeCommit repository, and generate a commit for the changes in the specified branch.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePullRequest",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a pull request in the specified repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePullRequestApprovalRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an approval rule specific to an individual pull request; does not grant permission to create approval rule templates",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRepository",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an AWS CodeCommit repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUnreferencedMergeCommit",
+            "condition_keys": [
+                "codecommit:References"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an unreferenced commit that contains the result of merging two commits using either the three-way or the squash merge option; does not control Git merge actions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApprovalRuleTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an approval rule template",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBranch",
+            "condition_keys": [
+                "codecommit:References"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a branch in an AWS CodeCommit repository with this API; does not control Git delete branch actions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCommentContent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the content of a comment made on a change, file, or commit in a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFile",
+            "condition_keys": [
+                "codecommit:References"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a specified file from a specified branch",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePullRequestApprovalRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete approval rule created for a pull request if the rule was not created by an approval rule template",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an AWS CodeCommit repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeMergeConflicts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about specific merge conflicts when attempting to merge two commits using either the three-way or the squash merge option",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribePullRequestEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about one or more pull request events",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateApprovalRuleTemplateFromRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove the association between an approval rule template and a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "EvaluatePullRequestApprovalRules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to evaluate whether a pull request is mergable based on its current approval state and approval rule requirements",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetApprovalRuleTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about an approval rule template",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBlob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the encoded content of an individual file in an AWS CodeCommit repository from the AWS CodeCommit console",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBranch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get details about a branch in an AWS CodeCommit repository with this API; does not control Git branch actions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetComment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get the content of a comment made on a change, file, or commit in a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCommentReactions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get the reactions on a comment",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCommentsForComparedCommit",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about comments made on the comparison between two commits",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCommentsForPullRequest",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get comments made on a pull request",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCommit",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about a commit, including commit message and committer information, with this API; does not control Git log actions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCommitHistory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about the history of commits in a repository",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCommitsFromMergeBase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about the difference between commits in the context of a potential merge",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDifferences",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about the differences between valid commit specifiers such as a branch, tag, HEAD, commit ID, or other fully qualified reference",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return the base-64 encoded contents of a specified file and its metadata",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFolder",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return the contents of a specified folder in a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMergeCommit",
+            "condition_keys": [
+                "codecommit:References"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about a merge commit created by one of the merge options for pull requests that creates merge commits. Not all merge options create merge commits. This permission does not control Git merge actions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMergeConflicts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about merge conflicts between the before and after commit IDs for a pull request in a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMergeOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about merge options for pull requests that can be used to merge two commits; does not control Git merge actions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetObjectIdentifier",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to resolve blobs, trees, and commits to their identifier",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPullRequest",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about a pull request in a specified repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPullRequestApprovalStates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the current approvals on an inputted pull request",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPullRequestOverrideState",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the current override state of a given pull request",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetReferences",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get details about references in an AWS CodeCommit repository; does not control Git reference actions",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about an AWS CodeCommit repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRepositoryTriggers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about triggers configured for a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTree",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the contents of a specified tree in an AWS CodeCommit repository from the AWS CodeCommit console",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetUploadArchiveStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get status information about an archive upload to a pipeline in AWS CodePipeline",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GitPull",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to pull information from an AWS CodeCommit repository to a local repo",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "GitPush",
+            "condition_keys": [
+                "codecommit:References"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to push information from a local repo to an AWS CodeCommit repository",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListApprovalRuleTemplates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all approval rule templates in an AWS Region for the AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListAssociatedApprovalRuleTemplatesForRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list approval rule templates that are associated with a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListBranches",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list branches for an AWS CodeCommit repository with this API; does not control Git branch actions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListPullRequests",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list pull requests for a specified repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListRepositories",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list information about AWS CodeCommit repositories in the current Region for your AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListRepositoriesForApprovalRuleTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list repositories that are associated with an approval rule template",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the resource attached to a CodeCommit resource ARN",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "MergeBranchesByFastForward",
+            "condition_keys": [
+                "codecommit:References"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to merge two commits into the specified destination branch using the fast-forward merge option",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "MergeBranchesBySquash",
+            "condition_keys": [
+                "codecommit:References"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to merge two commits into the specified destination branch using the squash merge option",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "MergeBranchesByThreeWay",
+            "condition_keys": [
+                "codecommit:References"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to merge two commits into the specified destination branch using the three-way merge option",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "MergePullRequestByFastForward",
+            "condition_keys": [
+                "codecommit:References"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to close a pull request and attempt to merge it into the specified destination branch for that pull request at the specified commit using the fast-forward merge option",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "MergePullRequestBySquash",
+            "condition_keys": [
+                "codecommit:References"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to close a pull request and attempt to merge it into the specified destination branch for that pull request at the specified commit using the squash merge option",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "MergePullRequestByThreeWay",
+            "condition_keys": [
+                "codecommit:References"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to close a pull request and attempt to merge it into the specified destination branch for that pull request at the specified commit using the three-way merge option",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "OverridePullRequestApprovalRules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to override all approval rules for a pull request, including approval rules created by a template",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PostCommentForComparedCommit",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to post a comment on the comparison between two commits",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PostCommentForPullRequest",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to post a comment on a pull request",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PostCommentReply",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to post a comment in reply to a comment on a comparison between commits or a pull request",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutCommentReaction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to post a reaction on a comment",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutFile",
+            "condition_keys": [
+                "codecommit:References"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add or update a file in a branch in an AWS CodeCommit repository, and generate a commit for the addition in the specified branch",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutRepositoryTriggers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create, update, or delete triggers for a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to attach resource tags to a CodeCommit resource ARN",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TestRepositoryTriggers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to test the functionality of repository triggers by sending information to the trigger target",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate resource tags from a CodeCommit resource ARN",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApprovalRuleTemplateContent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the content of approval rule templates; does not grant permission to update content of approval rules created specifically for pull requests",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApprovalRuleTemplateDescription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the description of approval rule templates",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApprovalRuleTemplateName",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the name of approval rule templates",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateComment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the contents of a comment if the identity matches the identity used to create the comment",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDefaultBranch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to change the default branch in an AWS CodeCommit repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePullRequestApprovalRuleContent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the content for approval rules created for a specific pull requests; does not grant permission to update approval rule content for rules created with an approval rule template",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePullRequestApprovalState",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the approval state for pull requests",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePullRequestDescription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the description of a pull request",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePullRequestStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the status of a pull request",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePullRequestTitle",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the title of a pull request",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRepositoryDescription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to change the description of an AWS CodeCommit repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRepositoryName",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to change the name of an AWS CodeCommit repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UploadArchive",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to the service role for AWS CodePipeline to upload repository changes into a pipeline",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "codecommit",
+    "service": "AWS CodeCommit"
+}

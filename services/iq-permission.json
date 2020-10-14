@@ -1,0 +1,15 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "ApproveAccessGrant",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to approve an access grant",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "iq-permission",
+    "service": "AWS IQ Permissions"
+}

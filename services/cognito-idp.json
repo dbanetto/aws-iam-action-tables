@@ -1,0 +1,1283 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AddCustomAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds additional user attributes to the user pool schema.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminAddUserToGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds the specified user to the specified group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminConfirmSignUp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Confirms user registration as an admin without using a confirmation code. Works on any user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminCreateUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new user in the specified user pool and sends a welcome message via email or phone (SMS).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminDeleteUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a user as an administrator. Works on any user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminDeleteUserAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the user attributes in a user pool as an administrator. Works on any user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminDisableProviderForUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disables the user from signing in with the specified external (SAML or social) identity provider.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminDisableUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disables the specified user as an administrator. Works on any user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminEnableUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the specified user as an administrator. Works on any user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminForgetDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Forgets the device, as an administrator.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "AdminGetDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the device, as an administrator.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "AdminGetUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the specified user by user name in a user pool as an administrator. Works on any user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminInitiateAuth",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Authenticates a user in a user pool as an administrator. Works on any user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminLinkProviderForUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Links an existing user account in a user pool (DestinationUser) to an identity from an external identity provider (SourceUser) based on a specified attribute name and value from the external identity provider.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "AdminListDevices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists devices, as an administrator.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "AdminListGroupsForUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the groups that the user belongs to.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "AdminListUserAuthEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the authentication events for the user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminRemoveUserFromGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes the specified user from the specified group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminResetUserPassword",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Resets the specified user's password in a user pool as an administrator. Works on any user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminRespondToAuthChallenge",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Responds to an authentication challenge, as an administrator.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminSetUserMFAPreference",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets MFA preference for the user in the userpool",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminSetUserPassword",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets the specified user's password in a user pool as an administrator. Works on any user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminSetUserSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets all the user settings for a specified user name. Works on any user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminUpdateAuthEventFeedback",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the feedback for the user authentication event",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminUpdateDeviceStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the device status as an administrator.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminUpdateUserAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the specified user's attributes, including developer attributes, as an administrator.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AdminUserGlobalSignOut",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Signs out users from all devices, as an administrator.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateSoftwareToken",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a unique generated shared secret key code for the user account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ChangePassword",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Changes the password for a specified user in a user pool.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ConfirmDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Confirms tracking of the device. This API call is the call that begins device tracking.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ConfirmForgotPassword",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows a user to enter a confirmation code to reset a forgotten password.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ConfirmSignUp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Confirms registration of a user and handles the existing alias from a previous user.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new group in the specified user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateIdentityProvider",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an identity provider for a user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateResourceServer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new OAuth2.0 resource server and defines custom scopes in it.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUserImportJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates the user import job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUserPool",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new Amazon Cognito user pool and sets the password policy for the pool.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUserPoolClient",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates the user pool client.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUserPoolDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new domain for a user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a group. Currently only groups with no members can be deleted.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteIdentityProvider",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an identity provider for a user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteResourceServer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a resource server.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows a user to delete one's self.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUserAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the attributes for a user.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUserPool",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified Amazon Cognito user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUserPoolClient",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows the developer to delete the user pool client.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUserPoolDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a domain for a user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeIdentityProvider",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about a specific identity provider.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeResourceServer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a resource server.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeRiskConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the risk configuration setting for the userpool / userpool client",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeUserImportJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the user import job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeUserPool",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the configuration information and metadata of the specified user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeUserPoolClient",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Client method for returning the configuration information and metadata of the specified user pool client.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeUserPoolDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about a domain.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ForgetDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Forgets the specified device.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ForgotPassword",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Calling this API causes a message to be sent to the end user with a confirmation code that is required to change the user's password.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCSVHeader",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the header information for the .csv file to be used as input for the user import job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the device.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetIdentityProviderByIdentifier",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the specified identity provider.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSigningCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the signing certificate.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetUICustomization",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the UI Customization information for a particular app client's app UI, if there is something set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the user attributes and metadata for a user.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetUserAttributeVerificationCode",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the user attribute verification code for the specified attribute name.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetUserPoolMfaConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the MFA configuration for the userpool",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "GlobalSignOut",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Signs out users from all devices.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "InitiateAuth",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Initiates the authentication flow.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDevices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the devices.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the groups associated with a user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListIdentityProviders",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists information about all identity providers for a user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListResourceServers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the resource servers for a user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the tags that are assigned to an Amazon Cognito user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListUserImportJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the user import jobs..",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListUserPoolClients",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the clients that have been created for the specified user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListUserPools",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the user pools associated with an AWS account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListUsers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the users in the Amazon Cognito user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListUsersInGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the users in the specified group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ResendConfirmationCode",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Resends the confirmation (for confirmation of registration) to a specific user in the user pool.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RespondToAuthChallenge",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Responds to the authentication challenge.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SetRiskConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "sets the risk configuration setting for the userpool / userpool client",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetUICustomization",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets the UI customization information for a user pool's built-in app UI.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetUserMFAPreference",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets MFA preference for the user in the userpool",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SetUserPoolMfaConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets the MFA configuration for the userpool",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetUserSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets the user settings like multi-factor authentication (MFA).",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SignUp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Registers the user in the specified user pool and creates a user name, password, and user attributes.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartUserImportJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts the user import.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopUserImportJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops the user import job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Assigns a set of tags to an Amazon Cognito user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Removes the specified tags from an Amazon Cognito user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateAuthEventFeedback",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the feedback for the user authentication event",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDeviceStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the device status.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the specified group with the specified attributes.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateIdentityProvider",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates identity provider information for a user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateResourceServer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the name and scopes of resource server.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateUserAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows a user to update a specific attribute (one at a time).",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateUserPool",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Updates the specified user pool with the specified attributes.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateUserPoolClient",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows the developer to update the specified user pool client and password policy.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateUserPoolDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the Secure Sockets Layer (SSL) certificate for the custom domain for your user pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "userpool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "VerifySoftwareToken",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Registers a user's entered TOTP code and mark the user's software token MFA status as verified if successful.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "VerifyUserAttribute",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Verifies a user attribute using a one time verification code.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "cognito-idp",
+    "service": "Amazon Cognito User Pools"
+}

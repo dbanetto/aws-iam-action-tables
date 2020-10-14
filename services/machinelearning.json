@@ -1,0 +1,434 @@
+{
+    "actions": [
+        {
+            "access_level": "Tagging",
+            "action": "AddTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds one or more tags to an object, up to a limit of 10. Each tag consists of a key and an optional value",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "batchprediction",
+                    "required": false
+                },
+                {
+                    "name": "datasource",
+                    "required": false
+                },
+                {
+                    "name": "evaluation",
+                    "required": false
+                },
+                {
+                    "name": "mlmodel",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateBatchPrediction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Generates predictions for a group of observations",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "batchprediction",
+                    "required": true
+                },
+                {
+                    "name": "datasource",
+                    "required": true
+                },
+                {
+                    "name": "mlmodel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDataSourceFromRDS",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a DataSource object from an Amazon RDS",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasource",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDataSourceFromRedshift",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a DataSource from a database hosted on an Amazon Redshift cluster",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasource",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDataSourceFromS3",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a DataSource object from S3",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasource",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateEvaluation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new Evaluation of an MLModel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasource",
+                    "required": true
+                },
+                {
+                    "name": "evaluation",
+                    "required": true
+                },
+                {
+                    "name": "mlmodel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateMLModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new MLModel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasource",
+                    "required": true
+                },
+                {
+                    "name": "mlmodel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRealtimeEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a real-time endpoint for the MLModel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlmodel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBatchPrediction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Assigns the DELETED status to a BatchPrediction, rendering it unusable",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "batchprediction",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDataSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Assigns the DELETED status to a DataSource, rendering it unusable",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasource",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteEvaluation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Assigns the DELETED status to an Evaluation, rendering it unusable",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "evaluation",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMLModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Assigns the DELETED status to an MLModel, rendering it unusable",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlmodel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRealtimeEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a real time endpoint of an MLModel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlmodel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "DeleteTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified tags associated with an ML object. After this operation is complete, you can't recover deleted tags",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "batchprediction",
+                    "required": false
+                },
+                {
+                    "name": "datasource",
+                    "required": false
+                },
+                {
+                    "name": "evaluation",
+                    "required": false
+                },
+                {
+                    "name": "mlmodel",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeBatchPredictions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of BatchPrediction operations that match the search criteria in the request",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDataSources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of DataSource that match the search criteria in the request",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeEvaluations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of DescribeEvaluations that match the search criteria in the request",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeMLModels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of MLModel that match the search criteria in the request",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes one or more of the tags for your Amazon ML object",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "batchprediction",
+                    "required": false
+                },
+                {
+                    "name": "datasource",
+                    "required": false
+                },
+                {
+                    "name": "evaluation",
+                    "required": false
+                },
+                {
+                    "name": "mlmodel",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBatchPrediction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a BatchPrediction that includes detailed metadata, status, and data file information",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "batchprediction",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDataSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a DataSource that includes metadata and data file information, as well as the current status of the DataSource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasource",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetEvaluation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns an Evaluation that includes metadata as well as the current status of the Evaluation",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasource",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMLModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns an MLModel that includes detailed metadata, and data source information as well as the current status of the MLModel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlmodel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "Predict",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Generates a prediction for the observation using the specified ML Model",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlmodel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateBatchPrediction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the BatchPredictionName of a BatchPrediction",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "batchprediction",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDataSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the DataSourceName of a DataSource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datasource",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateEvaluation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the EvaluationName of an Evaluation",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "evaluation",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateMLModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the MLModelName and the ScoreThreshold of an MLModel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlmodel",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning"
+}

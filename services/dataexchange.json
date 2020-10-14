@@ -1,0 +1,342 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CancelJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to cancel a job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "jobs",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAsset",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an asset (for example, in a Job).",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDataSet",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a data set.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to create a job to import or export assets.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "jobs",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRevision",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a revision.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAsset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to delete an asset.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "assets",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDataSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to delete a data set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-sets",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRevision",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to delete a revision.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "revisions",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAsset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to get information about an asset and to export it (for example, in a Job).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "assets",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDataSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about a data set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-sets",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "GetJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to get information about a job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "jobs",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRevision",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get information about a revision.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "revisions",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDataSetRevisions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to list the revisions of a data set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "revisions",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDataSets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list data sets for the account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-sets",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to list jobs for the account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "jobs",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListRevisionAssets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to get list the assets of a revision.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "assets",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the tags that you associated with the specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-sets",
+                    "required": false
+                },
+                {
+                    "name": "revisions",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to start a job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "jobs",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add one or more tags to a specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-sets",
+                    "required": false
+                },
+                {
+                    "name": "revisions",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove one or more tags from a specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-sets",
+                    "required": false
+                },
+                {
+                    "name": "revisions",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateAsset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to get update information about an asset.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "assets",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDataSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to update information about a data set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-sets",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRevision",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to update information about a revision.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "revisions",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange"
+}

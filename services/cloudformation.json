@@ -1,0 +1,776 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CancelUpdateStack",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Cancels an update on the specified stack.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ContinueUpdateRollback",
+            "condition_keys": [
+                "cloudformation:RoleArn"
+            ],
+            "dependent_actions": [],
+            "description": "For a specified stack that is in the UPDATE_ROLLBACK_FAILED state, continues rolling it back to the UPDATE_ROLLBACK_COMPLETE state.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateChangeSet",
+            "condition_keys": [
+                "cloudformation:ChangeSetName",
+                "cloudformation:ResourceTypes",
+                "cloudformation:ImportResourceTypes",
+                "cloudformation:RoleArn",
+                "cloudformation:StackPolicyUrl",
+                "cloudformation:TemplateUrl",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a list of changes for a stack.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateStack",
+            "condition_keys": [
+                "cloudformation:ResourceTypes",
+                "cloudformation:RoleArn",
+                "cloudformation:StackPolicyUrl",
+                "cloudformation:TemplateUrl",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a stack as specified in the template.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateStackInstances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates stack instances for the specified accounts, within the specified regions.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stackset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateStackSet",
+            "condition_keys": [
+                "cloudformation:RoleArn",
+                "cloudformation:TemplateUrl",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a stackset as specified in the template.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUploadBucket",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteChangeSet",
+            "condition_keys": [
+                "cloudformation:ChangeSetName"
+            ],
+            "dependent_actions": [],
+            "description": "Deletes the specified change set. Deleting change sets ensures that no one executes the wrong change set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteStack",
+            "condition_keys": [
+                "cloudformation:RoleArn"
+            ],
+            "dependent_actions": [],
+            "description": "Deletes a specified stack.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteStackInstances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes stack instances for the specified accounts, in the specified regions.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stackset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteStackSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a specified stackset.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stackset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterType",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deregisters an existing CloudFormation type or type version",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAccountLimits",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves your account's AWS CloudFormation limits.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeChangeSet",
+            "condition_keys": [
+                "cloudformation:ChangeSetName"
+            ],
+            "dependent_actions": [],
+            "description": "Returns the description for the specified change set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStackDriftDetectionStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a stack drift detection operation.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStackEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns all stack related events for a specified stack.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStackInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the stack instance that's associated with the specified stack set, AWS account, and region.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stackset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStackResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a description of the specified resource in the specified stack.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStackResourceDrifts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns drift information for the resources that have been checked for drift in the specified stack.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStackResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns AWS resource descriptions for running and deleted stacks.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStackSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the description of the specified stack set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stackset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStackSetOperation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the description of the specified stack set operation.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stackset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeStacks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the description for the specified stack.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeType",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about the CloudFormation type requested",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTypeRegistration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about the registration process for a CloudFormation type",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DetectStackDrift",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Detects whether a stack's actual configuration differs, or has drifted, from it's expected configuration, as defined in the stack template and any values specified as template parameters.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DetectStackResourceDrift",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about whether a resource's actual configuration differs, or has drifted, from it's expected configuration, as defined in the stack template and any values specified as template parameters.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DetectStackSetDrift",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables users to detect drift on a stack set and the stack instances that belong to that stack set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stackset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "EstimateTemplateCost",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the estimated monthly cost of a template.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ExecuteChangeSet",
+            "condition_keys": [
+                "cloudformation:ChangeSetName"
+            ],
+            "dependent_actions": [],
+            "description": "Updates a stack using the input information that was provided when the specified change set was created.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetStackPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the stack policy for a specified stack.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the template body for a specified stack.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTemplateSummary",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a new or existing template.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": false
+                },
+                {
+                    "name": "stackset",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListChangeSets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the ID and status of each active change set for a stack. For example, AWS CloudFormation lists change sets that are in the CREATE_IN_PROGRESS or CREATE_PENDING state.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListExports",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all exported output values in the account and region in which you call this action.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListImports",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all stacks that are importing an exported output value.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListStackInstances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns summary information about stack instances that are associated with the specified stack set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stackset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListStackResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns descriptions of all resources of the specified stack.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListStackSetOperationResults",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns summary information about the results of a stack set operation.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stackset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListStackSetOperations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns summary information about operations performed on a stack set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stackset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListStackSets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns summary information about stack sets that are associated with the user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stackset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListStacks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the summary information for stacks whose status matches the specified StackStatusFilter.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTypeRegistrations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists CloudFormation type registration attempts",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTypeVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists versions of a particular CloudFormation type",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTypes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists available CloudFormation types",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterType",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Registers a new CloudFormation type",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "SetStackPolicy",
+            "condition_keys": [
+                "cloudformation:StackPolicyUrl"
+            ],
+            "dependent_actions": [],
+            "description": "Sets a stack policy for a specified stack.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetTypeDefaultVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets which version of a CloudFormation type applies to CloudFormation operations",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SignalResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sends a signal to the specified resource with a success or failure status.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopStackSetOperation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops an in-progress operation on a stack set and its associated stack instances.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stackset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Tagging cloudformation resources.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": false
+                },
+                {
+                    "name": "stackset",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Untagging cloudformation resources.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": false
+                },
+                {
+                    "name": "stackset",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateStack",
+            "condition_keys": [
+                "cloudformation:ResourceTypes",
+                "cloudformation:RoleArn",
+                "cloudformation:StackPolicyUrl",
+                "cloudformation:TemplateUrl",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Updates a stack as specified in the template.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateStackInstances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the parameter values for stack instances for the specified accounts, within the specified regions.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stackset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateStackSet",
+            "condition_keys": [
+                "cloudformation:RoleArn",
+                "cloudformation:TemplateUrl",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Updates a stackset as specified in the template.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stackset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTerminationProtection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates termination protection for the specified stack.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ValidateTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Validates a specified template.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation"
+}

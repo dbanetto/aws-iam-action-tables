@@ -1,0 +1,267 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "BulkPublish",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Initiates a bulk publish of all existing datasets for an Identity Pool to the configured stream.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "identitypool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDataset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specific dataset.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDataset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets meta data about a dataset by identity and dataset name.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeIdentityPoolUsage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets usage details (for example, data storage) about a particular identity pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "identitypool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeIdentityUsage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets usage information for an identity, including number of datasets and data usage.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "identity",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBulkPublishDetails",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the status of the last BulkPublish operation for an identity pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "identitypool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCognitoEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the events and the corresponding Lambda functions associated with an identity pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "identitypool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetIdentityPoolConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the configuration settings of an identity pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "identitypool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDatasets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists datasets for an identity.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListIdentityPoolUsage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a list of identity pools registered with Cognito.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "identitypool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListRecords",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets paginated records, optionally changed after a particular sync count for a dataset and identity.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "QueryRecords",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "A permission that grants the ability to query records.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Registers a device to receive push sync notifications.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "identity",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetCognitoEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets the AWS Lambda function for a given event type for an identity pool.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "identitypool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetDatasetConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "A permission that grants ability to configure datasets.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetIdentityPoolConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets the necessary configuration for push sync.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "identitypool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SubscribeToDataset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Subscribes to receive notifications when a dataset is modified by another device.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UnsubscribeFromDataset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Unsubscribes from receiving notifications when a dataset is modified by another device.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRecords",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Posts updates to records and adds and deletes records for a dataset and user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "cognito-sync",
+    "service": "Amazon Cognito Sync"
+}

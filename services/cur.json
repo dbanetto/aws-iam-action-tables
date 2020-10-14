@@ -1,0 +1,57 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "DeleteReportDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete Cost and Usage Report Definition",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cur",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeReportDefinitions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get Cost and Usage Report Definitions",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyReportDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modify Cost and Usage Report Definition",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cur",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutReportDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Write Cost and Usage Report Definition",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cur",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "cur",
+    "service": "AWS Cost and Usage Report"
+}

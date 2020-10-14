@@ -1,0 +1,450 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateDiscoverer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an event schema discoverer. Once created, your events will be automatically map into corresponding schema documents",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "discoverer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRegistry",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a new schema registry in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "registry",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSchema",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a new schema in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDiscoverer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes discoverer in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "discoverer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRegistry",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an existing registry in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "registry",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteResourcePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete the resource-based policy attached to a given registry.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "registry",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSchema",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an existing schema in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSchemaVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a specific version of schema in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCodeBinding",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves metadata for generated code for specific schema in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDiscoverer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves discoverer metadata in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "discoverer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeRegistry",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an existing registry metadata in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "registry",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSchema",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves an existing schema in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCodeBindingSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves metadata for generated code for specific schema in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDiscoveredSchema",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves schema for the provided list of sample events.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResourcePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves the resource-based policy attached to a given registry.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "registry",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDiscoverers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all the discoverers in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "discoverer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListRegistries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all discoverers in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "registry",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListSchemaVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all versions of a schema.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListSchemas",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all schemas.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action lists tags for a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "discoverer",
+                    "required": true
+                },
+                {
+                    "name": "registry",
+                    "required": true
+                },
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutCodeBinding",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Generates code for specific schema in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutResourcePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Attach resource-based policy to the specific registry.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "registry",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "SearchSchemas",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Searches schemas based on specified keywords in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartDiscoverer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts the specified discoverer. Once started the discoverer will automatically register schemas for published events to configured source in your account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "discoverer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopDiscoverer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts the specified discoverer. Once started the discoverer will automatically register schemas for published events to configured source in your account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "discoverer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "This action tags an resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "discoverer",
+                    "required": true
+                },
+                {
+                    "name": "registry",
+                    "required": true
+                },
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This action removes a tag from on a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "discoverer",
+                    "required": true
+                },
+                {
+                    "name": "registry",
+                    "required": true
+                },
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDiscoverer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing discoverer in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "discoverer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRegistry",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing registry metadata in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "registry",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSchema",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing schema in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "schema",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "schemas",
+    "service": "Amazon EventBridge Schemas"
+}

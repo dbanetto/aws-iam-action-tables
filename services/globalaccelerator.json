@@ -1,0 +1,329 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AdvertiseByoipCidr",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Advertises an IPv4 address range that is provisioned for use with your accelerator through bring your own IP addresses (BYOIP).",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAccelerator",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Create an accelerator.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateEndpointGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Add an endpoint group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateListener",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Add a listener.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "accelerator",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAccelerator",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete the accelerator.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "accelerator",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteEndpointGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete the endpoint group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "endpointgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteListener",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete the listener.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeprovisionByoipCidr",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Releases the specified address range that you provisioned for use with your accelerator through bring your own IP addresses (BYOIP) and deletes the corresponding address pool.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAccelerator",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe the accelerator.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "accelerator",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAcceleratorAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe the accelerator Attributes.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "accelerator",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEndpointGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe the endpoint group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "endpointgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeListener",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe the listener.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListAccelerators",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List the accelerators.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListByoipCidrs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List the byoip cidrs.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListEndpointGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List the endpoint groups.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListListeners",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List the listeners.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "accelerator",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List tags for a globalaccelerator resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "accelerator",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ProvisionByoipCidr",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Provisions an address range for use with your accelerator through bring your own IP addresses (BYOIP) and creates a corresponding address pool.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Add tags to globalaccelerator resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "accelerator",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Remove tags from globalaccelerator resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "accelerator",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateAccelerator",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update the accelerator.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "accelerator",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateAcceleratorAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update the accelerator attributes.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "accelerator",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateEndpointGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update the endpoint group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "endpointgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateListener",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update the listener.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "listener",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "WithdrawByoipCidr",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops advertising an IPv4 address range that is provisioned as an address pool.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator"
+}

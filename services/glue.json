@@ -1,0 +1,1721 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "BatchCreatePartition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create one or more partitions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchDeleteConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete one or more connections",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "connection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchDeletePartition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete one or more partitions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchDeleteTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete one or more tables",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchDeleteTableVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete one or more versions of a table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                },
+                {
+                    "name": "tableversion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetCrawlers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve one or more crawlers",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetDevEndpoints",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve one or more development endpoints",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve one or more jobs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetPartition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve one or more partitions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetTriggers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve one or more triggers",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetWorkflows",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve one or more workflows",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchStopJobRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop one or more job runs for a job",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelMLTaskRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop a running ML Task Run",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlTransform",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateClassifier",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a classifier",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a connection",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "connection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCrawler",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a crawler",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDatabase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a database",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDevEndpoint",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a development endpoint",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateJob",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a job",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateMLTransform",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an ML Transform",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePartition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a partition",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateScript",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a script",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSecurityConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a security configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTrigger",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a trigger",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUserDefinedFunction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a function definition",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "userdefinedfunction",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateWorkflow",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a workflow",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteClassifier",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a classifier",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a connection",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "connection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCrawler",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a crawler",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDatabase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a database",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDevEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a development endpoint",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a job",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMLTransform",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an ML Transform",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlTransform",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePartition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a partition",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteResourcePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a resource policy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSecurityConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a security configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTableVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a version of a table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                },
+                {
+                    "name": "tableversion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTrigger",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a trigger",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUserDefinedFunction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a function definition",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "userdefinedfunction",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteWorkflow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a workflow",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCatalogImportStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the catalog import status",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetClassifier",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a classifier",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetClassifiers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all classifiers",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a connection",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "connection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetConnections",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of connections",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "connection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCrawler",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a crawler",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCrawlerMetrics",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve metrics about crawlers",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCrawlers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all crawlers",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDataCatalogEncryptionSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve catalog encryption settings",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDatabase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a database",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDatabases",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all databases",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDataflowGraph",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to transform a script into a directed acyclic graph (DAG)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDevEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a development endpoint",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDevEndpoints",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all development endpoints",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a job",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetJobBookmark",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a job bookmark",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetJobRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a job run",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetJobRuns",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all job runs of a job",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all current jobs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMLTaskRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve an ML Task Run",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlTransform",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetMLTaskRuns",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all ML Task Runs",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlTransform",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMLTransform",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve an ML Transform",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlTransform",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetMLTransforms",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all ML Transforms",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "GetMapping",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a mapping",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPartition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a partition",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPartitions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the partitions of a table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPlan",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a mapping for a script",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResourcePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a resource policy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSecurityConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a security configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSecurityConfigurations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve one or more security configurations",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTableVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a version of a table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                },
+                {
+                    "name": "tableversion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTableVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of versions of a table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                },
+                {
+                    "name": "tableversion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTables",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the tables in a database",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all tags associated with a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "crawler",
+                    "required": false
+                },
+                {
+                    "name": "devendpoint",
+                    "required": false
+                },
+                {
+                    "name": "job",
+                    "required": false
+                },
+                {
+                    "name": "trigger",
+                    "required": false
+                },
+                {
+                    "name": "workflow",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTrigger",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a trigger",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTriggers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the triggers associated with a job",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetUserDefinedFunction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a function definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "userdefinedfunction",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetUserDefinedFunctions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve multiple function definitions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "userdefinedfunction",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetWorkflow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a workflow",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetWorkflowRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a workflow run",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetWorkflowRunProperties",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve workflow run properties",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetWorkflowRuns",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all runs of a workflow",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ImportCatalogToGlue",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to import an Athena data catalog into AWS Glue",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListCrawlers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all crawlers",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDevEndpoints",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all development endpoints",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all current jobs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListMLTransforms",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all ML Transforms",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTriggers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all triggers",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListWorkflows",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all workflows",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutDataCatalogEncryptionSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update catalog encryption settings",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutResourcePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a resource policy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutWorkflowRunProperties",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update workflow run properties",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ResetJobBookmark",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to reset a job bookmark",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "SearchTables",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the tables in the catalog",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartCrawler",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start a crawler",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartCrawlerSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to change the schedule state of a crawler to SCHEDULED",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartExportLabelsTaskRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start an Export Labels ML Task Run",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlTransform",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartImportLabelsTaskRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start an Import Labels ML Task Run",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlTransform",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartJobRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start running a job",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartMLEvaluationTaskRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start an Evaluation ML Task Run",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlTransform",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartMLLabelingSetGenerationTaskRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start a Labeling Set Generation ML Task Run",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlTransform",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartTrigger",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start a trigger",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartWorkflowRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start running a workflow",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StopCrawler",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop a running crawler",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StopCrawlerSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to set the schedule state of a crawler to NOT_SCHEDULED",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StopTrigger",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop a trigger",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add tags to a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "crawler",
+                    "required": false
+                },
+                {
+                    "name": "devendpoint",
+                    "required": false
+                },
+                {
+                    "name": "job",
+                    "required": false
+                },
+                {
+                    "name": "trigger",
+                    "required": false
+                },
+                {
+                    "name": "workflow",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove tags associated with a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "crawler",
+                    "required": false
+                },
+                {
+                    "name": "devendpoint",
+                    "required": false
+                },
+                {
+                    "name": "job",
+                    "required": false
+                },
+                {
+                    "name": "trigger",
+                    "required": false
+                },
+                {
+                    "name": "workflow",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateClassifier",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a classifier",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a connection",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "connection",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateCrawler",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a crawler",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateCrawlerSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the schedule of a crawler",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDatabase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a database",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDevEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a development endpoint",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a job",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateMLTransform",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an ML Transform",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlTransform",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePartition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a partition",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTrigger",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a trigger",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateUserDefinedFunction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a function definition",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "catalog",
+                    "required": true
+                },
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "userdefinedfunction",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateWorkflow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a workflow",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UseMLTransforms",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to use an ML Transform from within a Glue ETL Script",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "mlTransform",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "glue",
+    "service": "AWS Glue"
+}

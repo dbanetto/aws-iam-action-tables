@@ -1,0 +1,277 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "BatchAssociateScramSecret",
+            "condition_keys": [],
+            "dependent_actions": [
+                "kms:CreateGrant",
+                "kms:RetireGrant"
+            ],
+            "description": "Grants permission to associate one or more Scram Secrets with an Amazon MSK cluster.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchDisassociateScramSecret",
+            "condition_keys": [],
+            "dependent_actions": [
+                "kms:RetireGrant"
+            ],
+            "description": "Grants permission to disassociate one or more Scram Secrets from an Amazon MSK cluster.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCluster",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs",
+                "iam:AttachRolePolicy",
+                "iam:CreateServiceLinkedRole",
+                "iam:PutRolePolicy",
+                "kms:CreateGrant",
+                "kms:DescribeKey"
+            ],
+            "description": "Grants permission to create a cluster",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a cluster.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the specified MSK configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a cluster.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeClusterOperation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a description of the cluster operation specified by the ARN.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeConfigurationRevision",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a configuration revision.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBootstrapBrokers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get connection details for the broker nodes in a cluster.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "GetCompatibleKafkaVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of the Apache Kafka versions to which you can update this cluster.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListClusterOperations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of all the operations that have been performed on the specified MSK cluster.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListClusters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of all clusters in the current account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListConfigurations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of all configurations in the current account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListNodes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of nodes in a cluster.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListScramSecrets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a list of the Scram Secrets associated with an Amazon MSK cluster.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list tags of a MSK resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to tag a MSK resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove tags from a MSK resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateBrokerCount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the number of broker nodes of the cluster.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateBrokerStorage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the storage size of the broker nodes of the cluster",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateClusterConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update Kafka configuration running on a cluster.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateClusterKafkaVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the cluster to the specified Apache Kafka version.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new revision of the configuration.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateMonitoring",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the monitoring settings for the cluster.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "kafka",
+    "service": "Amazon Managed Streaming for Apache Kafka"
+}

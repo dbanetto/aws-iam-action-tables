@@ -1,0 +1,231 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateConfigurationItemsToApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associates one or more configuration items with an application.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchDeleteImportData",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes one or more Migration Hub import tasks, each identified by their import ID. Each import task has a number of records, which can identify servers or applications.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an application with the given name and description.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates one or more tags for configuration items. Tags are metadata that help you categorize IT assets. This API accepts a list of multiple configuration items.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApplications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a list of applications and their associations with configuration items.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "DeleteTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the association between configuration items and one or more tags. This API accepts a list of multiple configuration items.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAgents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists agents or the Connector by ID or lists all agents/Connectors associated with your user account if you did not specify an ID.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeConfigurations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves attributes for a list of configuration item IDs. All of the supplied IDs must be for the same asset type (server, application, process, or connection). Output fields are specific to the asset type selected. For example, the output for a server configuration item includes a list of attributes about the server, such as host name, operating system, and number of network cards.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeContinuousExports",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists exports as specified by ID. All continuous exports associated with your user account can be listed if you call DescribeContinuousExports as is without passing any parameters.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeExportConfigurations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves the status of a given export process. You can retrieve status from a maximum of 100 processes.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeExportTasks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve status of one or more export tasks. You can retrieve the status of up to 100 export tasks.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeImportTasks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns an array of import tasks for your account, including status information, times, IDs, the Amazon S3 Object URL for the import file, and more.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves a list of configuration items that are tagged with a specific tag. Or retrieves a list of all tags assigned to a specific configuration item.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateConfigurationItemsFromApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociates one or more configuration items from an application.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ExportConfigurations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Exports all discovered configuration data to an Amazon S3 bucket or an application that enables you to view and evaluate the data. Data includes tags and tag associations, processes, connections, servers, and system performance.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDiscoverySummary",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves a short summary of discovered assets.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListConfigurations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves a list of configuration items according to criteria you specify in a filter. The filter criteria identify relationship requirements.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListServerNeighbors",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves a list of servers which are one network hop away from a specified server.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartContinuousExport",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Start the continuous flow of agent's discovered data into Amazon Athena.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartDataCollectionByAgentIds",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Instructs the specified agents or Connectors to start collecting data.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartExportTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Export the configuration data about discovered configuration items and relationships to an S3 bucket in a specified format.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartImportTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts an import task. The Migration Hub import feature allows you to import details of your on-premises environment directly into AWS without having to use the Application Discovery Service (ADS) tools such as the Discovery Connector or Discovery Agent. This gives you the option to perform migration assessment and planning directly from your imported data including the ability to group your devices as applications and track their migration status.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StopContinuousExport",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stop the continuous flow of agent's discovered data into Amazon Athena.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StopDataCollectionByAgentIds",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Instructs the specified agents or Connectors to stop collecting data.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates metadata about an application.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "discovery",
+    "service": "Application Discovery"
+}

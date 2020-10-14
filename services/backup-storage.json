@@ -1,0 +1,15 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "MountCapsule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associates a KMS key to a backup vault",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "backup-storage",
+    "service": "AWS Backup storage"
+}

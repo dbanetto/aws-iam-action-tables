@@ -1,0 +1,402 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "BatchDeleteDocument",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Batch Delete document",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchPutDocument",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Batch put document",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDataSource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Create a data source",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFaq",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Create an Faq",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateIndex",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Create an Index",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDataSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a data source",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-source",
+                    "required": true
+                },
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFaq",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete an Faq",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "faq",
+                    "required": true
+                },
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteIndex",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete an Index",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDataSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a data source",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-source",
+                    "required": true
+                },
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeFaq",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe an Faq",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "faq",
+                    "required": true
+                },
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeIndex",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe an Index",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDataSourceSyncJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get Data Source sync job history",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-source",
+                    "required": true
+                },
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDataSources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List the data sources",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListFaqs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List the Faqs",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListIndices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List the indexes",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists tags for a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-source",
+                    "required": false
+                },
+                {
+                    "name": "faq",
+                    "required": false
+                },
+                {
+                    "name": "index",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "Query",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Query documents and Faqs",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartDataSourceSyncJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Start Data Source sync job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-source",
+                    "required": true
+                },
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopDataSourceSyncJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stop Data Source sync job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-source",
+                    "required": true
+                },
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SubmitFeedback",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Send feedback about a query results",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Tags a resource with given key value pairs",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-source",
+                    "required": false
+                },
+                {
+                    "name": "faq",
+                    "required": false
+                },
+                {
+                    "name": "index",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Removes the tag with the given key from a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-source",
+                    "required": false
+                },
+                {
+                    "name": "faq",
+                    "required": false
+                },
+                {
+                    "name": "index",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDataSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update a data source",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "data-source",
+                    "required": true
+                },
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateIndex",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update an Index",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "index",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "kendra",
+    "service": "Amazon Kendra"
+}

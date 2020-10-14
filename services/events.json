@@ -1,0 +1,425 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "ActivateEventSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Activates a partner event source that has been deactivated. Once activated, your matching event bus will start receiving events from the event source.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "event-source",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateEventBus",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new event bus within your account. This can be a custom event bus which you can use to receive events from your own custom applications and services, or it can be a partner event bus which can be matched to a partner event source.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "event-bus",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePartnerEventSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Called by an AWS partner to create a partner event source.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "event-source",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeactivateEventSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Called by an AWS partner to create a partner event source.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "event-source",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteEventBus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified custom event bus or partner event bus. All rules associated with this event bus are also deleted. You can't delete your account's default event bus.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "event-bus",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePartnerEventSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Called by an AWS partner to delete a partner event source.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "event-source",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a rule. You must remove all targets from a rule using RemoveTargets before you can delete the rule.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEventBus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Displays the external AWS accounts that are permitted to write events to your account using your account's event bus, and the associated policy.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "event-bus",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEventSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the details of the specified partner event source that is shared with your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "event-source",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribePartnerEventSource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Called by an AWS partner describe the details of the specified partner event source that they have created.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "event-source",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the details of the specified rule.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disables a rule. A disabled rule won't match any events, and won't self-trigger if it has a schedule expression.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables a rule. If the rule does not exist, the operation fails.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListEventBuses",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all the event buses in your account, including the default event bus, custom event buses, and partner event buses.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListEventSources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the event sources shared with this account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListPartnerEventSourceAccounts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Called by an AWS partner to display the AWS account ID that the specified partner event source is associated with.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "event-source",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListPartnerEventSources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Called by an AWS partner to list all the partner event sources that they have created.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListRuleNamesByTarget",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the names of the rules that the given target is put to.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListRules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the Amazon EventBridge rules in your account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action lists tags for an Amazon EventBridge resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "event-bus",
+                    "required": false
+                },
+                {
+                    "name": "rule",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTargetsByRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists of targets assigned to the rule.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sends custom events to Amazon EventBridge so that they can be matched to rules.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "event-bus",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutPartnerEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sends custom events to Amazon EventBridge so that they can be matched to rules.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutPermission",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Running PutPermission permits the specified AWS account to put events to your account's default event bus.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "PutRule",
+            "condition_keys": [
+                "events:detail.userIdentity.principalId",
+                "events:detail-type",
+                "events:source",
+                "events:detail.service",
+                "events:detail.eventTypeCode",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates or updates a rule. Rules are enabled by default, or based on value of the State parameter.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutTargets",
+            "condition_keys": [
+                "events:TargetArn"
+            ],
+            "dependent_actions": [],
+            "description": "Adds target(s) to a rule. Targets are the resources that can be invoked when a rule is triggered.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RemovePermission",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Revokes the permission of another AWS account to be able to put events to your default event bus.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RemoveTargets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes target(s) from a rule so that when the rule is triggered, those targets will no longer be invoked.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "This action tags an Amazon EventBridge resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "event-bus",
+                    "required": false
+                },
+                {
+                    "name": "rule",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "TestEventPattern",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Tests whether an event pattern matches the provided event.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This action removes a tag from an Amazon EventBridge resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "event-bus",
+                    "required": false
+                },
+                {
+                    "name": "rule",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "prefix": "events",
+    "service": "Amazon EventBridge"
+}

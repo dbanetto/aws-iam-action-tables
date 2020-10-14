@@ -1,0 +1,714 @@
+{
+    "actions": [
+        {
+            "access_level": "Read",
+            "action": "BatchGetItem",
+            "condition_keys": [
+                "dynamodb:Attributes",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:Select"
+            ],
+            "dependent_actions": [],
+            "description": "Returns the attributes of one or more items from one or more tables",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchWriteItem",
+            "condition_keys": [
+                "dynamodb:Attributes",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity"
+            ],
+            "dependent_actions": [],
+            "description": "Puts or deletes multiple items in one or more tables",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ConditionCheckItem",
+            "condition_keys": [
+                "dynamodb:Attributes",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:ReturnValues"
+            ],
+            "dependent_actions": [],
+            "description": "The ConditionCheckItem operation checks the existence of a set of attributes for the item with the given primary key",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateBackup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a backup for an existing table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateGlobalTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the user to create a global table from an existing table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-table",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The CreateTable operation adds a new table to your account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTableReplica",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds a new replica table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBackup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an existing backup of a table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteItem",
+            "condition_keys": [
+                "dynamodb:Attributes",
+                "dynamodb:EnclosingOperation",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:ReturnValues"
+            ],
+            "dependent_actions": [],
+            "description": "Deletes a single item in a table by primary key",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DeleteTable operation deletes a table and all of its items",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTableReplica",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a replica table and all of its items",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeBackup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an existing backup of a table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeContinuousBackups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Checks the status of the backup restore settings on the specified table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeContributorInsights",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the contributor insights status and related details for a given table or global secondary index",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                },
+                {
+                    "name": "index",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeGlobalTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about the specified global table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeGlobalTableSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns settings information about the specified global table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLimits",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the current provisioned-capacity limits for your AWS account in a region, both for the region as a whole and for any one DynamoDB table that you create there",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeReservedCapacity",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes one or more of the Reserved Capacity purchased",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeReservedCapacityOfferings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes Reserved Capacity offerings that are available for purchase",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a stream, including the current status of the stream, its Amazon Resource Name (ARN), the composition of its shards, and its corresponding DynamoDB table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about the table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTableReplicaAutoScaling",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the auto scaling settings across all replicas of the global table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTimeToLive",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gives a description of the Time to Live (TTL) status on the specified table.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetItem",
+            "condition_keys": [
+                "dynamodb:Attributes",
+                "dynamodb:EnclosingOperation",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:Select"
+            ],
+            "dependent_actions": [],
+            "description": "The GetItem operation returns a set of attributes for the item with the given primary key",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRecords",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves the stream records from a given shard",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetShardIterator",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a shard iterator",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListBackups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List backups associated with the account and endpoint",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListContributorInsights",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the ContributorInsightsSummary for all tables and global secondary indexes associated with the current account and endpoint",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListGlobalTables",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all global tables that have a replica in the specified region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListStreams",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns an array of stream ARNs associated with the current account and endpoint",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTables",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns an array of table names associated with the current account and endpoint",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsOfResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List all tags on an Amazon DynamoDB resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PurchaseReservedCapacityOfferings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Purchases Reserved Capacity for use with your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutItem",
+            "condition_keys": [
+                "dynamodb:Attributes",
+                "dynamodb:EnclosingOperation",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:ReturnValues"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new item, or replaces an old item with a new item",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "Query",
+            "condition_keys": [
+                "dynamodb:Attributes",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:ReturnValues",
+                "dynamodb:Select"
+            ],
+            "dependent_actions": [],
+            "description": "Uses the primary key of a table or a secondary index to directly access items from that table or index",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                },
+                {
+                    "name": "index",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RestoreTableFromBackup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new table from an existing backup",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "backup",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RestoreTableToPointInTime",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Restores a table to a point in time",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "Scan",
+            "condition_keys": [
+                "dynamodb:Attributes",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:ReturnValues",
+                "dynamodb:Select"
+            ],
+            "dependent_actions": [],
+            "description": "Returns one or more items and item attributes by accessing every item in a table or a secondary index",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                },
+                {
+                    "name": "index",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associate a set of tags with an Amazon DynamoDB resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes the association of tags from an Amazon DynamoDB resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateContinuousBackups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables or disables continuous backups",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateContributorInsights",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the status for contributor insights for a specific table or global secondary index",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                },
+                {
+                    "name": "index",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateGlobalTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the user to add or remove replicas in the specified global table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-table",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateGlobalTableSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables the user to update settings of the specified global table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "global-table",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateItem",
+            "condition_keys": [
+                "dynamodb:Attributes",
+                "dynamodb:EnclosingOperation",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:ReturnValues"
+            ],
+            "dependent_actions": [],
+            "description": "Edits an existing item's attributes, or adds a new item to the table if it does not already exist",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies the provisioned throughput settings, global secondary indexes, or DynamoDB Streams settings for a given table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTableReplicaAutoScaling",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates auto scaling settings on your replica table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTimeToLive",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables or disables TTL for the specified table",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB"
+}

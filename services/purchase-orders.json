@@ -1,0 +1,24 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "ModifyPurchaseOrders",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modify purchase orders and details",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ViewPurchaseOrders",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "View purchase orders and details",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "purchase-orders",
+    "service": "AWS Purchase Orders Console"
+}

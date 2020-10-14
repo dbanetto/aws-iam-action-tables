@@ -1,0 +1,33 @@
+{
+    "actions": [
+        {
+            "access_level": "Read",
+            "action": "GetConnectorHealth",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves all health metrics that were published from the Server Migration Connector.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterConnector",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Registers AWS Connector with AWS Connector Service.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ValidateConnectorId",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Validates Server Migration Connector Id that was registered with AWS Connector Service.",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "awsconnector",
+    "service": "AWS Connector Service"
+}

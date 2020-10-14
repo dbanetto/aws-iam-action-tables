@@ -1,0 +1,332 @@
+{
+    "actions": [
+        {
+            "access_level": "List",
+            "action": "BatchGetTraces",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of traces specified by ID. Each trace is a collection of segment documents that originates from a single request. Use GetTraceSummaries to get a list of trace IDs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a group resource with a name and a filter expression",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSamplingRule",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a rule to control sampling behavior for instrumented applications",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "sampling-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteGroup",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a group resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSamplingRule",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a sampling rule",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "sampling-rule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "GetEncryptionConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the current encryption configuration for X-Ray data",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetGroup",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve group resource details",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all active group details",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInsight",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the details of a specific insight",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInsightEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the events of a specific insight",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInsightImpactGraph",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the part of the service graph which is impacted for a specific insight",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInsightSummaries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the summary of all insights for a group and time range with optional filters",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSamplingRules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve all sampling rules",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSamplingStatisticSummaries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about recent sampling results for all sampling rules",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSamplingTargets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to request a sampling quota for rules that the service is using to sample requests",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetServiceGraph",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a document that describes services that process incoming requests, and downstream services that they call as a result",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTimeSeriesServiceStatistics",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve an aggregation of service statistics defined by a specific time range bucketed into time intervals",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTraceGraph",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a service graph for one or more specific trace IDs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTraceSummaries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve IDs and metadata for traces available for a specified time frame using an optional filter. To get the full traces, pass the trace IDs to BatchGetTraces",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list tags for an X-Ray resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": false
+                },
+                {
+                    "name": "sampling-rule",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "PutEncryptionConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the encryption configuration for X-Ray data",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutTelemetryRecords",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to send AWS X-Ray daemon telemetry to the service",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutTraceSegments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to upload segment documents to AWS X-Ray. The X-Ray SDK generates segment documents and sends them to the X-Ray daemon, which uploads them in batches",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add tags to an X-Ray resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": false
+                },
+                {
+                    "name": "sampling-rule",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove tags from an X-Ray resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": false
+                },
+                {
+                    "name": "sampling-rule",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateGroup",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to update a group resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSamplingRule",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to modify a sampling rule's configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "sampling-rule",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "xray",
+    "service": "AWS X-Ray"
+}

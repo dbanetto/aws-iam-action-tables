@@ -1,0 +1,131 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateSavingsPlan",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a savings plan",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteQueuedSavingsPlan",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the queued savings plan associated with customers account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "savingsplan",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSavingsPlanRates",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the rates associated with customers savings plan",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "savingsplan",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSavingsPlans",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the savings plans associated with customers account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "savingsplan",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSavingsPlansOfferingRates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the rates assciated with savings plans offerings",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSavingsPlansOfferings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the savings plans offerings that customer is eligible to purchase",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list tags for a savings plan",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "savingsplan",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to tag a savings plan",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "savingsplan",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to untag a savings plan",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "savingsplan",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "savingsplans",
+    "service": "AWS Savings Plans"
+}

@@ -1,0 +1,444 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "ConnectAsMaster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to connect as a master to the signaling channel specified by the endpoint",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ConnectAsViewer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to connect as a viewer to the signaling channel specified by the endpoint",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSignalingChannel",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a signaling channel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateStream",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a Kinesis video stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSignalingChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an existing signaling channel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an existing Kinesis video stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeSignalingChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the specified signaling channel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the specified Kinesis video stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetClip",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get a media clip from a video stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDASHStreamingSessionURL",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a URL for MPEG-DASH video streaming",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDataEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get an endpoint for a specified stream for either reading or writing media data to Kinesis Video Streams",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetHLSStreamingSessionURL",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a URL for HLS video streaming",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetIceServerConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get the ICE server configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMedia",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return media content of a Kinesis video stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMediaForFragmentList",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to read and return media data only from persisted storage",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSignalingChannelEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get endpoints for a specified combination of protocol and role for a signaling channel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListFragments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the fragments from archival storage based on the pagination token or selector type with range specified",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListSignalingChannels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list your signaling channels",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListStreams",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list your Kinesis video streams",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to fetch the tags associated with your resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": false
+                },
+                {
+                    "name": "stream",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to fetch the tags associated with Kinesis video stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutMedia",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to send media data to a Kinesis video stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SendAlexaOfferToMaster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to send the Alexa SDP offer to the master",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to attach set of tags to your resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": false
+                },
+                {
+                    "name": "stream",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagStream",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to attach set of tags to your Kinesis video streams",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove one or more tags from your resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": false
+                },
+                {
+                    "name": "stream",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagStream",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove one or more tags from your Kinesis video streams",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDataRetention",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the data retention period of your Kinesis video stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSignalingChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an existing signaling channel",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an existing Kinesis video stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "kinesisvideo",
+    "service": "Amazon Kinesis Video Streams"
+}

@@ -1,0 +1,20 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "connect",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Connect to database",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "database",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "neptune-db",
+    "service": "Amazon Neptune"
+}

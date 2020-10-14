@@ -1,0 +1,931 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Connect a directory to be used by AWS Single Sign-On",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create an association between a directory user or group and a profile",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "AttachManagedPolicyToPermissionSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Attaches an AWS managed policy to a permission set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAccountAssignment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Assigns access to a Principal for a specified AWS account using a specified permission set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Account",
+                    "required": true
+                },
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateApplicationInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Add an application instance to AWS Single Sign-On",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateApplicationInstanceCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Add a new certificate for an application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateManagedApplicationInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Add a managed application instance to AWS Single Sign-On",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePermissionSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a permission set",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a profile for an application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTrust",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a federation trust in a target account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAccountAssignment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a Principal's access from a specified AWS account using a specified permission set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Account",
+                    "required": true
+                },
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApplicationInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete the application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApplicationInstanceCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete an inactive or expired certificate from the application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteInlinePolicyFromPermissionSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the inline policy from a specified permission set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteManagedApplicationInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete the managed application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePermissionSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a permission set",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePermissionsPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete the permission policy associated with a permission set",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete the profile for an application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAccountAssignmentCreationStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the status of the assignment creation request.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAccountAssignmentDeletionStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the status of an assignment deletion request.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribePermissionSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a permission set",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribePermissionSetProvisioningStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the status for the given Permission Set Provisioning request.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribePermissionsPolicies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve all the permissions policies associated with a permission set",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeRegisteredRegions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Obtains the regions where your organization has enabled AWS Single Sign-on",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DetachManagedPolicyFromPermissionSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Detaches the attached AWS managed policy from the specified permission set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociate a directory to be used by AWS Single Sign-On",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociate a directory user or group from a profile",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetApplicationInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve details for an application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetApplicationTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve application template details",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInlinePolicyForPermissionSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Obtains the inline policy assigned to the permission set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetManagedApplicationInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve details for an application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMfaDeviceManagementForDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve Mfa Device Management settings for the directory",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPermissionSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve details of a permission set",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPermissionsPolicy",
+            "condition_keys": [],
+            "dependent_actions": [
+                "sso:DescribePermissionsPolicies"
+            ],
+            "description": "Retrieve all permission policies associated with a permission set",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve a profile for an application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSSOStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Check if AWS Single Sign-On is enabled",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSharedSsoConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve shared configuration for the current SSO instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSsoConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve configuration for the current SSO instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTrust",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve the federation trust in a target account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ImportApplicationInstanceServiceProviderMetadata",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update the application instance by uploading an application SAML metadata file provided by the service provider",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListAccountAssignmentCreationStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the status of the AWS account assignment creation requests for a specified SSO instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListAccountAssignmentDeletionStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the status of the AWS account assignment deletion requests for a specified SSO instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListAccountAssignments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the assignee of the specified AWS account with the specified permission set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Account",
+                    "required": true
+                },
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListAccountsForProvisionedPermissionSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all the AWS accounts where the specified permission set is provisioned.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListApplicationInstanceCertificates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve all of the certificates for a given application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListApplicationInstances",
+            "condition_keys": [],
+            "dependent_actions": [
+                "sso:GetApplicationInstance"
+            ],
+            "description": "Retrieve all application instances",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListApplicationTemplates",
+            "condition_keys": [],
+            "dependent_actions": [
+                "sso:GetApplicationTemplate"
+            ],
+            "description": "Retrieve all supported application templates",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListApplications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve all supported applications",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListDirectoryAssociations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve details about the directory connected to AWS Single Sign-On",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListInstances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the SSO Instances that the caller has access to.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListManagedPoliciesInPermissionSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the AWS managed policies that are attached to a specified permission set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListPermissionSetProvisioningStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the status of the Permission Set Provisioning requests for a specified SSO instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListPermissionSets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve all permission sets",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListPermissionSetsProvisionedToAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all the permission sets that are provisioned to a specified AWS account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Account",
+                    "required": true
+                },
+                {
+                    "name": "Instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListProfileAssociations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve the directory user or group associated with the profile",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListProfiles",
+            "condition_keys": [],
+            "dependent_actions": [
+                "sso:GetProfile"
+            ],
+            "description": "Retrieve all profiles for an application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the tags that are attached to a specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ProvisionPermissionSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The process by which a specified permission set is provisioned to the specified target.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Account",
+                    "required": true
+                },
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutInlinePolicyToPermissionSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Attaches an IAM inline policy to a permission set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutMfaDeviceManagementForDirectory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Put Mfa Device Management settings for the directory",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutPermissionsPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Add a policy to a permission set",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartSSO",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Initialize AWS Single Sign-On",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Associates a set of tags with a specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Disassociates a set of tags from a specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApplicationInstanceActiveCertificate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Set a certificate as the active one for this application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApplicationInstanceDisplayData",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update display data of an application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApplicationInstanceResponseConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update federation response configuration for the application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApplicationInstanceResponseSchemaConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update federation response schema configuration for the application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApplicationInstanceSecurityConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update security details for the application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApplicationInstanceServiceProviderConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update service provider related configuration for the application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApplicationInstanceStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update the status of an application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDirectoryAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update the user attribute mappings for your connected directory",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateManagedApplicationInstanceStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update the status of a managed application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePermissionSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update the permission set.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "Instance",
+                    "required": true
+                },
+                {
+                    "name": "PermissionSet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update the profile for an application instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSSOConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update the configuration for the current SSO instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTrust",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update the federation trust in a target account",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "sso",
+    "service": "AWS SSO"
+}

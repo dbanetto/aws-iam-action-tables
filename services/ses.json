@@ -1,0 +1,688 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CloneReceiptRuleSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a receipt rule set by cloning an existing one",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateConfigurationSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new configuration set",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateConfigurationSetEventDestination",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a configuration set event destination",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateConfigurationSetTrackingOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an association between a configuration set and a custom domain for open and click event tracking",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCustomVerificationEmailTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new custom verification email template",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateReceiptFilter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new IP address filter",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateReceiptRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a receipt rule",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateReceiptRuleSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an empty receipt rule set",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an email template",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteConfigurationSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the configuration set",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteConfigurationSetEventDestination",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a configuration set event destination",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteConfigurationSetTrackingOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an association between a configuration set and a custom domain for open and click event tracking",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCustomVerificationEmailTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an existing custom verification email template",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteIdentity",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified identity (an email address or a domain) from the list of verified identities",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteIdentityPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified identity (an email address or a domain) from the list of verified identities",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteReceiptFilter",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified IP address filter",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteReceiptRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified receipt rule",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteReceiptRuleSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified receipt rule set and all of the receipt rules it contains",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an email template",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteVerifiedEmailAddress",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified email address from the list of verified addresses",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeActiveReceiptRuleSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the metadata and receipt rules for the receipt rule set that is currently active",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeConfigurationSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the details of the specified configuration set",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeReceiptRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the details of the specified receipt rule",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeReceiptRuleSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the details of the specified receipt rule set",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAccountSendingEnabled",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the email sending status of the Amazon SES account for the current region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCustomVerificationEmailTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the custom email verification template for the template name you specify",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetIdentityDkimAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the current status of Easy DKIM signing for an entity",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetIdentityMailFromDomainAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the custom MAIL FROM attributes for a list of identities (email addresses and/or domains)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetIdentityNotificationAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Given a list of verified identities (email addresses and/or domains), returns a structure describing identity notification attributes",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetIdentityPolicies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the requested sending authorization policies for the given identity (an email address or a domain)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetIdentityVerificationAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Given a list of identities (email addresses and/or domains), returns the verification status and (for domain identities) the verification token for each identity",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSendQuota",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the user's current sending limits",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSendStatistics",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the user's sending statistics. The result is a list of data points, representing the last two weeks of sending activity",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the template object (which includes the Subject line, HTML part and text part) for the template you specify",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListConfigurationSets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of the configuration sets associated with your Amazon SES account in the current AWS Region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListCustomVerificationEmailTemplates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the existing custom verification email templates for your account in the current AWS Region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListIdentities",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list containing all of the identities (email addresses and domains) for your AWS account, regardless of verification status",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListIdentityPolicies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of sending authorization policies that are attached to the given identity (an email address or a domain)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListReceiptFilters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the IP address filters associated with your AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListReceiptRuleSets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the receipt rule sets that exist under your AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTemplates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the email templates present in your Amazon SES account in the current AWS Region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListVerifiedEmailAddresses",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list containing all of the email addresses that have been verified",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutIdentityPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds or updates a sending authorization policy for the specified identity (an email address or a domain)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ReorderReceiptRuleSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Reorders the receipt rules within a receipt rule set",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SendBounce",
+            "condition_keys": [
+                "ses:FromAddress"
+            ],
+            "dependent_actions": [],
+            "description": "Generates and sends a bounce message to the sender of an email you received through Amazon SES",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SendBulkTemplatedEmail",
+            "condition_keys": [
+                "ses:FeedbackAddress",
+                "ses:FromAddress",
+                "ses:FromDisplayName",
+                "ses:Recipients"
+            ],
+            "dependent_actions": [],
+            "description": "Composes an email message to multiple destinations",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "identity",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SendCustomVerificationEmail",
+            "condition_keys": [
+                "ses:FeedbackAddress",
+                "ses:FromAddress",
+                "ses:FromDisplayName",
+                "ses:Recipients"
+            ],
+            "dependent_actions": [],
+            "description": "Adds an email address to the list of identities for your Amazon SES account in the current AWS Region and attempts to verify it",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "identity",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SendEmail",
+            "condition_keys": [
+                "ses:FeedbackAddress",
+                "ses:FromAddress",
+                "ses:FromDisplayName",
+                "ses:Recipients"
+            ],
+            "dependent_actions": [],
+            "description": "Composes an email message based on input data, and then immediately queues the message for sending",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "identity",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SendRawEmail",
+            "condition_keys": [
+                "ses:FeedbackAddress",
+                "ses:FromAddress",
+                "ses:FromDisplayName",
+                "ses:Recipients"
+            ],
+            "dependent_actions": [],
+            "description": "Sends an email message, with header and content specified by the client",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "identity",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SendTemplatedEmail",
+            "condition_keys": [
+                "ses:FeedbackAddress",
+                "ses:FromAddress",
+                "ses:FromDisplayName",
+                "ses:Recipients"
+            ],
+            "dependent_actions": [],
+            "description": "Composes an email message using an email template and immediately queues it for sending",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "identity",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetActiveReceiptRuleSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets the specified receipt rule set as the active receipt rule set",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SetIdentityDkimEnabled",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables or disables Easy DKIM signing of email sent from an identity",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SetIdentityFeedbackForwardingEnabled",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Given an identity (an email address or a domain), enables or disables whether Amazon SES forwards bounce and complaint notifications as email",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SetIdentityHeadersInNotificationsEnabled",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Given an identity (an email address or a domain), sets whether Amazon SES includes the original email headers in the Amazon Simple Notification Service (Amazon SNS) notifications of a specified type",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SetIdentityMailFromDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables or disables the custom MAIL FROM domain setup for a verified identity (an email address or a domain)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SetIdentityNotificationTopic",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Given an identity (an email address or a domain), sets the Amazon Simple Notification Service (Amazon SNS) topic to which Amazon SES will publish bounce, complaint, and/or delivery notifications for emails sent with that identity as the Source",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SetReceiptRulePosition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets the position of the specified receipt rule in the receipt rule set",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "TestRenderTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a preview of the MIME content of an email when provided with a template and a set of replacement data",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateAccountSendingEnabled",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables or disables email sending across your entire Amazon SES account in the current AWS Region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateConfigurationSetEventDestination",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the event destination of a configuration set",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateConfigurationSetReputationMetricsEnabled",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables or disables the publishing of reputation metrics for emails sent using a specific configuration set in a given AWS Region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateConfigurationSetSendingEnabled",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enables or disables email sending for messages sent using a specific configuration set in a given AWS Region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateConfigurationSetTrackingOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies an association between a configuration set and a custom domain for open and click event tracking",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateCustomVerificationEmailTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing custom verification email template",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateReceiptRule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a receipt rule",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an email template",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "VerifyDomainDkim",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a set of DKIM tokens for a domain",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "VerifyDomainIdentity",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Verifies a domain",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "VerifyEmailAddress",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Verifies an email address. This action causes a confirmation email message to be sent to the specified address. This action is throttled at one request per second",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "VerifyEmailIdentity",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Verifies an email address. This action causes a confirmation email message to be sent to the specified address. This action is throttled at one request per second",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "ses",
+    "service": "Amazon SES"
+}

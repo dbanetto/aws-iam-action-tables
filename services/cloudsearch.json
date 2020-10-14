@@ -1,0 +1,454 @@
+{
+    "actions": [
+        {
+            "access_level": "Tagging",
+            "action": "AddTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Attaches resource tags to an Amazon CloudSearch domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BuildSuggesters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Indexes the search suggestions.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new search domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DefineAnalysisScheme",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Configures an analysis scheme that can be applied to a text or text-array field to define language-specific text processing options.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DefineExpression",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Configures an Expression for the search domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DefineIndexField",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Configures an IndexField for the search domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DefineSuggester",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Configures a suggester for a domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAnalysisScheme",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an analysis scheme.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Permanently deletes a search domain and all of its data.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteExpression",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes an Expression from the search domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteIndexField",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes an IndexField from the search domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSuggester",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a suggester.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAnalysisSchemes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the analysis schemes configured for a domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAvailabilityOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the availability options configured for a domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDomainEndpointOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the domain endpoint options configured for a domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDomains",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about the search domains owned by this account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeExpressions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the expressions configured for the search domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeIndexFields",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about the index fields configured for the search domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeScalingParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the scaling parameters configured for a domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeServiceAccessPolicies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about the access policies that control access to the domain's document and search endpoints.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSuggesters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the suggesters configured for a domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "IndexDocuments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Tells the search domain to start indexing its documents using the latest indexing options.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDomainNames",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all search domains owned by an account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Displays all of the resource tags for an Amazon CloudSearch domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "RemoveTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes the specified resource tags from an Amazon ES domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateAvailabilityOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Configures the availability options for a domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDomainEndpointOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Configures the domain endpoint options for a domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateScalingParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Configures scaling parameters for a domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "UpdateServiceAccessPolicies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Configures the access rules that control access to the domain's document and search endpoints.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "document",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows access to the document service operations.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "search",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows access to the search operations.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "suggest",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows access to the suggest operations.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "prefix": "cloudsearch",
+    "service": "Amazon CloudSearch"
+}

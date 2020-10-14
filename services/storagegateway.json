@@ -1,0 +1,1070 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "ActivateGateway",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This operation activates the gateway you previously deployed on your host.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "AddCache",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation configures one or more gateway local disks as cache for a cached-volume gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "AddTagsToResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This operation adds one or more tags to the specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": false
+                },
+                {
+                    "name": "share",
+                    "required": false
+                },
+                {
+                    "name": "tape",
+                    "required": false
+                },
+                {
+                    "name": "volume",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AddUploadBuffer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation configures one or more gateway local disks as upload buffer for a specified gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AddWorkingStorage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation configures one or more gateway local disks as working storage for a gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AttachVolume",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation connects a volume to an iSCSI connection and then attaches the volume to the specified gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                },
+                {
+                    "name": "volume",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelArchival",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Cancels archiving of a virtual tape to the virtual tape shelf (VTS) after the archiving process is initiated.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                },
+                {
+                    "name": "tape",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelRetrieval",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Cancels retrieval of a virtual tape from the virtual tape shelf (VTS) to a gateway after the retrieval process is initiated.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                },
+                {
+                    "name": "tape",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCachediSCSIVolume",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This operation creates a cached volume on a specified cached gateway. This operation is supported only for the gateway-cached volume architecture.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                },
+                {
+                    "name": "volume",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateNFSFileShare",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This operation creates a NFS file share on an existing file gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSMBFileShare",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This operation creates a SMB file share on an existing file gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation initiates a snapshot of a volume.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "volume",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSnapshotFromVolumeRecoveryPoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation initiates a snapshot of a gateway from a volume recovery point.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "volume",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateStorediSCSIVolume",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This operation creates a volume on a specified gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTapeWithBarcode",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a virtual tape by using your own barcode.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTapes",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates one or more virtual tapes. You write data to the virtual tapes and then archive the tapes.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBandwidthRateLimit",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation deletes the bandwidth rate limits of a gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteChapCredentials",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation deletes Challenge-Handshake Authentication Protocol (CHAP) credentials for a specified iSCSI target and initiator pair.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "target",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFileShare",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation deletes a file share from a file gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "share",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteGateway",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation deletes a gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSnapshotSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation deletes a snapshot of a volume.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "volume",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTape",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified virtual tape.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                },
+                {
+                    "name": "tape",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTapeArchive",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified virtual tape from the virtual tape shelf (VTS).",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteVolume",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation deletes the specified gateway volume that you previously created using the CreateCachediSCSIVolume or CreateStorediSCSIVolume API.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "volume",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeBandwidthRateLimit",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation returns the bandwidth rate limits of a gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCache",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation returns information about the cache of a gateway. This operation is supported only for the gateway-cached volume architecture.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCachediSCSIVolumes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation returns a description of the gateway volumes specified in the request. This operation is supported only for the gateway-cached volume architecture.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "volume",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeChapCredentials",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation returns an array of Challenge-Handshake Authentication Protocol (CHAP) credentials information for a specified iSCSI target, one for each target-initiator pair.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "target",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeGatewayInformation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation returns metadata about a gateway such as its name, network interfaces, configured time zone, and the state (whether the gateway is running or not).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeMaintenanceStartTime",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation returns your gateway's weekly maintenance start time including the day and time of the week.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeNFSFileShares",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation gets a description for one or more file shares from a file gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "share",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSMBFileShares",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation gets a description for one or more file shares from a file gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "share",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSMBSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation gets a description of a Server Message Block (SMB) file share settings from a file gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSnapshotSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation describes the snapshot schedule for the specified gateway volume.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "volume",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStorediSCSIVolumes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation returns the description of the gateway volumes specified in the request.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "volume",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTapeArchives",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a description of specified virtual tapes in the virtual tape shelf (VTS).",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTapeRecoveryPoints",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of virtual tape recovery points that are available for the specified gateway-VTL.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTapes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a description of the specified Amazon Resource Name (ARN) of virtual tapes.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeUploadBuffer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation returns information about the upload buffer of a gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeVTLDevices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a description of virtual tape library (VTL) devices for the specified gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeWorkingStorage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation returns information about the working storage of a gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DetachVolume",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation disconnects a volume from an iSCSI connection and then detaches the volume from the specified gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "volume",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableGateway",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disables a gateway when the gateway is no longer functioning.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "JoinDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation enables you to join an Active Directory Domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListFileShares",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation gets a list of the file shares for a specific file gateway, or the list of file shares that belong to the calling user account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListGateways",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation lists gateways owned by an AWS account in a region specified in the request. The returned list is ordered by gateway Amazon Resource Name (ARN).",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListLocalDisks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation returns a list of the gateway's local disks.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation lists the tags that have been added to the specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": false
+                },
+                {
+                    "name": "share",
+                    "required": false
+                },
+                {
+                    "name": "tape",
+                    "required": false
+                },
+                {
+                    "name": "volume",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTapes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists virtual tapes in your virtual tape library (VTL) and your virtual tape shelf (VTS).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "tape",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListVolumeInitiators",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation lists iSCSI initiators that are connected to a volume.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "volume",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListVolumeRecoveryPoints",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation lists the recovery points for a specified gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListVolumes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation lists the iSCSI stored volumes of a gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "NotifyWhenUploaded",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action sends you a notification through CloudWatch Events when all files written to your NFS file share have been uploaded to Amazon S3.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "share",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RefreshCache",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation refreshes the cache for the specified file share.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "share",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "RemoveTagsFromResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This operation removes one or more tags from the specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": false
+                },
+                {
+                    "name": "share",
+                    "required": false
+                },
+                {
+                    "name": "tape",
+                    "required": false
+                },
+                {
+                    "name": "volume",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ResetCache",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation resets all cache disks that have encountered a error and makes the disks available for reconfiguration as cache storage.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RetrieveTapeArchive",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves an archived virtual tape from the virtual tape shelf (VTS) to a gateway-VTL.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                },
+                {
+                    "name": "tape",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RetrieveTapeRecoveryPoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves the recovery point for the specified virtual tape.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                },
+                {
+                    "name": "tape",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetLocalConsolePassword",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets the password for your VM local console.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SetSMBGuestPassword",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sets the password for SMB Guest user.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ShutdownGateway",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation shuts down a gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartGateway",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation starts a gateway that you previously shut down.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateBandwidthRateLimit",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation updates the bandwidth rate limits of a gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateChapCredentials",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation updates the Challenge-Handshake Authentication Protocol (CHAP) credentials for a specified iSCSI target.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "target",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateGatewayInformation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation updates a gateway's metadata, which includes the gateway's name and time zone.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateGatewaySoftwareNow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation updates the gateway virtual machine (VM) software.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateMaintenanceStartTime",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation updates a gateway's weekly maintenance start time information, including day and time of the week. The maintenance time is the time in your gateway's time zone.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateNFSFileShare",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation updates a NFS file share.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "share",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSMBFileShare",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation updates a SMB file share.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "share",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSnapshotSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation updates a snapshot schedule configured for a gateway volume.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "volume",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateVTLDeviceType",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This operation updates the type of medium changer in a gateway-VTL.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "storagegateway",
+    "service": "Amazon Storage Gateway"
+}

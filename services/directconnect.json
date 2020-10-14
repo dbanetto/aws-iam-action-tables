@@ -1,0 +1,892 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AcceptDirectConnectGatewayAssociationProposal",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Accepts a proposal request to attach a virtual private gateway to a Direct Connect gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dx-gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AllocateConnectionOnInterconnect",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a hosted connection on an interconnect.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AllocateHostedConnection",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new hosted connection between a AWS Direct Connect partner's network and a specific AWS Direct Connect location.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                },
+                {
+                    "name": "dxlag",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AllocatePrivateVirtualInterface",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Provisions a private virtual interface to be owned by a different customer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                },
+                {
+                    "name": "dxlag",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AllocatePublicVirtualInterface",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Provisions a public virtual interface to be owned by a different customer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                },
+                {
+                    "name": "dxlag",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AllocateTransitVirtualInterface",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Provisions a transit virtual interface to be owned by a different customer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                },
+                {
+                    "name": "dxlag",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateConnectionWithLag",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associates a connection with a LAG.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": true
+                },
+                {
+                    "name": "dxlag",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateHostedConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associates a hosted connection and its virtual interfaces with a link aggregation group (LAG) or interconnect.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": true
+                },
+                {
+                    "name": "dxcon",
+                    "required": false
+                },
+                {
+                    "name": "dxlag",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateVirtualInterface",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associates a virtual interface with a specified link aggregation group (LAG) or connection.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxvif",
+                    "required": true
+                },
+                {
+                    "name": "dxcon",
+                    "required": false
+                },
+                {
+                    "name": "dxlag",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ConfirmConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Confirm the creation of a hosted connection on an interconnect.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ConfirmPrivateVirtualInterface",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Accept ownership of a private virtual interface created by another customer.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxvif",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ConfirmPublicVirtualInterface",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Accept ownership of a public virtual interface created by another customer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxvif",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ConfirmTransitVirtualInterface",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Accept ownership of a transit virtual interface created by another customer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxvif",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateBGPPeer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a BGP peer on the specified virtual interface.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxvif",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateConnection",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new connection between the customer network and a specific AWS Direct Connect location.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxlag",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDirectConnectGateway",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a Direct Connect gateway, which is an intermediate object that enables you to connect a set of virtual interfaces and virtual private gateways.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDirectConnectGatewayAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an association between a Direct Connect gateway and a virtual private gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dx-gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDirectConnectGatewayAssociationProposal",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a proposal to associate the specified virtual private gateway with the specified Direct Connect gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dx-gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateInterconnect",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new interconnect between a AWS Direct Connect partner's network and a specific AWS Direct Connect location.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxlag",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLag",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a link aggregation group (LAG) with the specified number of bundled physical connections between the customer network and a specific AWS Direct Connect location.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePrivateVirtualInterface",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new private virtual interface.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                },
+                {
+                    "name": "dxlag",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePublicVirtualInterface",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new public virtual interface.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                },
+                {
+                    "name": "dxlag",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTransitVirtualInterface",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a new transit virtual interface.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                },
+                {
+                    "name": "dxlag",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBGPPeer",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified BGP peer on the specified virtual interface with the specified customer address and ASN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxvif",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the connection.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDirectConnectGateway",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified Direct Connect gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dx-gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDirectConnectGatewayAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the association between the specified Direct Connect gateway and virtual private gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dx-gateway",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDirectConnectGatewayAssociationProposal",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the association proposal request between the specified Direct Connect gateway and virtual private gateway.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteInterconnect",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified interconnect.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLag",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified link aggregation group (LAG).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxlag",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteVirtualInterface",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a virtual interface.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxvif",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeConnectionLoa",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the LOA-CFA for a Connection.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeConnections",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Displays all connections in this region.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeConnectionsOnInterconnect",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Return a list of connections that have been provisioned on the given interconnect.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDirectConnectGatewayAssociationProposals",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes one or more association proposals for connection between a virtual private gateway and a Direct Connect gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dx-gateway",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDirectConnectGatewayAssociations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the associations between your Direct Connect gateways and virtual private gateways.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dx-gateway",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDirectConnectGatewayAttachments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the attachments between your Direct Connect gateways and virtual interfaces.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dx-gateway",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDirectConnectGateways",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all your Direct Connect gateways or only the specified Direct Connect gateway.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dx-gateway",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeHostedConnections",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the hosted connections that have been provisioned on the specified interconnect or link aggregation group (LAG).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                },
+                {
+                    "name": "dxlag",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeInterconnectLoa",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the LOA-CFA for an Interconnect.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeInterconnects",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of interconnects owned by the AWS account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes all your link aggregation groups (LAG) or the specified LAG.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxlag",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLoa",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the LOA-CFA for a connection, interconnect, or link aggregation group (LAG).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                },
+                {
+                    "name": "dxlag",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeLocations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the list of AWS Direct Connect locations in the current AWS region.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the tags associated with the specified AWS Direct Connect resources.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                },
+                {
+                    "name": "dxlag",
+                    "required": false
+                },
+                {
+                    "name": "dxvif",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeVirtualGateways",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of virtual private gateways owned by the AWS account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeVirtualInterfaces",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Displays all virtual interfaces for an AWS account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                },
+                {
+                    "name": "dxlag",
+                    "required": false
+                },
+                {
+                    "name": "dxvif",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateConnectionFromLag",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociates a connection from a link aggregation group (LAG).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": true
+                },
+                {
+                    "name": "dxlag",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListVirtualInterfaceTestHistory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the virtual interface failover test history.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxvif",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartBgpFailoverTest",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts the virtual interface failover test that verifies your configuration meets your resiliency requirements by placing the BGP peering session in the DOWN state. You can then send traffic to verify that there are no outages.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxvif",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopBgpFailoverTest",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops the virtual interface failover test.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxvif",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Adds the specified tags to the specified AWS Direct Connect resource. Each resource can have a maximum of 50 tags.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                },
+                {
+                    "name": "dxlag",
+                    "required": false
+                },
+                {
+                    "name": "dxvif",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Removes one or more tags from the specified AWS Direct Connect resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxcon",
+                    "required": false
+                },
+                {
+                    "name": "dxlag",
+                    "required": false
+                },
+                {
+                    "name": "dxvif",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDirectConnectGatewayAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the specified attributes of the Direct Connect gateway association.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateLag",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the attributes of the specified link aggregation group (LAG).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxlag",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateVirtualInterfaceAttributes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the specified attributes of the specified virtual private interface.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dxvif",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect"
+}

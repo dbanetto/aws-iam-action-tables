@@ -1,0 +1,733 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateFleet",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to associate the specified fleet with the specified stack",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                },
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchAssociateUserStack",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to associate the specified users with the specified stacks. Users in a user pool cannot be assigned to stacks with fleets that are joined to an Active Directory domain",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchDisassociateUserStack",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate the specified users from the specified stacks",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CopyImage",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to copy the specified image within the same Region or to a new Region within the same AWS account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "image",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDirectoryConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a Directory Config object in AppStream 2.0. This object includes the configuration information required to join fleets and image builders to Microsoft Active Directory domains",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFleet",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a fleet. A fleet is a group of streaming instances from which applications are launched and streamed to users",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                },
+                {
+                    "name": "image",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateImageBuilder",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an image builder. An image builder is a virtual machine that is used to create an image",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "image",
+                    "required": true
+                },
+                {
+                    "name": "image-builder",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateImageBuilderStreamingURL",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a URL to start an image builder streaming session",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "image-builder",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateStack",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a stack to start streaming applications to users. A stack consists of an associated fleet, user access policies, and storage configurations",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateStreamingURL",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a temporary URL to start an AppStream 2.0 streaming session for the specified user. A streaming URL enables application streaming to be tested without user setup",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                },
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUsageReportSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a usage report subscription. Usage reports are generated daily",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new user in the user pool",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDirectoryConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the specified Directory Config object from AppStream 2.0. This object includes the configuration information required to join fleets and image builders to Microsoft Active Directory domains",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFleet",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the specified fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteImage",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the specified image. An image cannot be deleted when it is in use",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "image",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteImageBuilder",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the specified image builder and release capacity",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "image-builder",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteImagePermissions",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete permissions for the specified private image",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "image",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteStack",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the specified stack. After the stack is deleted, the application streaming environment provided by the stack is no longer available to users. Also, any reservations made for application streaming sessions for the stack are released",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUsageReportSubscription",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disable usage report generation",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a user from the user pool",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDirectoryConfigs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list that describes one or more specified Directory Config objects for AppStream 2.0, if the names for these objects are provided. Otherwise, all Directory Config objects in the account are described. This object includes the configuration information required to join fleets and image builders to Microsoft Active Directory domains",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeFleets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list that describes one or more specified fleets, if the fleet names are provided. Otherwise, all fleets in the account are described",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeImageBuilders",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list that describes one or more specified image builders, if the image builder names are provided. Otherwise, all image builders in the account are described",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "image-builder",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeImagePermissions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list that describes the permissions for shared AWS account IDs on a private image that you own",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "image",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeImages",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list that describes one or more specified images, if the image names or image ARNs are provided. Otherwise, all images in the account are described",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "image",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSessions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list that describes the streaming sessions for the specified stack and fleet. If a user ID is provided for the stack and fleet, only the streaming sessions for that user are described",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                },
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStacks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list that describes one or more specified stacks, if the stack names are provided. Otherwise, all stacks in the account are described",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeUsageReportSubscriptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list that describes one or more usage report subscriptions",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeUserStackAssociations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list that describes the UserStackAssociation objects",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeUsers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list that describes users in the user pool",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disable the specified user in the user pool. This action does not delete the user",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateFleet",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate the specified fleet from the specified stack",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                },
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to enable a user in the user pool",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ExpireSession",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to immediately stop the specified streaming session",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetImageBuilders",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list that describes one or more specified image builders, if the image builder names are provided. Otherwise, all image builders in the account are described",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "GetParametersForThemeAssetUpload",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to upload theme assets",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListAssociatedFleets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the name of the fleet that is associated with the specified stack",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListAssociatedStacks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the name of the stack with which the specified fleet is associated",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of all tags for the specified AppStream 2.0 resource. The following resources can be tagged: Image builders, images, fleets, and stacks",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartFleet",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to start the specified fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartImageBuilder",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to start the specified image builder",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "image-builder",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopFleet",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to stop the specified fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopImageBuilder",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to stop the specified image builder",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "image-builder",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "Stream",
+            "condition_keys": [
+                "appstream:userId"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to federated users to sign in by using their existing credentials and stream applications from the specified stack",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add or overwrite one or more tags for the specified AppStream 2.0 resource. The following resources can be tagged: Image builders, images, fleets, and stacks",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": false
+                },
+                {
+                    "name": "image",
+                    "required": false
+                },
+                {
+                    "name": "image-builder",
+                    "required": false
+                },
+                {
+                    "name": "stack",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate one or more tags from the specified AppStream 2.0 resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": false
+                },
+                {
+                    "name": "image",
+                    "required": false
+                },
+                {
+                    "name": "image-builder",
+                    "required": false
+                },
+                {
+                    "name": "stack",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDirectoryConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the specified Directory Config object in AppStream 2.0. This object includes the configuration information required to join fleets and image builders to Microsoft Active Directory domains",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFleet",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to update the specified fleet. All attributes except the fleet name can be updated when the fleet is in the STOPPED state",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fleet",
+                    "required": true
+                },
+                {
+                    "name": "image",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateImagePermissions",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add or update permissions for the specified private image",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "image",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateStack",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to update the specified fields for the specified stack",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stack",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0"
+}

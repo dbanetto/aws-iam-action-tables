@@ -1,0 +1,326 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CancelJournalKinesisStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to cancel a journal kinesis stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLedger",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a ledger",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLedger",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a ledger",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeJournalKinesisStream",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe information about a journal kinesis stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeJournalS3Export",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe information about a journal export job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLedger",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a ledger",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ExecuteStatement",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to send commands to a ledger via the console",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ExportJournalToS3",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to export journal contents to an Amazon S3 bucket",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBlock",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a block from a ledger for a given BlockAddress",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDigest",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a digest from a ledger for a given BlockAddress",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRevision",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a revision for a given document ID and a given BlockAddress",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "InsertSampleData",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to insert sample application data via the console",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListJournalKinesisStreamsForLedger",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list journal kinesis streams for a specified ledger",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListJournalS3Exports",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list journal export jobs for all ledgers",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListJournalS3ExportsForLedger",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list journal export jobs for a specified ledger",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListLedgers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list existing ledgers",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list tags for a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SendCommand",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to send commands to a ledger",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ShowCatalog",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view a ledger's catalog via the console",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StreamJournalToKinesis",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stream journal contents to a Kinesis Data Stream",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "stream",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add one or more tags to a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove one or more tags to a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateLedger",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update properties on a ledger",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ledger",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "qldb",
+    "service": "Amazon QLDB"
+}

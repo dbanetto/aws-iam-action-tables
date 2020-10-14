@@ -1,0 +1,60 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AcknowledgeMessage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Acknowledges a message, ensuring it will not be delivered again",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMessage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a message",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "FailMessage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Fails a message, signifying the message could not be processed successfully, ensuring it cannot be replied to or delivered again",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Routes traffic to the correct endpoint based on the given destination for the messages",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMessages",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delivers messages to clients/instances using long polling",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SendReply",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Sends replies from clients/instances to upstream service",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "ec2messages",
+    "service": "Amazon Message Delivery Service"
+}

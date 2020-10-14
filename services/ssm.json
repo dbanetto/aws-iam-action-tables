@@ -1,0 +1,1698 @@
+{
+    "actions": [
+        {
+            "access_level": "Tagging",
+            "action": "AddTagsToResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add or overwrite one or more tags for a specified AWS resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": false
+                },
+                {
+                    "name": "maintenancewindow",
+                    "required": false
+                },
+                {
+                    "name": "managed-instance",
+                    "required": false
+                },
+                {
+                    "name": "parameter",
+                    "required": false
+                },
+                {
+                    "name": "patchbaseline",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelCommand",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to cancel a specified Run Command command",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelMaintenanceWindowExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to cancel an in-progress maintenance window execution",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateActivation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an activation that is used to register on-premises servers and virtual machines (VMs) with Systems Manager",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate a specified Systems Manager document with specified instances or other targets",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": true
+                },
+                {
+                    "name": "instance",
+                    "required": false
+                },
+                {
+                    "name": "managed-instance",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAssociationBatch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to combine entries for multiple CreateAssociation operations in a single command",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": true
+                },
+                {
+                    "name": "instance",
+                    "required": false
+                },
+                {
+                    "name": "managed-instance",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDocument",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to create a Systems Manager SSM document",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateMaintenanceWindow",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a maintenance window",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateOpsItem",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an OpsItem in OpsCenter",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePatchBaseline",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a patch baseline",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateResourceDataSync",
+            "condition_keys": [
+                "ssm:SyncType"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a resource data sync configuration, which regularly collects inventory data from managed instances and updates the data in an Amazon S3 bucket",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resourcedatasync",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteActivation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a specified activation for managed instances",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate a specified SSM document from a specified instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "association",
+                    "required": false
+                },
+                {
+                    "name": "document",
+                    "required": false
+                },
+                {
+                    "name": "instance",
+                    "required": false
+                },
+                {
+                    "name": "managed-instance",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDocument",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a specified SSM document and its instance associations",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteInventory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a specified custom inventory type, or the data associated with a custom inventory type",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMaintenanceWindow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a specified maintenance window",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "maintenancewindow",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteParameter",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a specified SSM parameter",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parameter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteParameters",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete multiple specified SSM parameters",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parameter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePatchBaseline",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a specified patch baseline",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "patchbaseline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteResourceDataSync",
+            "condition_keys": [
+                "ssm:SyncType"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a specified resource data sync",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resourcedatasync",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterManagedInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to deregister a specified on-premises server or virtual machine (VM) from Systems Manager",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "managed-instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterPatchBaselineForPatchGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to deregister a specified patch baseline from being the default patch baseline for a specified patch group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "patchbaseline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterTargetFromMaintenanceWindow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to deregister a specified target from a maintenance window",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "maintenancewindow",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterTaskFromMaintenanceWindow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to deregister a specified task from a maintenance window",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "maintenancewindow",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeActivations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about a specified managed instance activation, such as when it was created and the number of instances registered using the activation",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about the specified association for a specified instance or target",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "association",
+                    "required": false
+                },
+                {
+                    "name": "document",
+                    "required": false
+                },
+                {
+                    "name": "instance",
+                    "required": false
+                },
+                {
+                    "name": "managed-instance",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAssociationExecutionTargets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about a specified association execution",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAssociationExecutions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view all executions for a specified association",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAutomationExecutions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about all active and terminated Automation executions",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAutomationStepExecutions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about all active and terminated step executions in an Automation workflow",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAvailablePatches",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view all patches eligible to include in a patch baseline",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDocument",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about a specified SSM document",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDocumentParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to display information about SSM document parameters in the Systems Manager console (internal Systems Manager action)",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDocumentPermission",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the permissions for a specified SSM document",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEffectiveInstanceAssociations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view all current associations for a specified instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "instance",
+                    "required": false
+                },
+                {
+                    "name": "managed-instance",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEffectivePatchesForPatchBaseline",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about the patches currently associated with the specified patch baseline (Windows only)",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "patchbaseline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeInstanceAssociationsStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the status of the associations for a specified instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "instance",
+                    "required": false
+                },
+                {
+                    "name": "managed-instance",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeInstanceInformation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about a specified instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeInstancePatchStates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view status details about patches on a specified instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeInstancePatchStatesForPatchGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe the high-level patch state for the instances in the specified patch group",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeInstancePatches",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view general details about the patches on a specified instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeInstanceProperties",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to user's Amazon EC2 console to render managed instances' nodes",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeInventoryDeletions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about a specified inventory deletion",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeMaintenanceWindowExecutionTaskInvocations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details of a specified task execution for a maintenance window",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeMaintenanceWindowExecutionTasks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about the tasks that ran during a specified maintenance window execution",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeMaintenanceWindowExecutions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the executions of a specified maintenance window",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "maintenancewindow",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeMaintenanceWindowSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about upcoming executions of a specified maintenance window",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeMaintenanceWindowTargets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view a list of the targets associated with a specified maintenance window",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "maintenancewindow",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeMaintenanceWindowTasks",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view a list of the tasks associated with a specified maintenance window",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "maintenancewindow",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeMaintenanceWindows",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about all or specified maintenance windows",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeMaintenanceWindowsForTarget",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about the maintenance window targets and tasks associated with a specified instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeOpsItems",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about specified OpsItems",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about a specified SSM parameter",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribePatchBaselines",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about patch baselines that meet the specified criteria",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribePatchGroupState",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view aggregated status details for patches for a specified patch group",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribePatchGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about the patch baseline for a specified patch group",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribePatchProperties",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details of available patches for a specified operating system and patch property",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeSessions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view a list of recent Session Manager sessions that meet the specified search criteria",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAutomationExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details of a specified Automation execution",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCalendarState",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the calendar state for a change calendar or a list of change calendars",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCommandInvocation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about the command execution of a specified invocation or plugin",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetConnectionStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the Session Manager connection status for a specified managed instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDefaultPatchBaseline",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the current default patch baseline for a specified operating system type",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "patchbaseline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDeployablePatchSnapshotForInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the current patch baseline snapshot for a specified instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDocument",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the contents of a specified SSM document",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInventory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view instance inventory details per the specified criteria",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInventorySchema",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view a list of inventory types or attribute names for a specified inventory item type",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMaintenanceWindow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about a specified maintenance window",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "maintenancewindow",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMaintenanceWindowExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about a specified maintenance window execution",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMaintenanceWindowExecutionTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about a specified maintenance window execution task",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMaintenanceWindowExecutionTaskInvocation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about a specific maintenance window task running on a specific target",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMaintenanceWindowTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about tasks registered with a specified maintenance window",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "maintenancewindow",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetManifest",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Used by Systems Manager and SSM Agent to determine package installation requirements for an instance (internal Systems Manager call)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetOpsItem",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about a specified OpsItem",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetOpsSummary",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view summary information about OpsItems based on specified filters and aggregators",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resourcedatasync",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetParameter",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about a specified parameter",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parameter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetParameterHistory",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to view details and changes for a specified parameter",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parameter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetParameters",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about multiple specified parameters",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parameter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetParametersByPath",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about parameters in a specified hierarchy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parameter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPatchBaseline",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about a specified patch baseline",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "patchbaseline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPatchBaselineForPatchGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the ID of the current patch baseline for a specified patch group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "patchbaseline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetServiceSetting",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the account-level setting for an AWS service",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "servicesetting",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "LabelParameterVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to apply an identifying label to a specified version of a parameter",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parameter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListAssociationVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list versions of the specified association",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListAssociations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the associations for a specified SSM document or managed instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListCommandInvocations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list information about command invocations sent to a specified instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListCommands",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the commands sent to a specified instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListComplianceItems",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list compliance status for specified resource types on a specified resource",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListComplianceSummaries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list a summary count of compliant and noncompliant resources for a specified compliance type",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDocumentVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all versions of a specified document",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDocuments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view information about a specified SSM document",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListInstanceAssociations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Used by SSM Agent to check for new State Manager associations (internal Systems Manager call)",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "instance",
+                    "required": false
+                },
+                {
+                    "name": "managed-instance",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListInventoryEntries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view a list of specified inventory types for a specified instance",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListResourceComplianceSummaries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list resource-level summary count",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListResourceDataSync",
+            "condition_keys": [
+                "ssm:SyncType"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to list information about resource data sync configurations in an account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view a list of resource tags for a specified resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": false
+                },
+                {
+                    "name": "maintenancewindow",
+                    "required": false
+                },
+                {
+                    "name": "managed-instance",
+                    "required": false
+                },
+                {
+                    "name": "parameter",
+                    "required": false
+                },
+                {
+                    "name": "patchbaseline",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyDocumentPermission",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to share a custom SSM document publicly or privately with specified AWS accounts",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutComplianceItems",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to register a compliance type and other compliance details on a specified resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "instance",
+                    "required": false
+                },
+                {
+                    "name": "managed-instance",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "PutConfigurePackageResult",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Used by SSM Agent to generate a report of the results of specific agent requests (internal Systems Manager call)",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutInventory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add or update inventory items on multiple specified managed instances",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutParameter",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an SSM parameter",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "parameter",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterDefaultPatchBaseline",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to specify the default patch baseline for an operating system type",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "patchbaseline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterPatchBaselineForPatchGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to specify the default patch baseline for a specified patch group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "patchbaseline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterTargetWithMaintenanceWindow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to register a target with a specified maintenance window",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "maintenancewindow",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterTaskWithMaintenanceWindow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to register a task with a specified maintenance window",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "maintenancewindow",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "RemoveTagsFromResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove a specified tag key from a specified resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": false
+                },
+                {
+                    "name": "maintenancewindow",
+                    "required": false
+                },
+                {
+                    "name": "managed-instance",
+                    "required": false
+                },
+                {
+                    "name": "parameter",
+                    "required": false
+                },
+                {
+                    "name": "patchbaseline",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ResetServiceSetting",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to reset the service setting for an AWS account to the default value",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "servicesetting",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ResumeSession",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to reconnect a Session Manager session to a managed instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "session",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SendAutomationSignal",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to send a signal to change the current behavior or status of a specified Automation execution",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SendCommand",
+            "condition_keys": [
+                "aws:ResourceTag/${TagKey}",
+                "ssm:resourceTag/tag-key"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to run commands on one or more specified managed instances",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": true
+                },
+                {
+                    "name": "instance",
+                    "required": false
+                },
+                {
+                    "name": "managed-instance",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartAssociationsOnce",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to run a specified association manually",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "association",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartAutomationExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to initiate the execution of an Automation document",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "automation-definition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartSession",
+            "condition_keys": [
+                "ssm:SessionDocumentAccessCheck"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to initiate a connection to a specified target for a Session Manager session",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "instance",
+                    "required": true
+                },
+                {
+                    "name": "document",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopAutomationExecution",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop a specified Automation execution that is already in progress",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "TerminateSession",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to permanently end a Session Manager connection to an instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "session",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an association and immediately run the association on the specified targets",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "association",
+                    "required": true
+                },
+                {
+                    "name": "document",
+                    "required": false
+                },
+                {
+                    "name": "instance",
+                    "required": false
+                },
+                {
+                    "name": "managed-instance",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateAssociationStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the status of the SSM document associated with a specified instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": true
+                },
+                {
+                    "name": "instance",
+                    "required": false
+                },
+                {
+                    "name": "managed-instance",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDocument",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update one or more values for an SSM document",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDocumentDefaultVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to change the default version of an SSM document",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "document",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateInstanceAssociationStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Used by SSM Agent to update the status of the association that it is currently running (internal Systems Manager call)",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "association",
+                    "required": true
+                },
+                {
+                    "name": "instance",
+                    "required": false
+                },
+                {
+                    "name": "managed-instance",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateInstanceInformation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Used by SSM Agent to send a heartbeat signal to the Systems Manager service in the cloud",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateMaintenanceWindow",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a specified maintenance window",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "maintenancewindow",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateMaintenanceWindowTarget",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a specified maintenance window target",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "maintenancewindow",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateMaintenanceWindowTask",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a specified maintenance window task",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "maintenancewindow",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateManagedInstanceRole",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to assign or change the IAM role assigned to a specified managed instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "managed-instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateOpsItem",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to edit or change an OpsItem",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePatchBaseline",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a specified patch baseline",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "patchbaseline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateResourceDataSync",
+            "condition_keys": [
+                "ssm:SyncType"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to update a resource data sync",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resourcedatasync",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateServiceSetting",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the service setting for an AWS account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "servicesetting",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "ssm",
+    "service": "AWS Systems Manager"
+}

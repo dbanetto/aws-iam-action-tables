@@ -1,0 +1,336 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateCluster",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an Amazon EKS cluster.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFargateProfile",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an AWS Fargate profile.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateNodegroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an Amazon EKS Nodegroup.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an Amazon EKS cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFargateProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an AWS Fargate profile.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fargateprofile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteNodegroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an Amazon EKS Nodegroup.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "nodegroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns descriptive information about an Amazon EKS cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeFargateProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns descriptive information about an AWS Fargate profile associated with a cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "fargateprofile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeNodegroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns descriptive information about an Amazon EKS nodegroup.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "nodegroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeUpdate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a given update for a given Amazon EKS cluster/nodegroup (in the specified or default region).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "nodegroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListClusters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the Amazon EKS clusters in your AWS account (in the specified or default region).",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListFargateProfiles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the AWS Fargate profiles in your AWS account (in the specified or default region) associated with a given cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListNodegroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the Amazon EKS nodegroups in your AWS account (in the specified or default region) attached to given cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List tags for the specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "fargateprofile",
+                    "required": false
+                },
+                {
+                    "name": "nodegroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListUpdates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the updates for a given Amazon EKS cluster/nodegroup (in the specified or default region).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                },
+                {
+                    "name": "nodegroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Tags the specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "fargateprofile",
+                    "required": false
+                },
+                {
+                    "name": "nodegroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Untags the specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": false
+                },
+                {
+                    "name": "fargateprofile",
+                    "required": false
+                },
+                {
+                    "name": "nodegroup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateClusterConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update Amazon EKS cluster configurations (eg: API server endpoint access).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateClusterVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update the Kubernetes version of an Amazon EKS cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "cluster",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateNodegroupConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update Amazon EKS nodegroup configurations (eg: min/max/desired capacity or labels).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "nodegroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateNodegroupVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update the Kubernetes version of an Amazon EKS nodegroup.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "nodegroup",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "eks",
+    "service": "Amazon Elastic Container Service for Kubernetes"
+}

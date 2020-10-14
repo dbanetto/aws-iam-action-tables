@@ -1,0 +1,48 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "InvalidateCache",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Used to invalidate API cache upon a client request",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "execute-api-general",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "Invoke",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Used to invoke an API upon a client request",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "execute-api-general",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ManageConnections",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "ManageConnections controls access to the @connections API",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "execute-api-general",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "execute-api",
+    "service": "Amazon API Gateway"
+}

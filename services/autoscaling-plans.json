@@ -1,0 +1,60 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateScalingPlan",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a scaling plan.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteScalingPlan",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified scaling plan.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeScalingPlanResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the scalable resources in the specified scaling plan.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeScalingPlans",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the specified scaling plans or all of your scaling plans.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetScalingPlanResourceForecastData",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves the forecast data for a scalable resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateScalingPlan",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a scaling plan.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "autoscaling-plans",
+    "service": "AWS Auto Scaling"
+}

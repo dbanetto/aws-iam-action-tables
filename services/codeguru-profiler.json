@@ -1,0 +1,322 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AddNotificationChannels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add up to 2 topic ARNs of existing AWS SNS topics to publish notifications",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "BatchGetFrameMetricData",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get the frame metric data for a Profiling Group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ConfigureAgent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission for an agent to register with the orchestration service and retrieve profiling configuration information",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateProfilingGroup",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a profiling group",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProfilingGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a profiling group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProfilingGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a profiling group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFindingsReportAccountSummary",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get a summary of recent recommendations for each profiling group in the account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetNotificationConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get the notification configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get the resource policy associated with the specified Profiling Group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get aggregated profiles for a specific profiling group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRecommendations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get recommendations",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListFindingsReports",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the available recommendations reports for a specific profiling group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListProfileTimes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the start times of the available aggregated profiles for a specific profiling group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListProfilingGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list profiling groups in the account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list tags for a Profiling Group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PostAgentProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to submit a profile collected by an agent belonging to a specific profiling group for aggregation",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "PutPermission",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the list of principals allowed for an action group in the resource policy associated with the specified Profiling Group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RemoveNotificationChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an already configured SNStopic arn from the notification configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "RemovePermission",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove the permission of specified Action Group from the resource policy associated with the specified Profiling Group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "SubmitFeedback",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to submit user feedback for useful or non useful anomaly",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add or overwrite tags to a Profiling Group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove tags from a Profiling Group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateProfilingGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a specific profiling group",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "ProfilingGroup",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "codeguru-profiler",
+    "service": "Amazon CodeGuru Profiler"
+}

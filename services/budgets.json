@@ -1,0 +1,34 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "ModifyBudget",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to modify budgets and budget details",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "budget",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ViewBudget",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to view budgets and budget details",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "budget",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "budgets",
+    "service": "AWS Budget Service"
+}

@@ -1,0 +1,885 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "BatchDeleteWorlds",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete one or more worlds in a batch operation",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchDescribeSimulationJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe multiple simulation jobs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelDeploymentJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Cancel a deployment job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deploymentJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelSimulationJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Cancel a simulation job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "simulationJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelSimulationJobBatch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Cancel a simulation job batch",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "simulationJobBatch",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelWorldExportJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Cancel a world export job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "worldExportJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelWorldGenerationJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Cancel a world generation job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "worldGenerationJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDeploymentJob",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [
+                "iam:CreateServiceLinkedRole"
+            ],
+            "description": "Create a deployment job",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFleet",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Create a deployment fleet that represents a logical group of robots running the same robot application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRobot",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [
+                "iam:CreateServiceLinkedRole"
+            ],
+            "description": "Create a robot that can be registered to a fleet",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRobotApplication",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Create a robot application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRobotApplicationVersion",
+            "condition_keys": [],
+            "dependent_actions": [
+                "s3:GetObject"
+            ],
+            "description": "Create a snapshot of a robot application",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "robotApplication",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSimulationApplication",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Create a simulation application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSimulationApplicationVersion",
+            "condition_keys": [],
+            "dependent_actions": [
+                "s3:GetObject"
+            ],
+            "description": "Create a snapshot of a simulation application",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "simulationApplication",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSimulationJob",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [
+                "iam:CreateServiceLinkedRole"
+            ],
+            "description": "Create a simulation job",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateWorldExportJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a world export job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "world",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateWorldGenerationJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a world generation job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "worldTemplate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateWorldTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a world template",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFleet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a deployment fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deploymentFleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRobot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a robot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "robot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRobotApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a robot application",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "robotApplication",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSimulationApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a simulation application",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "simulationApplication",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteWorldTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a world template",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "worldTemplate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterRobot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deregister a robot from a fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deploymentFleet",
+                    "required": true
+                },
+                {
+                    "name": "robot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDeploymentJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a deployment job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deploymentJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeFleet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a deployment fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deploymentFleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeRobot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a robot",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "robot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeRobotApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a robot application",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "robotApplication",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSimulationApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a simulation application",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "simulationApplication",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSimulationJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a simulation job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "simulationJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSimulationJobBatch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a simulation job batch",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "simulationJobBatch",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeWorld",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a world",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "world",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeWorldExportJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a world export job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "worldExportJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeWorldGenerationJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a world generation job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "worldGenerationJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeWorldTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe a world template",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "worldTemplate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetWorldTemplateBody",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get the body of a world template",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "worldTemplate",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDeploymentJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List deployment jobs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListFleets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List fleets",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListRobotApplications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List robot applications",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListRobots",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List robots",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSimulationApplications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List simulation applications",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSimulationJobBatches",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List simulation job batches",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSimulationJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List simulation jobs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSupportedAvailabilityZones",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists supported availability zones",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List tags for a RoboMaker resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deploymentFleet",
+                    "required": false
+                },
+                {
+                    "name": "deploymentJob",
+                    "required": false
+                },
+                {
+                    "name": "robot",
+                    "required": false
+                },
+                {
+                    "name": "robotApplication",
+                    "required": false
+                },
+                {
+                    "name": "simulationApplication",
+                    "required": false
+                },
+                {
+                    "name": "simulationJob",
+                    "required": false
+                },
+                {
+                    "name": "simulationJobBatch",
+                    "required": false
+                },
+                {
+                    "name": "world",
+                    "required": false
+                },
+                {
+                    "name": "worldExportJob",
+                    "required": false
+                },
+                {
+                    "name": "worldGenerationJob",
+                    "required": false
+                },
+                {
+                    "name": "worldTemplate",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListWorldExportJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List world export jobs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListWorldGenerationJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List world generation jobs",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListWorldTemplates",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List world templates",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListWorlds",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List worlds",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterRobot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Register a robot to a fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deploymentFleet",
+                    "required": true
+                },
+                {
+                    "name": "robot",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RestartSimulationJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Restart a running simulation job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "simulationJob",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartSimulationJobBatch",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [
+                "iam:CreateServiceLinkedRole"
+            ],
+            "description": "Create a simulation job batch",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SyncDeploymentJob",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:CreateServiceLinkedRole"
+            ],
+            "description": "Ensures the most recently deployed robot application is deployed to all robots in the fleet",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deploymentFleet",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Add tags to a RoboMaker resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deploymentFleet",
+                    "required": false
+                },
+                {
+                    "name": "deploymentJob",
+                    "required": false
+                },
+                {
+                    "name": "robot",
+                    "required": false
+                },
+                {
+                    "name": "robotApplication",
+                    "required": false
+                },
+                {
+                    "name": "simulationApplication",
+                    "required": false
+                },
+                {
+                    "name": "simulationJob",
+                    "required": false
+                },
+                {
+                    "name": "simulationJobBatch",
+                    "required": false
+                },
+                {
+                    "name": "world",
+                    "required": false
+                },
+                {
+                    "name": "worldExportJob",
+                    "required": false
+                },
+                {
+                    "name": "worldGenerationJob",
+                    "required": false
+                },
+                {
+                    "name": "worldTemplate",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Remove tags from a RoboMaker resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deploymentFleet",
+                    "required": false
+                },
+                {
+                    "name": "deploymentJob",
+                    "required": false
+                },
+                {
+                    "name": "robot",
+                    "required": false
+                },
+                {
+                    "name": "robotApplication",
+                    "required": false
+                },
+                {
+                    "name": "simulationApplication",
+                    "required": false
+                },
+                {
+                    "name": "simulationJob",
+                    "required": false
+                },
+                {
+                    "name": "simulationJobBatch",
+                    "required": false
+                },
+                {
+                    "name": "world",
+                    "required": false
+                },
+                {
+                    "name": "worldExportJob",
+                    "required": false
+                },
+                {
+                    "name": "worldGenerationJob",
+                    "required": false
+                },
+                {
+                    "name": "worldTemplate",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRobotApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update a robot application",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "robotApplication",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRobotDeployment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Report the deployment status for an individual robot",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSimulationApplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update a simulation application",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "simulationApplication",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateWorldTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update a world template",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "worldTemplate",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "robomaker",
+    "service": "AWS RoboMaker"
+}

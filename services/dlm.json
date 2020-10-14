@@ -1,0 +1,111 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateLifecyclePolicy",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Create a data lifecycle policy to manage the scheduled creation and retention of Amazon EBS snapshots. You may have up to 100 policies.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLifecyclePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete an existing data lifecycle policy. In addition, this action halts the creation and deletion of snapshots that the policy specified. Existing snapshots are not affected.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "policy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetLifecyclePolicies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of summary descriptions of data lifecycle policies.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLifecyclePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a complete description of a single data lifecycle policy.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "policy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the tags associated with a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "policy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add or update tags of a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "policy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove associated with a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "policy",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateLifecyclePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an existing data lifecycle policy.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "policy",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "dlm",
+    "service": "Amazon Data Lifecycle Manager"
+}

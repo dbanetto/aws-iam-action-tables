@@ -1,0 +1,734 @@
+{
+    "actions": [
+        {
+            "access_level": "Permissions management",
+            "action": "AddLayerVersionPermission",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add permissions to the resource-based policy of a version of an AWS Lambda layer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "layerVersion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "AddPermission",
+            "condition_keys": [
+                "lambda:Principal"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to give an AWS service or another account permission to use an AWS Lambda function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAlias",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an alias for a Lambda function version",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateEventSourceMapping",
+            "condition_keys": [
+                "lambda:FunctionArn"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a mapping between an event source and an AWS Lambda function",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFunction",
+            "condition_keys": [
+                "lambda:Layer",
+                "lambda:VpcIds",
+                "lambda:SubnetIds",
+                "lambda:SecurityGroupIds"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an AWS Lambda function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAlias",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an AWS Lambda function alias",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteEventSourceMapping",
+            "condition_keys": [
+                "lambda:FunctionArn"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an AWS Lambda event source mapping",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "eventSourceMapping",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFunction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an AWS Lambda function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFunctionConcurrency",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove a concurrent execution limit from an AWS Lambda function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFunctionEventInvokeConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the configuration for asynchronous invocation for an AWS Lambda function, version, or alias",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLayerVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a version of an AWS Lambda layer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "layerVersion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProvisionedConcurrencyConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the provisioned concurrency configuration for an AWS Lambda function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": false
+                },
+                {
+                    "name": "alias",
+                    "required": false
+                },
+                {
+                    "name": "function",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "DisableReplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disable replication for a Lambda@Edge function",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "EnableReplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to enable replication for a Lambda@Edge function",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAccountSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about an account's limits and usage in an AWS Region",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAlias",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about an AWS Lambda function alias",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetEventSourceMapping",
+            "condition_keys": [
+                "lambda:FunctionArn"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about an AWS Lambda event source mapping",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "eventSourceMapping",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFunction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about an AWS Lambda function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFunctionConcurrency",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about the reserved concurrency configuration for a function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFunctionConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about the version-specific settings of an AWS Lambda function or version",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFunctionEventInvokeConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the configuration for asynchronous invocation for a function, version, or alias",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLayerVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view details about a version of an AWS Lambda layer. Note this action also supports GetLayerVersionByArn API",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "layerVersion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLayerVersionPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the resource-based policy for a version of an AWS Lambda layer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "layerVersion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the resource-based policy for an AWS Lambda function, version, or alias",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetProvisionedConcurrencyConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the provisioned concurrency configuration for an AWS Lambda function's alias or version",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": false
+                },
+                {
+                    "name": "alias",
+                    "required": false
+                },
+                {
+                    "name": "function",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "InvokeAsync",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "(Deprecated) Grants permission to invoke a function asynchronously",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "InvokeFunction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to invoke an AWS Lambda function",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListAliases",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of aliases for an AWS Lambda function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListEventSourceMappings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of AWS Lambda event source mappings",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListFunctionEventInvokeConfigs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of configurations for asynchronous invocation for a function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListFunctions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of AWS Lambda functions, with the version-specific configuration of each function",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListLayerVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of versions of an AWS Lambda layer",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListLayers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of AWS Lambda layers, with details about the latest version of each layer",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListProvisionedConcurrencyConfigs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of provisioned concurrency configurations for an AWS Lambda function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of tags for an AWS Lambda function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListVersionsByFunction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of versions for an AWS Lambda function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PublishLayerVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an AWS Lambda layer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "layer",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PublishVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an AWS Lambda function version",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutFunctionConcurrency",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to configure reserved concurrency for an AWS Lambda function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutFunctionEventInvokeConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to configures options for asynchronous invocation on an AWS Lambda function, version, or alias",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutProvisionedConcurrencyConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to configure provisioned concurrency for an AWS Lambda function's alias or version",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": false
+                },
+                {
+                    "name": "alias",
+                    "required": false
+                },
+                {
+                    "name": "function",
+                    "required": false
+                },
+                {
+                    "name": "version",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "RemoveLayerVersionPermission",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove a statement from the permissions policy for a version of an AWS Lambda layer",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "layerVersion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "RemovePermission",
+            "condition_keys": [
+                "lambda:Principal"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to revoke function-use permission from an AWS service or another account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add tags to an AWS Lambda function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UntagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove tags from an AWS Lambda function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateAlias",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the configuration of an AWS Lambda function's alias",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateEventSourceMapping",
+            "condition_keys": [
+                "lambda:FunctionArn"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to update the configuration of an AWS Lambda event source mapping",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "eventSourceMapping",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFunctionCode",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the code of an AWS Lambda function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFunctionConfiguration",
+            "condition_keys": [
+                "lambda:Layer",
+                "lambda:VpcIds",
+                "lambda:SubnetIds",
+                "lambda:SecurityGroupIds"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the version-specific settings of an AWS Lambda function",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFunctionEventInvokeConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the configuration for asynchronous invocation for an AWS Lambda function, version, or alias",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "function",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "lambda",
+    "service": "AWS Lambda"
+}

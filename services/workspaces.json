@@ -1,0 +1,378 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateIpGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associates the specified IP access control group with the specified directory.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "AuthorizeIpRules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds one or more rules to the specified IP access control group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workspaceipgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateIpGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an IP access control group.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates tags for a WorkSpace.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateWorkspaces",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates one or more WorkSpaces.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directoryid",
+                    "required": true
+                },
+                {
+                    "name": "workspacebundle",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteIpGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified IP access control group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workspaceipgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes tags from a Workspace.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteWorkspaceImage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified workspace image.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves a list that describes the configuration of bring your own license (BYOL) for the specified account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeAccountModifications",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves a list that describes modifications to the configuration of bring your own license (BYOL) for the specified account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeClientProperties",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe client properties about the specified resources.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directoryid",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeIpGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves information about the IP access control groups of your account in the region.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workspaceipgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes tags for a WorkSpace.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeWorkspaceBundles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Obtains information about the WorkSpace bundles that are available to your account in the specified region.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workspacebundle",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeWorkspaceDirectories",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves information about the AWS Directory Service directories in the region that are registered with Amazon WorkSpaces and are available to your account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeWorkspaceImages",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves a list that describes one or more specified images.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeWorkspaces",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Obtains information about the specified WorkSpaces.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeWorkspacesConnectionStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the connection status of a specified WorkSpace.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateIpGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociates the specified IP access control group from the specified directory.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ImportWorkspaceImage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Import a licensed EC2 image to into Amazon WorkSpaces.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListAvailableManagementCidrRanges",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List available CIDR ranges for a CIDR range constraint.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modify the configuration of bring your own license (BYOL) for the specified account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyClientProperties",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modify the client properties of a specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "directoryid",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyWorkspaceProperties",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modifies the WorkSpace properties, including the running mode and AutoStop time.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workspaceid",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ModifyWorkspaceState",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Modify the state of specified WorkSpaces.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workspaceid",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RebootWorkspaces",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Reboots the specified WorkSpaces.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workspaceid",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RebuildWorkspaces",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Rebuilds the specified WorkSpaces.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workspaceid",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RevokeIpRules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Removes one or more rules from the specified IP access control group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workspaceipgroup",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartWorkspaces",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts the specified WorkSpaces.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workspaceid",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopWorkspaces",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops the specified WorkSpaces.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workspaceid",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TerminateWorkspaces",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Terminates the specified WorkSpaces.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workspaceid",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRulesOfIpGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Replaces the current rules of the specified IP access control group with the specified rules.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workspaceipgroup",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces"
+}

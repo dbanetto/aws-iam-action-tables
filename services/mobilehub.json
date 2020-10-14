@@ -1,0 +1,243 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a project",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateServiceRole",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Enable AWS Mobile Hub in the account by creating the required service role",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete the specified project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProjectSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a saved snapshot of project configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeployToStage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deploy changes to the specified stage",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeBundle",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe the download bundle",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ExportBundle",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Export the download bundle",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ExportProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Export the project configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "GenerateProjectParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Generate project parameters required for code generation",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get project configuration and resources",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetProjectSnapshot",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Fetch the previously exported project configuration snapshot",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ImportProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a new project from the previously exported project configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "InstallBundle",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Install a bundle in the project deployments S3 bucket",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListAvailableConnectors",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List the available SaaS (Software as a Service) connectors",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListAvailableFeatures",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List available features",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListAvailableRegions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List available regions for projects",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListBundles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List the available download bundles",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListProjectSnapshots",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List saved snapshots of project configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListProjects",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List projects",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SynchronizeProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Synchronize state of resources into project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ValidateProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Validate a mobile hub project.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "VerifyServiceRole",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Verify AWS Mobile Hub is enabled in the account",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "mobilehub",
+    "service": "AWS Mobile Hub"
+}

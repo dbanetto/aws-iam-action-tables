@@ -1,0 +1,302 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CancelJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Cancels a job in an AWS Batch job queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateComputeEnvironment",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an AWS Batch compute environment.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateJobQueue",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an AWS Batch job queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "compute-environment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteComputeEnvironment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an AWS Batch compute environment.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "compute-environment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteJobQueue",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified job queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "job-queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterJobDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deregisters an AWS Batch job definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "job-definition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeComputeEnvironments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes one or more of your compute environments.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeJobDefinitions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a list of job definitions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeJobQueues",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes one or more of your job queues.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a list of AWS Batch jobs.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of task jobs for a specified job queue.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List tags for the specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "compute-environment",
+                    "required": false
+                },
+                {
+                    "name": "job",
+                    "required": false
+                },
+                {
+                    "name": "job-definition",
+                    "required": false
+                },
+                {
+                    "name": "job-queue",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterJobDefinition",
+            "condition_keys": [
+                "batch:User",
+                "batch:Privileged",
+                "batch:Image",
+                "batch:LogDriver",
+                "batch:AWSLogsGroup",
+                "batch:AWSLogsRegion",
+                "batch:AWSLogsStreamPrefix",
+                "batch:AWSLogsCreateGroup",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Registers an AWS Batch job definition.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SubmitJob",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Submits an AWS Batch job from a job definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "job-definition",
+                    "required": true
+                },
+                {
+                    "name": "job-queue",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Tags the specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "compute-environment",
+                    "required": false
+                },
+                {
+                    "name": "job",
+                    "required": false
+                },
+                {
+                    "name": "job-definition",
+                    "required": false
+                },
+                {
+                    "name": "job-queue",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TerminateJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Terminates jobs in a job queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Untags the specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "compute-environment",
+                    "required": false
+                },
+                {
+                    "name": "job",
+                    "required": false
+                },
+                {
+                    "name": "job-definition",
+                    "required": false
+                },
+                {
+                    "name": "job-queue",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateComputeEnvironment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an AWS Batch compute environment.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "compute-environment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateJobQueue",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a job queue.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "job-queue",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "batch",
+    "service": "AWS Batch"
+}

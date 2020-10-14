@@ -1,0 +1,486 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateExternalConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add an external connection to a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateWithDownstreamRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate an existing repository as an upstream repository to another repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CopyPackageVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to copy package versions from one repository to another repository in the same domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new domain",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a new repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a domain",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "DeleteDomainPermissionsPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the resource policy set on a domain",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePackageVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete package versions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "package",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "DeleteRepositoryPermissionsPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the resource policy set on a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about a domain",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribePackageVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return information about a package version",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "package",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return detailed information about a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateExternalConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate an external connection from a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisposePackageVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to set the status of package versions to Disposed and delete their assets",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "package",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAuthorizationToken",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to generate a temporary authentication token for accessing repositories in a domain",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDomainPermissionsPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a domain's resource policy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPackageVersionAsset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return an asset (or file) that is part of a package version",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "package",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetPackageVersionReadme",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a package version's readme file",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "package",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRepositoryEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return an endpoint for a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRepositoryPermissionsPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a repository's resource policy",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDomains",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the domains in the current user's AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListPackageVersionAssets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list a package version's assets",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "package",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListPackageVersionDependencies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the direct dependencies of a package version",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "package",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListPackageVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list a package's versions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "package",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListPackages",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the packages in a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListRepositories",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the repositories administered by the calling account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListRepositoriesInDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the repositories in a domain",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PublishPackageVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to publish assets and metadata to a repository endpoint",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "package",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutDomainPermissionsPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to attach a resource policy to a domain",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutPackageMetadata",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add, modify or remove package metadata using a repository endpoint",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "package",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutRepositoryPermissionsPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to attach a resource policy to a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ReadFromRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return package assets and metadata from a repository endpoint",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePackageVersionsStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the status of one or more versions of a package",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "package",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the properties of a repository",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "repository",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact"
+}

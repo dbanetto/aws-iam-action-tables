@@ -1,0 +1,339 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateApp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an application configuration to migrate on-premise application onto AWS",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateReplicationJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a job to migrate on-premise server onto AWS",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an existing application configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAppLaunchConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete launch configuration for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAppReplicationConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete replication configuration for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAppValidationConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete validation configuration for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteReplicationJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an existing job to migrate on-premise server onto AWS",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteServerCatalog",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the complete list of on-premise servers gathered into AWS",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateConnector",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate a connector that has been associated",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "GenerateChangeSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to generate a changeSet for the CloudFormation stack of an application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "GenerateTemplate",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to generate a CloudFormation template for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetApp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get the configuration and statuses for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAppLaunchConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get launch configuration for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAppReplicationConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get replication configuration for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAppValidationConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get validation configuration for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAppValidationOutput",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get notification sent from application validation script.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetConnectors",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get all connectors that have been associated",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMessages",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to gets messages from AWS Server Migration Service to Server Migration Connector",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetReplicationJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get all existing jobs to migrate on-premise servers onto AWS",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetReplicationRuns",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get all runs for an existing job",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetServers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get all servers that have been imported",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ImportAppCatalog",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to import application catalog from AWS Application Discovery Service",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ImportServerCatalog",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to gather a complete list of on-premise servers",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "LaunchApp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create and launch a CloudFormation stack for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListApps",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to get a list of summaries for existing applications",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "NotifyAppValidationOutput",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to send notification for application validation script",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutAppLaunchConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create or update launch configuration for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutAppReplicationConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create or update replication configuration for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutAppValidationConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to put validation configuration for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SendMessage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to send message from Server Migration Connector to AWS Server Migration Service",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartAppReplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create and start replication jobs for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartOnDemandAppReplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start a replication run for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartOnDemandReplicationRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start a replication run for an existing replication job",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StopAppReplication",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop and delete replication jobs for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "TerminateApp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to terminate the CloudFormation stack for an existing application",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateApp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an existing application configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateReplicationJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update an existing job to migrate on-premise server onto AWS",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "sms",
+    "service": "AWS Server Migration Service"
+}

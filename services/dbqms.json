@@ -1,0 +1,87 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateFavoriteQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new favorite query",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateQueryHistory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Add a query to the history",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFavoriteQueries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete saved queries",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteQueryHistory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Delete a historical query",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeFavoriteQueries",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List saved queries and associated metadata",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeQueryHistory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List history of queries that were run",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetQueryString",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve favorite or history query string by id",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFavoriteQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update saved query and description",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateQueryHistory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Update the query history",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "dbqms",
+    "service": "Database Query Metadata Service"
+}

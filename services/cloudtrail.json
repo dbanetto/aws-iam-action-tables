@@ -1,0 +1,235 @@
+{
+    "actions": [
+        {
+            "access_level": "Tagging",
+            "action": "AddTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add one or more tags to a trail, up to a limit of 10",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "trail",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTrail",
+            "condition_keys": [],
+            "dependent_actions": [
+                "s3:PutObject"
+            ],
+            "description": "Grants permission to create a trail that specifies the settings for delivery of log data to an Amazon S3 bucket",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "trail",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTrail",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a trail",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "trail",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTrails",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list settings for the trails associated with the current region for your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetEventSelectors",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list settings for event selectors configured for a trail",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "trail",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInsightSelectors",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list CloudTrail Insights selectors that are configured for a trail",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "trail",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTrail",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list settings for the trail",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTrailStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a JSON-formatted list of information about the specified trail",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "trail",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListPublicKeys",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the public keys whose private keys were used to sign trail digest files within a specified time range",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the tags for trails in the current region",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "trail",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTrails",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list trails associated with the current region for your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "LookupEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to look up API activity events captured by CloudTrail that create, update, or delete resources in your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutEventSelectors",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create and update event selectors for a trail",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "trail",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutInsightSelectors",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create and update CloudTrail Insights selectors for a trail",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "trail",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "RemoveTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove tags from a trail",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "trail",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartLogging",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start the recording of AWS API calls and log file delivery for a trail",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "trail",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopLogging",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop the recording of AWS API calls and log file delivery for a trail",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "trail",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTrail",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the settings that specify delivery of log files",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "trail",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail"
+}

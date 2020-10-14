@@ -1,0 +1,615 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AcceptInvitation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to accept Security Hub invitations to become a member account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchDisableStandards",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disable standards in Security Hub",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchEnableStandards",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to enable standards in Security Hub",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchImportFindings",
+            "condition_keys": [
+                "securityhub:TargetAccount"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to import findings into Security Hub from an integrated product",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "product",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchUpdateFindings",
+            "condition_keys": [
+                "securityhub:ASFFSyntaxPath/${ASFFSyntaxPath}"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to update customer-controlled fields for a selected set of Security Hub findings",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateActionTarget",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create custom actions in Security Hub",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateInsight",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create insights in Security Hub. Insights are collections of related findings",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create member accounts in Security Hub",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeclineInvitations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to decline Security Hub invitations to become a member account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteActionTarget",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete custom actions in Security Hub",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteInsight",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete insights from Security Hub",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteInvitations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete Security Hub invitations to become a member account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete Security Hub member accounts",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeActionTargets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of custom actions using the API",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeHub",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about the hub resource in your account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProducts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about the available Security Hub product integrations",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStandards",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about Security Hub standards",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeStandardsControls",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about Security Hub standards controls",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableImportFindingsForProduct",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disable the findings importing for a Security Hub integrated product",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisableSecurityHub",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disable Security Hub",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateFromMasterAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to a Security Hub member account to disassociate from the associated master account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate Security Hub member accounts from the associated master account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableImportFindingsForProduct",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to enable the findings importing for a Security Hub integrated product",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "EnableSecurityHub",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to enable Security Hub",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetEnabledStandards",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of the standards that are enabled in Security Hub",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFindings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of findings from Security Hub",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInsightResults",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve insight results from Security Hub",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetInsights",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve Security Hub insights",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInvitationsCount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the count of Security Hub membership invitations sent to the account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMasterAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve details about the Security Hub master account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the details of Security Hub member accounts",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "InviteMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to invite other AWS accounts to become Security Hub member accounts",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListEnabledProductsForImport",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the Security Hub integrated products that are currently enabled",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListInvitations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the Security Hub invitations sent to the account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListMembers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve details about Security Hub member accounts associated with the master account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list of tags associated with a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "TagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to add tags to a Security Hub resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UntagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove tags from a Security Hub resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateActionTarget",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update custom actions in Security Hub",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFindings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update Security Hub findings",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateInsight",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update insights in Security Hub",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSecurityHubConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update Security Hub configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateStandardsControl",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update Security Hub standards controls",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hub",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "prefix": "securityhub",
+    "service": "AWS Security Hub"
+}

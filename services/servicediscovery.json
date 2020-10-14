@@ -1,0 +1,287 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateHttpNamespace",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an HTTP namespace.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePrivateDnsNamespace",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a private namespace based on DNS, which will be visible only inside a specified Amazon VPC.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePublicDnsNamespace",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a public namespace based on DNS, which will be visible on the internet.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateService",
+            "condition_keys": [
+                "servicediscovery:NamespaceArn",
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a service.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "namespace",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteNamespace",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a specified namespace.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "namespace",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteService",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a specified service.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "service",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterInstance",
+            "condition_keys": [
+                "servicediscovery:ServiceArn"
+            ],
+            "dependent_actions": [],
+            "description": "Deletes the records and the health check, if any, that Amazon Route 53 created for the specified instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "service",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DiscoverInstances",
+            "condition_keys": [
+                "servicediscovery:NamespaceName",
+                "servicediscovery:ServiceName"
+            ],
+            "dependent_actions": [],
+            "description": "Discovers registered instances for a specified namespace and service.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInstance",
+            "condition_keys": [
+                "servicediscovery:ServiceArn"
+            ],
+            "dependent_actions": [],
+            "description": "Gets information about a specified instance.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInstancesHealthStatus",
+            "condition_keys": [
+                "servicediscovery:ServiceArn"
+            ],
+            "dependent_actions": [],
+            "description": "Gets the current health status (Healthy, Unhealthy, or Unknown) of one or more instances.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetNamespace",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about a namespace.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "namespace",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetOperation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about a specific operation.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetService",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the settings for a specified service.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "service",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListInstances",
+            "condition_keys": [
+                "servicediscovery:ServiceArn"
+            ],
+            "dependent_actions": [],
+            "description": "Gets summary information about the instances that were registered with a specified service.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListNamespaces",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about the namespaces.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListOperations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists operations that match the criteria that you specify.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListServices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets settings for all the services that match specified filters.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists tags for the specified resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterInstance",
+            "condition_keys": [
+                "servicediscovery:ServiceArn"
+            ],
+            "dependent_actions": [],
+            "description": "Registers an instance based on the settings in a specified service.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "service",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Adds one or more tags to the specified resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "Removes one or more tags from the specified resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateInstanceCustomHealthStatus",
+            "condition_keys": [
+                "servicediscovery:ServiceArn"
+            ],
+            "dependent_actions": [],
+            "description": "Updates the current health status for an instance that has a custom health check.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateService",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the settings in a specified service.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "service",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "servicediscovery",
+    "service": "AWS Cloud Map"
+}

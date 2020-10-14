@@ -1,0 +1,390 @@
+{
+    "actions": [
+        {
+            "access_level": "Read",
+            "action": "BatchGetItem",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The BatchGetItem action returns the attributes of one or more items from one or more tables.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchWriteItem",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The BatchWriteItem action operation puts or deletes multiple items in one or more tables.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ConditionCheckItem",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The ConditionCheckItem operation checks the existence of a set of attributes for the item with the given primary key",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCluster",
+            "condition_keys": [],
+            "dependent_actions": [
+                "dax:CreateParameterGroup",
+                "dax:CreateSubnetGroup",
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs",
+                "iam:GetRole",
+                "iam:PassRole"
+            ],
+            "description": "The CreateCluster action creates a DAX cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The CreateParameterGroup action creates collection of parameters that you apply to all of the nodes in a DAX cluster.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSubnetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The CreateSubnetGroup action creates a new subnet group.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DecreaseReplicationFactor",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DecreaseReplicationFactor action removes one or more nodes from a DAX cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DeleteCluster action deletes a previously provisioned DAX cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteItem",
+            "condition_keys": [
+                "dax:EnclosingOperation"
+            ],
+            "dependent_actions": [],
+            "description": "The DeleteItem action deletes a single item in a table by primary key.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DeleteParameterGroup action deletes the specified parameter group.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSubnetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DeleteSubnetGroup action deletes a subnet group.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeClusters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeClusters action returns information about all provisioned DAX clusters.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeDefaultParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeDefaultParameters action returns the default system parameter information for DAX.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeEvents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeEvents action returns events related to DAX clusters and parameter groups.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeParameterGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeParameterGroups action returns a list of parameter group descriptions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeParameters",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeParameters action returns the detailed parameter list for a particular parameter group.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeSubnetGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The DescribeSubnetGroups action returns a list of subnet group descriptions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetItem",
+            "condition_keys": [
+                "dax:EnclosingOperation"
+            ],
+            "dependent_actions": [],
+            "description": "The GetItem action returns a set of attributes for the item with the given primary key.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "IncreaseReplicationFactor",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The IncreaseReplicationFactor action adds one or more nodes to a DAX cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The ListTags action returns a list all of the tags for a DAX cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutItem",
+            "condition_keys": [
+                "dax:EnclosingOperation"
+            ],
+            "dependent_actions": [],
+            "description": "The PutItem action creates a new item, or replaces an old item with a new item.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "Query",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The Query action finds items based on primary key values. You can query any table or secondary index that has a composite primary key (a partition key and a sort key).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RebootNode",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The RebootNode action reboots a single node of a DAX cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "Scan",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The Scan action returns one or more items and item attributes by accessing every item in a table or a secondary index.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The TagResource action associates a set of tags with a DAX resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The UntagResource action removes the association of tags from a DAX resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateCluster",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The UpdateCluster action modifies the settings for a DAX cluster.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateItem",
+            "condition_keys": [
+                "dax:EnclosingOperation"
+            ],
+            "dependent_actions": [],
+            "description": "The UpdateItem action edits an existing item's attributes, or adds a new item to the table if it does not already exist.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "application",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateParameterGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The UpdateParameterGroup action modifies the parameters of a parameter group.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSubnetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "The UpdateSubnetGroup action modifies an existing subnet group.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "dax",
+    "service": "Amazon DynamoDB Accelerator (DAX)"
+}

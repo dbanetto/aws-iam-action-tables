@@ -1,0 +1,82 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateConfigurationSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a new configuration set. After you create the configuration set, you can add one or more event destinations to it.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateConfigurationSetEventDestination",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Create a new event destination in a configuration set.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteConfigurationSet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an existing configuration set.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteConfigurationSetEventDestination",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an event destination in a configuration set.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetConfigurationSetEventDestinations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Obtain information about an event destination, including the types of events it reports, the Amazon Resource Name (ARN) of the destination, and the name of the event destination.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListConfigurationSets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Return a list of configuration sets. This operation only returns the configuration sets that are associated with your account in the current AWS Region.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "SendVoiceMessage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a new voice message and send it to a recipient's phone number.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateConfigurationSetEventDestination",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Update an event destination in a configuration set. An event destination is a location that you publish information about your voice calls to. For example, you can log an event to an Amazon CloudWatch destination when a call fails.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS and Voice Service"
+}

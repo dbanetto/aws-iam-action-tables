@@ -1,0 +1,487 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "BatchPutMessage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Puts a batch of messages into the specified channel.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CancelPipelineReprocessing",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Cancels reprocessing for the specified pipeline.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateChannel",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a channel.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDataset",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a dataset.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDatasetContent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Generates content of the specified dataset (by executing the dataset actions).",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDatastore",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a datastore.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datastore",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePipeline",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a pipeline.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified channel.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDataset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified dataset.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDatasetContent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the content of the specified dataset.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDatastore",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified datastore.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datastore",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeletePipeline",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified pipeline.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the specified channel.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDataset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the specified dataset.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDatastore",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the specified datastore.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datastore",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLoggingOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes logging options for the the account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribePipeline",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes the specified pipeline.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDatasetContent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets the content of the specified dataset.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListChannels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the channels for the account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDatasets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the datasets for the account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDatastores",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the datastores for the account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListPipelines",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the pipelines for the account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the tags (metadata) which you have assigned to the resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": false
+                },
+                {
+                    "name": "dataset",
+                    "required": false
+                },
+                {
+                    "name": "datastore",
+                    "required": false
+                },
+                {
+                    "name": "pipeline",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PutLoggingOptions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Puts logging options for the the account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "RunPipelineActivity",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Runs the specified pipeline activity.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "SampleChannelData",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Samples the specified channel's data.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartPipelineReprocessing",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts reprocessing for the specified pipeline.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Adds to or modifies the tags of the given resource. Tags are metadata which can be used to manage a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": false
+                },
+                {
+                    "name": "dataset",
+                    "required": false
+                },
+                {
+                    "name": "datastore",
+                    "required": false
+                },
+                {
+                    "name": "pipeline",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Removes the given tags (metadata) from the resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": false
+                },
+                {
+                    "name": "dataset",
+                    "required": false
+                },
+                {
+                    "name": "datastore",
+                    "required": false
+                },
+                {
+                    "name": "pipeline",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateChannel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the specified channel.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "channel",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDataset",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the specified dataset.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "dataset",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDatastore",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the specified datastore.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "datastore",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdatePipeline",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the specified pipeline.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "pipeline",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics"
+}

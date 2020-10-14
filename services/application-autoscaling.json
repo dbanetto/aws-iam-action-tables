@@ -1,0 +1,96 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "DeleteScalingPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an Application Auto Scaling scaling policy that was previously created.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteScheduledAction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an Application Auto Scaling scheduled action that was previously created.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterScalableTarget",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deregisters a scalable target that was previously registered.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeScalableTargets",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Provides descriptive information for scalable targets with a specified service namespace.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeScalingActivities",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Provides descriptive information for scaling activities with a specified service namespace for the previous six weeks.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeScalingPolicies",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Provides descriptive information for scaling policies with a specified service namespace.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeScheduledActions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Provides descriptive information for scheduled actions with a specified service namespace.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutScalingPolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates or updates a policy for an existing Application Auto Scaling scalable target.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PutScheduledAction",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates or updates a scheduled action for an existing Application Auto Scaling scalable target.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterScalableTarget",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Registers or updates a scalable target. A scalable target is a resource that can be scaled out or in with Application Auto Scaling.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "application-autoscaling",
+    "service": "Application Auto Scaling"
+}

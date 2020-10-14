@@ -1,0 +1,51 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateOutpost",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an Outpost",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetOutpost",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about the specified Outpost",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetOutpostInstanceTypes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the instance types for the specified Outpost",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListOutposts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "List the Outposts for your AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSites",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the sites for the specified AWS account",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "outposts",
+    "service": "AWS Outposts"
+}

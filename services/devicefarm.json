@@ -1,0 +1,1195 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CreateDevicePool",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a device pool within a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateInstanceProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a device instance profile",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateNetworkProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a network profile within a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "CreateProject",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a project for mobile testing",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateRemoteAccessSession",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to start a remote access session to a device instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                },
+                {
+                    "name": "project",
+                    "required": true
+                },
+                {
+                    "name": "deviceinstance",
+                    "required": false
+                },
+                {
+                    "name": "upload",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTestGridProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a project for desktop testing",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTestGridUrl",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to generate a new pre-signed url used to access our test grid service",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "testgrid-project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUpload",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to upload a new file or app within a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateVPCEConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an Amazon Virtual Private Cloud (VPC) endpoint configuration",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDevicePool",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a user-generated device pool",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "devicepool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteInstanceProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a user-generated instance profile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "instanceprofile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteNetworkProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a user-generated network profile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "networkprofile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a mobile testing project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRemoteAccessSession",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a completed remote access session and its results",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "session",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a run",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "run",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTestGridProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a desktop testing project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "testgrid-project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUpload",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a user-uploaded file",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "upload",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteVPCEConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an Amazon Virtual Private Cloud (VPC) endpoint configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vpceconfiguration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAccountSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the number of unmetered iOS and/or unmetered Android devices purchased by the account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDevice",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the information of a unique device type",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDeviceInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retireve the information of a device instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deviceinstance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDevicePool",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retireve the information of a device pool",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "devicepool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDevicePoolCompatibility",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about the compatibility of a test and/or app with a device pool",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "devicepool",
+                    "required": true
+                },
+                {
+                    "name": "upload",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetInstanceProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retireve the information of an instance profile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "instanceprofile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retireve the information of a job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetNetworkProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retireve the information of a network profile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "networkprofile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetOfferingStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the current status and future status of all offerings purchased by an AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a mobile testing project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRemoteAccessSession",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retireve the link to a currently running remote access session",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "session",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retireve the information of a run",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "run",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSuite",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retireve the information of a testing suite",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "suite",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTest",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retireve the information of a test case",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "test",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTestGridProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a desktop testing project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "testgrid-project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetTestGridSession",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retireve the information of a test grid session",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "testgrid-project",
+                    "required": false
+                },
+                {
+                    "name": "testgrid-session",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetUpload",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retireve the information of an uploaded file",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "upload",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetVPCEConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retireve the information of an Amazon Virtual Private Cloud (VPC) endpoint configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vpceconfiguration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "InstallToRemoteAccessSession",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to install an application to a device in a remote access session",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "session",
+                    "required": true
+                },
+                {
+                    "name": "upload",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListArtifacts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the artifacts in a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "job",
+                    "required": false
+                },
+                {
+                    "name": "run",
+                    "required": false
+                },
+                {
+                    "name": "suite",
+                    "required": false
+                },
+                {
+                    "name": "test",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDeviceInstances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of device instances",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDevicePools",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of device pools",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDevices",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of unique device types",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListInstanceProfiles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of device instance profiles",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of jobs within a run",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "run",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListNetworkProfiles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of network profiles within a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListOfferingPromotions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the offering promotions",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListOfferingTransactions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all of the historical purchases, renewals, and system renewal transactions for an AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListOfferings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the products or offerings that the user can manage through the API",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListProjects",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of mobile testing projects for an AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListRemoteAccessSessions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of currently running remote access sessions",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListRuns",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of runs within a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListSamples",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of samples within a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListSuites",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of testing suites within a job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the tags of a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": false
+                },
+                {
+                    "name": "deviceinstance",
+                    "required": false
+                },
+                {
+                    "name": "devicepool",
+                    "required": false
+                },
+                {
+                    "name": "instanceprofile",
+                    "required": false
+                },
+                {
+                    "name": "networkprofile",
+                    "required": false
+                },
+                {
+                    "name": "project",
+                    "required": false
+                },
+                {
+                    "name": "run",
+                    "required": false
+                },
+                {
+                    "name": "session",
+                    "required": false
+                },
+                {
+                    "name": "testgrid-project",
+                    "required": false
+                },
+                {
+                    "name": "testgrid-session",
+                    "required": false
+                },
+                {
+                    "name": "vpceconfiguration",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTestGridProjects",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of desktop testing projects for an AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTestGridSessionActions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the session actions performed during a test grid session",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "testgrid-session",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTestGridSessionArtifacts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the artifacts generated by a test grid session",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "testgrid-session",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTestGridSessions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the sessions within a test grid project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "testgrid-project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTests",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of tests within a testing suite",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "suite",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListUniqueProblems",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of unique problems within a run",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "run",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListUploads",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of uploads within a project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListVPCEConfigurations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the information of Amazon Virtual Private Cloud (VPC) endpoint configurations",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PurchaseOffering",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to purchase offerings for an AWS account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RenewOffering",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to set the quantity of devices to renew for an offering",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "ScheduleRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to schedule a run",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                },
+                {
+                    "name": "devicepool",
+                    "required": false
+                },
+                {
+                    "name": "upload",
+                    "required": false
+                },
+                {
+                    "name": "devicepool",
+                    "required": true
+                },
+                {
+                    "name": "project",
+                    "required": true
+                },
+                {
+                    "name": "upload",
+                    "required": false
+                },
+                {
+                    "name": "project",
+                    "required": true
+                },
+                {
+                    "name": "upload",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to terminate a running job",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopRemoteAccessSession",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to terminate a running remote access session",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "session",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopRun",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to terminate a running test run",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "run",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add tags to a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": false
+                },
+                {
+                    "name": "deviceinstance",
+                    "required": false
+                },
+                {
+                    "name": "devicepool",
+                    "required": false
+                },
+                {
+                    "name": "instanceprofile",
+                    "required": false
+                },
+                {
+                    "name": "networkprofile",
+                    "required": false
+                },
+                {
+                    "name": "project",
+                    "required": false
+                },
+                {
+                    "name": "run",
+                    "required": false
+                },
+                {
+                    "name": "session",
+                    "required": false
+                },
+                {
+                    "name": "testgrid-project",
+                    "required": false
+                },
+                {
+                    "name": "testgrid-session",
+                    "required": false
+                },
+                {
+                    "name": "vpceconfiguration",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove tags from a resource",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "device",
+                    "required": false
+                },
+                {
+                    "name": "deviceinstance",
+                    "required": false
+                },
+                {
+                    "name": "devicepool",
+                    "required": false
+                },
+                {
+                    "name": "instanceprofile",
+                    "required": false
+                },
+                {
+                    "name": "networkprofile",
+                    "required": false
+                },
+                {
+                    "name": "project",
+                    "required": false
+                },
+                {
+                    "name": "run",
+                    "required": false
+                },
+                {
+                    "name": "session",
+                    "required": false
+                },
+                {
+                    "name": "testgrid-project",
+                    "required": false
+                },
+                {
+                    "name": "testgrid-session",
+                    "required": false
+                },
+                {
+                    "name": "vpceconfiguration",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDeviceInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an existing device instance",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deviceinstance",
+                    "required": true
+                },
+                {
+                    "name": "instanceprofile",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDevicePool",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an existing device pool",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "devicepool",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateInstanceProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an existing instance profile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "instanceprofile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateNetworkProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an existing network profile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "networkprofile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an existing mobile testing project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTestGridProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an existing desktop testing project",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "testgrid-project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateUpload",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an existing upload",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "upload",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateVPCEConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify an existing Amazon Virtual Private Cloud (VPC) endpoint configuration",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "vpceconfiguration",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "devicefarm",
+    "service": "AWS Device Farm"
+}

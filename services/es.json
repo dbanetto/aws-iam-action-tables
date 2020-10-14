@@ -1,0 +1,444 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AcceptInboundCrossClusterSearchConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows the destination domain owner to accept an inbound cross-cluster search connection request",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "AddTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to attach resource tags to an Amazon ES domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateElasticsearchDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an Amazon ES domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateElasticsearchServiceRole",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create the service-linked role required for Amazon ES domains that use VPC access.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateOutboundCrossClusterSearchConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a new cross-cluster search connection from a source domain to a destination domain",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteElasticsearchDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an Amazon ES domain and all of its data.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteElasticsearchServiceRole",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete the service-linked role required for Amazon ES domains that use VPC access.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteInboundCrossClusterSearchConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows the destination domain owner to delete an existing inbound cross-cluster search connection",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteOutboundCrossClusterSearchConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows the source domain owner to delete an existing outbound cross-cluster search connection",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeElasticsearchDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view a description of the domain configuration for the specified Amazon ES domain, including the domain ID, domain service endpoint, and domain ARN.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeElasticsearchDomainConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view a description of the configuration options and status of an Amazon ES domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeElasticsearchDomains",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view a description of the domain configuration for up to five specified Amazon ES domains.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeElasticsearchInstanceTypeLimits",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to view the instance count, storage, and master node limits for a given Elasticsearch version and instance type.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeInboundCrossClusterSearchConnections",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all the inbound cross-cluster search connections for a destination domain",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeOutboundCrossClusterSearchConnections",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists all the outbound cross-cluster search connections for a source domain",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeReservedElasticsearchInstanceOfferings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to fetch reserved instance offerings for ES",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeReservedElasticsearchInstances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to fetch ES reserved instances already purchased by customer",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ESCrossClusterGet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to send cross-cluster requests to a destination domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ESHttpDelete",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to send HTTP DELETE requests to the Elasticsearch APIs.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ESHttpGet",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to send HTTP GET requests to the Elasticsearch APIs.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ESHttpHead",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to send HTTP HEAD requests to the Elasticsearch APIs.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ESHttpPatch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to send HTTP PATCH requests to the Elasticsearch APIs.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ESHttpPost",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to send HTTP POST requests to the Elasticsearch APIs.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ESHttpPut",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to send HTTP PUT requests to the Elasticsearch APIs.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "GetCompatibleElasticsearchVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to fetch list of compatible elastic search versions to which Amazon ES domain can be upgraded",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetUpgradeHistory",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to fetch upgrade history for given ES domain",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetUpgradeStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to fetch upgrade status for given ES domain",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDomainNames",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to display the names of all Amazon ES domains that the current user owns.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListElasticsearchInstanceTypeDetails",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all instance types and available features for a given Elasticsearch version.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListElasticsearchInstanceTypes",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all Elasticsearch instance types that are supported for a given Elasticsearch version.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListElasticsearchVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all supported Elasticsearch versions on Amazon ES.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to display all of the tags for an Amazon ES domain.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "PurchaseReservedElasticsearchInstanceOffering",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to purchase ES reserved instances",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RejectInboundCrossClusterSearchConnection",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Allows the destination domain owner to reject an inbound cross-cluster search connection request",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "RemoveTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to remove tags from Amazon ES domains.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateElasticsearchDomainConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to modify the configuration of an Amazon ES domain, such as the instance type or number of instances.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpgradeElasticsearchDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to initiate upgrade of elastic search domain to given version",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "es",
+    "service": "Amazon Elasticsearch Service"
+}

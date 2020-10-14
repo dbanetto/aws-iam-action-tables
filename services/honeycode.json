@@ -1,0 +1,61 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "ApproveTeamAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to approve a team association request for your AWS Account",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetScreenData",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to load the data from a screen",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "screen",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "InvokeScreenAutomation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to invoke a screen automation",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "screen-automation",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTeamAssociations",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list all pending and approved team associations with your AWS Account",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RejectTeamAssociation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to reject a team association request for your AWS Account",
+            "permission_only": true,
+            "resources": []
+        }
+    ],
+    "prefix": "honeycode",
+    "service": "Amazon Honeycode"
+}

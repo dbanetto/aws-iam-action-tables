@@ -1,0 +1,85 @@
+{
+    "actions": [
+        {
+            "access_level": "List",
+            "action": "DownloadSoftware",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Download the Software files for AWS Elemental Appliances and Software Purchases",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "GenerateLicenses",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Generate Software Licenses for AWS Elemental Appliances and Software Purchases",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetActivation",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describe an activation",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "activation",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "This action lists tags for an AWS Elemental Activations resource",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "activation",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:TagKeys",
+                "aws:RequestTag/${TagKey}"
+            ],
+            "dependent_actions": [],
+            "description": "This action adds a tag for an AWS Elemental Activations resource",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "activation",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "This action removes a tag from an AWS Elemental Activations resource",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "activation",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "prefix": "elemental-activations",
+    "service": "Elemental Activations"
+}

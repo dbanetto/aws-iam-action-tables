@@ -1,0 +1,1341 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "AssociateRoleToGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate a role with a group. The role's permissions must allow Greengrass core Lambda functions and connectors to perform actions in other AWS services.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "AssociateServiceRoleToAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to associate a role with your account. AWS IoT Greengrass uses this role to access your Lambda functions and AWS IoT resources.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateConnectorDefinition",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a connector definition.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateConnectorDefinitionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a version of an existing connector definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "connectorDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCoreDefinition",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a core definition.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCoreDefinitionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a version of an existing core definition. Greengrass groups must each contain exactly one Greengrass core.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "coreDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDeployment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a deployment.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDeviceDefinition",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a device definition.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDeviceDefinitionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a version of an existing device definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deviceDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFunctionDefinition",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a Lambda function definition to be used in a group that contains a list of Lambda functions and their configurations.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFunctionDefinitionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a version of an existing Lambda function definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "functionDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a group.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateGroupCertificateAuthority",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a CA for the group, or rotate the existing CA.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateGroupVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a version of a group that has already been defined.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLoggerDefinition",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a logger definition.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLoggerDefinitionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a version of an existing logger definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "loggerDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateResourceDefinition",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a resource definition that contains a list of resources to be used in a group.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateResourceDefinitionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a version of an existing resource definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resourceDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSoftwareUpdateJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create an AWS IoT job that will trigger your Greengrass cores to update the software they are running.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSubscriptionDefinition",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create a subscription definition.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateSubscriptionDefinitionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to create a version of an existing subscription definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subscriptionDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteConnectorDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a connector definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "connectorDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCoreDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a core definition. Deleting a definition that is currently in use in a deployment affects future deployments.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "coreDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDeviceDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a device definition. Deleting a definition that is currently in use in a deployment affects future deployments.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deviceDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFunctionDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a Lambda function definition. Deleting a definition that is currently in use in a deployment affects future deployments.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "functionDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a group that is not currently in use in a deployment.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteLoggerDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a logger definition. Deleting a definition that is currently in use in a deployment affects future deployments.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "loggerDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteResourceDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a resource definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resourceDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSubscriptionDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a subscription definition. Deleting a definition that is currently in use in a deployment affects future deployments.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subscriptionDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateRoleFromGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate the role from a group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateServiceRoleFromAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to disassociate the service role from an account. Without a service role, deployments will not work.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "Discover",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information required to connect to a Greengrass core.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "thing",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetAssociatedRole",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the role associated with a group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetBulkDeploymentStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return the status of a bulk deployment.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bulkDeployment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetConnectivityInfo",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the connectivity information for a core.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "connectivityInfo",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetConnectorDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a connector definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "connectorDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetConnectorDefinitionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a connector definition version.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "connectorDefinition",
+                    "required": true
+                },
+                {
+                    "name": "connectorDefinitionVersion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCoreDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a core definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "coreDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetCoreDefinitionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a core definition version.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "coreDefinition",
+                    "required": true
+                },
+                {
+                    "name": "coreDefinitionVersion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDeploymentStatus",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return the status of a deployment.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deployment",
+                    "required": true
+                },
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDeviceDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a device definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deviceDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDeviceDefinitionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a device definition version.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deviceDefinition",
+                    "required": true
+                },
+                {
+                    "name": "deviceDefinitionVersion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFunctionDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a Lambda function definition, such as its creation time and latest version.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "functionDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetFunctionDefinitionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a Lambda function definition version, such as which Lambda functions are included in the version and their configurations.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "functionDefinition",
+                    "required": true
+                },
+                {
+                    "name": "functionDefinitionVersion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetGroupCertificateAuthority",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return the public key of the CA associated with a group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "certificateAuthority",
+                    "required": true
+                },
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetGroupCertificateConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the current configuration for the CA used by a group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetGroupVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a group version.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                },
+                {
+                    "name": "groupVersion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLoggerDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a logger definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "loggerDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetLoggerDefinitionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a logger definition version.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "loggerDefinition",
+                    "required": true
+                },
+                {
+                    "name": "loggerDefinitionVersion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResourceDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a resource definition, such as its creation time and latest version.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resourceDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResourceDefinitionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a resource definition version, such as which resources are included in the version.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resourceDefinition",
+                    "required": true
+                },
+                {
+                    "name": "resourceDefinitionVersion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetServiceRoleForAccount",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve the service role that is attached to an account.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSubscriptionDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a subscription definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subscriptionDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSubscriptionDefinitionVersion",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve information about a subscription definition version.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subscriptionDefinition",
+                    "required": true
+                },
+                {
+                    "name": "subscriptionDefinitionVersion",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListBulkDeploymentDetailedReports",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a paginated list of the deployments that have been started in a bulk deployment operation and their current deployment status.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bulkDeployment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListBulkDeployments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of bulk deployments.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListConnectorDefinitionVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the versions of a connector definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "connectorDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListConnectorDefinitions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of connector definitions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListCoreDefinitionVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the versions of a core definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "coreDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListCoreDefinitions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of core definitions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDeployments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of all deployments for a group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDeviceDefinitionVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the versions of a device definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deviceDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDeviceDefinitions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of device definitions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListFunctionDefinitionVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the versions of a Lambda function definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "functionDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListFunctionDefinitions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of Lambda function definitions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListGroupCertificateAuthorities",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of current CAs for a group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListGroupVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the versions of a group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of groups.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListLoggerDefinitionVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the versions of a logger definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "loggerDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListLoggerDefinitions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of logger definitions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListResourceDefinitionVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the versions of a resource definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resourceDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListResourceDefinitions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of resource definitions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSubscriptionDefinitionVersions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the versions of a subscription definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subscriptionDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListSubscriptionDefinitions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to retrieve a list of subscription definitions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to list the tags for a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bulkDeployment",
+                    "required": false
+                },
+                {
+                    "name": "connectorDefinition",
+                    "required": false
+                },
+                {
+                    "name": "coreDefinition",
+                    "required": false
+                },
+                {
+                    "name": "deviceDefinition",
+                    "required": false
+                },
+                {
+                    "name": "functionDefinition",
+                    "required": false
+                },
+                {
+                    "name": "group",
+                    "required": false
+                },
+                {
+                    "name": "loggerDefinition",
+                    "required": false
+                },
+                {
+                    "name": "resourceDefinition",
+                    "required": false
+                },
+                {
+                    "name": "subscriptionDefinition",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ResetDeployments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to reset a group's deployments.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartBulkDeployment",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to deploy multiple groups in one operation.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StopBulkDeployment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to stop the execution of a bulk deployment.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bulkDeployment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to add tags to a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bulkDeployment",
+                    "required": false
+                },
+                {
+                    "name": "connectorDefinition",
+                    "required": false
+                },
+                {
+                    "name": "coreDefinition",
+                    "required": false
+                },
+                {
+                    "name": "deviceDefinition",
+                    "required": false
+                },
+                {
+                    "name": "functionDefinition",
+                    "required": false
+                },
+                {
+                    "name": "group",
+                    "required": false
+                },
+                {
+                    "name": "loggerDefinition",
+                    "required": false
+                },
+                {
+                    "name": "resourceDefinition",
+                    "required": false
+                },
+                {
+                    "name": "subscriptionDefinition",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to remove tags from a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "bulkDeployment",
+                    "required": false
+                },
+                {
+                    "name": "connectorDefinition",
+                    "required": false
+                },
+                {
+                    "name": "coreDefinition",
+                    "required": false
+                },
+                {
+                    "name": "deviceDefinition",
+                    "required": false
+                },
+                {
+                    "name": "functionDefinition",
+                    "required": false
+                },
+                {
+                    "name": "group",
+                    "required": false
+                },
+                {
+                    "name": "loggerDefinition",
+                    "required": false
+                },
+                {
+                    "name": "resourceDefinition",
+                    "required": false
+                },
+                {
+                    "name": "subscriptionDefinition",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateConnectivityInfo",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the connectivity information for a Greengrass core. Any devices that belong to the group that has this core will receive this information in order to find the location of the core and connect to it.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "connectivityInfo",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateConnectorDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a connector definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "connectorDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateCoreDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a core definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "coreDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDeviceDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a device definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "deviceDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateFunctionDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a Lambda function definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "functionDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateGroupCertificateConfiguration",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update the certificate expiry time for a group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateLoggerDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a logger definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "loggerDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateResourceDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a resource definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "resourceDefinition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateSubscriptionDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to update a subscription definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "subscriptionDefinition",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass"
+}

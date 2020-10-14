@@ -1,0 +1,270 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "CancelQuery",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants Permission to cancel queries in your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDatabase",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permissions to create a database in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "database",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTable",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permissions to create a table in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDatabase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to delete a database in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "database",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to delete a table in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDatabase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to describe a database in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "database",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "DescribeEndpoints",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to describe timestream endpoints.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants Permissions to describe a table in your account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListDatabases",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants Permission to list databases in your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListMeasures",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants Permissions to list measures of a table in your account",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTables",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants Permission to list tables in your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTagsForResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to list tags of a resource in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "Select",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants Permission to issue 'select from table' queries",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "SelectValues",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants Permissions to issue 'select 1' queries",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Tagging",
+            "action": "TagResource",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permissions to add tags to a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "UntagResource",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permissions to remove a tag from a resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "database",
+                    "required": true
+                },
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDatabase",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to update a database in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "database",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTable",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to update a table in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "WriteRecords",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permissions to ingest data to a table in your account.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "table",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "timestream",
+    "service": "AWS Timestream"
+}

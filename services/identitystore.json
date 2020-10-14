@@ -1,0 +1,42 @@
+{
+    "actions": [
+        {
+            "access_level": "Read",
+            "action": "DescribeGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves information about group from the directory that AWS Identity Store provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeUser",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves information about user from the directory that AWS Identity Store provides by default",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Search for groups within the associated directory",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListUsers",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Search for users within the associated directory",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "identitystore",
+    "service": "AWS Identity Store"
+}

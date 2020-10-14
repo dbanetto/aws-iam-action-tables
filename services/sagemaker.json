@@ -1,0 +1,2297 @@
+{
+    "actions": [
+        {
+            "access_level": "Tagging",
+            "action": "AddTags",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Adds or overwrites one or more tags for the specified Amazon SageMaker resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "app",
+                    "required": false
+                },
+                {
+                    "name": "automl-job",
+                    "required": false
+                },
+                {
+                    "name": "domain",
+                    "required": false
+                },
+                {
+                    "name": "endpoint",
+                    "required": false
+                },
+                {
+                    "name": "endpoint-config",
+                    "required": false
+                },
+                {
+                    "name": "experiment",
+                    "required": false
+                },
+                {
+                    "name": "experiment-trial",
+                    "required": false
+                },
+                {
+                    "name": "experiment-trial-component",
+                    "required": false
+                },
+                {
+                    "name": "flow-definition",
+                    "required": false
+                },
+                {
+                    "name": "human-task-ui",
+                    "required": false
+                },
+                {
+                    "name": "hyper-parameter-tuning-job",
+                    "required": false
+                },
+                {
+                    "name": "labeling-job",
+                    "required": false
+                },
+                {
+                    "name": "model",
+                    "required": false
+                },
+                {
+                    "name": "monitoring-schedule",
+                    "required": false
+                },
+                {
+                    "name": "notebook-instance",
+                    "required": false
+                },
+                {
+                    "name": "processing-job",
+                    "required": false
+                },
+                {
+                    "name": "training-job",
+                    "required": false
+                },
+                {
+                    "name": "transform-job",
+                    "required": false
+                },
+                {
+                    "name": "user-profile",
+                    "required": false
+                },
+                {
+                    "name": "workteam",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "AssociateTrialComponent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Associate a trial component with a trial.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "experiment-trial",
+                    "required": true
+                },
+                {
+                    "name": "experiment-trial-component",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetMetrics",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieve metrics associated with SageMaker Resources such as Training Jobs. This API is not publicly exposed at this point, however admins can control this action",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "training-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchPutMetrics",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Publish metrics associated with a SageMaker Resource such as a Training Job. This API is not publicly exposed at this point, however admins can control this action",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "training-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAlgorithm",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create an algorithm.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "algorithm",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateApp",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "sagemaker:InstanceTypes"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to create an App for a SageMaker Studio UserProfile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "app",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateAutoMLJob",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "sagemaker:InterContainerTrafficEncryption",
+                "sagemaker:OutputKmsKey",
+                "sagemaker:VolumeKmsKey",
+                "sagemaker:VpcSecurityGroupIds",
+                "sagemaker:VpcSubnets"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Creates automl job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "automl-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCodeRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a code repository.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "code-repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateCompilationJob",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Create a compilation job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "compilation-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateDomain",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "sagemaker:AppNetworkAccess",
+                "sagemaker:InstanceTypes",
+                "sagemaker:VpcSecurityGroupIds",
+                "sagemaker:VpcSubnets",
+                "sagemaker:DomainSharingOutputKmsKey",
+                "sagemaker:HomeEfsFileSystemKmsKey"
+            ],
+            "dependent_actions": [
+                "iam:CreateServiceLinkedRole",
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to create a Domain for SageMaker Studio",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateEndpoint",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an endpoint using the endpoint configuration specified in the request.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateEndpointConfig",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "sagemaker:AcceleratorTypes",
+                "sagemaker:InstanceTypes",
+                "sagemaker:ModelArn",
+                "sagemaker:VolumeKmsKey"
+            ],
+            "dependent_actions": [],
+            "description": "Creates an endpoint configuration that can be deployed using Amazon SageMaker hosting services.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "endpoint-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateExperiment",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Create an experiment.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "experiment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateFlowDefinition",
+            "condition_keys": [
+                "sagemaker:WorkteamArn",
+                "sagemaker:WorkteamType",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Creates a flow definition, which defines settings for a human workflow.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "flow-definition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateHumanTaskUi",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Defines the settings you will use for the human review workflow user interface.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "human-task-ui",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateHyperParameterTuningJob",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "sagemaker:FileSystemAccessMode",
+                "sagemaker:FileSystemDirectoryPath",
+                "sagemaker:FileSystemId",
+                "sagemaker:FileSystemType",
+                "sagemaker:InstanceTypes",
+                "sagemaker:InterContainerTrafficEncryption",
+                "sagemaker:MaxRuntimeInSeconds",
+                "sagemaker:NetworkIsolation",
+                "sagemaker:OutputKmsKey",
+                "sagemaker:VolumeKmsKey",
+                "sagemaker:VpcSecurityGroupIds",
+                "sagemaker:VpcSubnets"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Creates hyper parameter tuning job that can be deployed using Amazon SageMaker.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hyper-parameter-tuning-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateLabelingJob",
+            "condition_keys": [
+                "sagemaker:WorkteamArn",
+                "sagemaker:WorkteamType",
+                "sagemaker:VolumeKmsKey",
+                "sagemaker:OutputKmsKey",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Starts a labeling job. A labeling job takes unlabeled data in and produces labeled data as output, which can be used for training SageMaker models.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "labeling-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateModel",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "sagemaker:NetworkIsolation",
+                "sagemaker:VpcSecurityGroupIds",
+                "sagemaker:VpcSubnets"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Creates a model in Amazon SageMaker. In the request, you specify a name for the model and describe one or more containers.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "model",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateModelPackage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Create a model package.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "model-package",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateMonitoringSchedule",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "sagemaker:InstanceTypes",
+                "sagemaker:MaxRuntimeInSeconds",
+                "sagemaker:NetworkIsolation",
+                "sagemaker:OutputKmsKey",
+                "sagemaker:VolumeKmsKey",
+                "sagemaker:VpcSecurityGroupIds",
+                "sagemaker:VpcSubnets"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Creates a monitoring schedule.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "monitoring-schedule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateNotebookInstance",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "sagemaker:AcceleratorTypes",
+                "sagemaker:DirectInternetAccess",
+                "sagemaker:InstanceTypes",
+                "sagemaker:RootAccess",
+                "sagemaker:VolumeKmsKey",
+                "sagemaker:VpcSecurityGroupIds",
+                "sagemaker:VpcSubnets"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Creates an Amazon SageMaker notebook instance. A notebook instance is an Amazon EC2 instance running on a Jupyter Notebook.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notebook-instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateNotebookInstanceLifecycleConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates an notebook instance lifecycle configuration that can be deployed using Amazon SageMaker.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notebook-instance-lifecycle-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePresignedDomainUrl",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to return a URL that you can use from your browser to connect to the Domain as a specified UserProfile when AuthMode is 'IAM'",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user-profile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreatePresignedNotebookInstanceUrl",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a URL that you can use from your browser to connect to the Notebook Instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notebook-instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateProcessingJob",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "sagemaker:InstanceTypes",
+                "sagemaker:MaxRuntimeInSeconds",
+                "sagemaker:NetworkIsolation",
+                "sagemaker:OutputKmsKey",
+                "sagemaker:VolumeKmsKey",
+                "sagemaker:VpcSecurityGroupIds",
+                "sagemaker:VpcSubnets",
+                "sagemaker:InterContainerTrafficEncryption"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Starts a processing job. After processing completes, Amazon SageMaker saves the resulting artifacts and other optional output to an Amazon S3 location that you specify.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "processing-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTrainingJob",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "sagemaker:FileSystemAccessMode",
+                "sagemaker:FileSystemDirectoryPath",
+                "sagemaker:FileSystemId",
+                "sagemaker:FileSystemType",
+                "sagemaker:InstanceTypes",
+                "sagemaker:InterContainerTrafficEncryption",
+                "sagemaker:MaxRuntimeInSeconds",
+                "sagemaker:NetworkIsolation",
+                "sagemaker:OutputKmsKey",
+                "sagemaker:VolumeKmsKey",
+                "sagemaker:VpcSecurityGroupIds",
+                "sagemaker:VpcSubnets"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Starts a model training job. After training completes, Amazon SageMaker saves the resulting model artifacts and other optional output to an Amazon S3 location that you specify.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "training-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTransformJob",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "sagemaker:InstanceTypes",
+                "sagemaker:ModelArn",
+                "sagemaker:OutputKmsKey",
+                "sagemaker:VolumeKmsKey"
+            ],
+            "dependent_actions": [],
+            "description": "Starts a transform job. After the results are obtained, Amazon SageMaker saves them to an Amazon S3 location that you specify.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "transform-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTrial",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Create a trial.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "experiment-trial",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateTrialComponent",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Create a trial component.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "experiment-trial-component",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateUserProfile",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "sagemaker:VpcSecurityGroupIds",
+                "sagemaker:InstanceTypes",
+                "sagemaker:DomainSharingOutputKmsKey"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Grants permission to create a UserProfile for a SageMaker Studio Domain",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user-profile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateWorkforce",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Create a workforce.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workforce",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateWorkteam",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Create a workteam.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workteam",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteAlgorithm",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an algorithm.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "algorithm",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteApp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete an App",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "app",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteCodeRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a code repository.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "code-repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a Domain",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an endpoint. Amazon SageMaker frees up all the resources that were deployed when the endpoint was created.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteEndpointConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the endpoint configuration created using the CreateEndpointConfig API. The DeleteEndpointConfig API deletes only the specified configuration. It does not delete any endpoints created using the configuration.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "endpoint-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteExperiment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an experiment.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "experiment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteFlowDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deltes the specified flow definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "flow-definition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteHumanLoop",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes the specified human loop.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "human-loop",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a model created using the CreateModel API. The DeleteModel API deletes only the model entry in Amazon SageMaker that you created by calling the CreateModel API. It does not delete model artifacts, inference code, or the IAM role that you specified when creating the model.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "model",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteModelPackage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a model package.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "model-package",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteMonitoringSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a monitoring schedule. Amazon SageMaker will no longer run the scheduled monitoring.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "monitoring-schedule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteNotebookInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an Amazon SageMaker notebook instance. Before you can delete a notebook instance, you must call the StopNotebookInstance API.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notebook-instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteNotebookInstanceLifecycleConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an notebook instance lifecycle configuration that can be deployed using Amazon SageMaker.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notebook-instance-lifecycle-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Tagging",
+            "action": "DeleteTags",
+            "condition_keys": [
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Deletes the specified set of tags from an Amazon SageMaker resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "app",
+                    "required": false
+                },
+                {
+                    "name": "automl-job",
+                    "required": false
+                },
+                {
+                    "name": "compilation-job",
+                    "required": false
+                },
+                {
+                    "name": "domain",
+                    "required": false
+                },
+                {
+                    "name": "endpoint",
+                    "required": false
+                },
+                {
+                    "name": "endpoint-config",
+                    "required": false
+                },
+                {
+                    "name": "experiment",
+                    "required": false
+                },
+                {
+                    "name": "experiment-trial",
+                    "required": false
+                },
+                {
+                    "name": "experiment-trial-component",
+                    "required": false
+                },
+                {
+                    "name": "flow-definition",
+                    "required": false
+                },
+                {
+                    "name": "human-task-ui",
+                    "required": false
+                },
+                {
+                    "name": "hyper-parameter-tuning-job",
+                    "required": false
+                },
+                {
+                    "name": "labeling-job",
+                    "required": false
+                },
+                {
+                    "name": "model",
+                    "required": false
+                },
+                {
+                    "name": "monitoring-schedule",
+                    "required": false
+                },
+                {
+                    "name": "notebook-instance",
+                    "required": false
+                },
+                {
+                    "name": "processing-job",
+                    "required": false
+                },
+                {
+                    "name": "training-job",
+                    "required": false
+                },
+                {
+                    "name": "transform-job",
+                    "required": false
+                },
+                {
+                    "name": "user-profile",
+                    "required": false
+                },
+                {
+                    "name": "workteam",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTrial",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a trial.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "experiment-trial",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteTrialComponent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a trial component.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "experiment-trial-component",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteUserProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to delete a UserProfile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user-profile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteWorkforce",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a workforce.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workforce",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteWorkteam",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a workteam.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workteam",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAlgorithm",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about an algorithm.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "algorithm",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeApp",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe an App",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "app",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeAutoMLJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an automl job that was created via CreateAutoMLJob API.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "automl-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCodeRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a code repository.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "code-repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCompilationJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a compilation job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "compilation-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeDomain",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a Domain",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the description of an endpoint.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeEndpointConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the description of an endpoint configuration, which was created using the CreateEndpointConfig API.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "endpoint-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeExperiment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about an experiment.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "experiment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeFlowDefinition",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns detailed information about the specified flow definition.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "flow-definition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeHumanLoop",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns detailed information about the specified human loop.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "human-loop",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeHumanTaskUi",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns detailed information about the specified human review workflow user interface.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "human-task-ui",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeHyperParameterTuningJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a hyper parameter tuning job that was created via CreateHyperParameterTuningJob API.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hyper-parameter-tuning-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeLabelingJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a labeling job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "labeling-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeModel",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a model that you created using the CreateModel API.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "model",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeModelPackage",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a model package.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "model-package",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeMonitoringSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a monitoring schedule.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "monitoring-schedule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeNotebookInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a notebook instance.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notebook-instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeNotebookInstanceLifecycleConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes an notebook instance lifecycle configuration that was created via CreateNotebookInstanceLifecycleConfig API.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notebook-instance-lifecycle-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeProcessingJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a processing job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "processing-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeSubscribedWorkteam",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a subscribed workteam.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workteam",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTrainingJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a training job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "training-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTransformJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a transform job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "transform-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTrial",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a trial.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "experiment-trial",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTrialComponent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a trial component.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "experiment-trial-component",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeUserProfile",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to describe a UserProfile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user-profile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeWorkforce",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a workforce.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workforce",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeWorkteam",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns information about a workteam.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workteam",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DisassociateTrialComponent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Disassociate a trial component with a trial.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "experiment-trial",
+                    "required": true
+                },
+                {
+                    "name": "experiment-trial-component",
+                    "required": true
+                },
+                {
+                    "name": "processing-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetSearchSuggestions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Get search suggestions when provided with keyword.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "InvokeEndpoint",
+            "condition_keys": [
+                "sagemaker:TargetModel"
+            ],
+            "dependent_actions": [],
+            "description": "After you deploy a model into production using Amazon SageMaker hosting services, your client applications use this API to get inferences from the model hosted at the specified endpoint.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListAlgorithms",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists algorithms.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListApps",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the Apps in your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListAutoMLJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists automl jobs created via the CreateAutoMLJob.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListCandidatesForAutoMLJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists candidates for automl job created via the CreateAutoMLJob.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListCodeRepositories",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists code repositories.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListCompilationJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists compilation jobs.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListDomains",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the Domains in your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListEndpointConfigs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists endpoint configurations.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListEndpoints",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists endpoints.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListExperiments",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists experiments.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListFlowDefinitions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns summary information about flow definitions, given the specified parameters.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListHumanLoops",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns summary information about human loops, given the specified parameters.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListHumanTaskUis",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns summary information about human review workflow user interfaces, given the specified parameters.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListHyperParameterTuningJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists hyper parameter tuning jobs that was created using Amazon SageMaker.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListLabelingJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists labeling jobs.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListLabelingJobsForWorkteam",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists labeling jobs for workteam.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workteam",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListModelPackages",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists model packages.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListModels",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists the models created with the CreateModel API.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListMonitoringExecutions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists monitoring executions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListMonitoringSchedules",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists monitoring schedules.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListNotebookInstanceLifecycleConfigs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists notebook instance lifecycle configurations that can be deployed using Amazon SageMaker.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListNotebookInstances",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of the Amazon SageMaker notebook instances in the requester's account in an AWS Region.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListProcessingJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists processing jobs.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSubscribedWorkteams",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists subscribed workteams.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTags",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns the tag set associated with the specified resource.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "app",
+                    "required": false
+                },
+                {
+                    "name": "automl-job",
+                    "required": false
+                },
+                {
+                    "name": "domain",
+                    "required": false
+                },
+                {
+                    "name": "endpoint",
+                    "required": false
+                },
+                {
+                    "name": "endpoint-config",
+                    "required": false
+                },
+                {
+                    "name": "experiment",
+                    "required": false
+                },
+                {
+                    "name": "experiment-trial",
+                    "required": false
+                },
+                {
+                    "name": "experiment-trial-component",
+                    "required": false
+                },
+                {
+                    "name": "flow-definition",
+                    "required": false
+                },
+                {
+                    "name": "human-task-ui",
+                    "required": false
+                },
+                {
+                    "name": "hyper-parameter-tuning-job",
+                    "required": false
+                },
+                {
+                    "name": "labeling-job",
+                    "required": false
+                },
+                {
+                    "name": "model",
+                    "required": false
+                },
+                {
+                    "name": "monitoring-schedule",
+                    "required": false
+                },
+                {
+                    "name": "notebook-instance",
+                    "required": false
+                },
+                {
+                    "name": "training-job",
+                    "required": false
+                },
+                {
+                    "name": "transform-job",
+                    "required": false
+                },
+                {
+                    "name": "user-profile",
+                    "required": false
+                },
+                {
+                    "name": "workteam",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTrainingJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists training jobs.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTrainingJobsForHyperParameterTuningJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists training jobs for a hyper parameter tuning job that was created using Amazon SageMaker.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hyper-parameter-tuning-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListTransformJobs",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists transform jobs.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTrialComponents",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists trial components.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListTrials",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists trials.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListUserProfiles",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants permission to list the UserProfiles in your account",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListWorkforces",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists workforces.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListWorkteams",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists workteams.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "RenderUiTemplate",
+            "condition_keys": [],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Render a UI template used for a human annotation task.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "Search",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Search for SageMaker objects.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "StartHumanLoop",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts a human loop.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "flow-definition",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartMonitoringSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts a monitoring schedule.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "monitoring-schedule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartNotebookInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Launches an EC2 instance with the latest version of the libraries and attaches your EBS volume.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notebook-instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopAutoMLJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops a running automl job created via the CreateAutoMLJob.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "automl-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopCompilationJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops a compilation job.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "compilation-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopHumanLoop",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops the specified human loop.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "human-loop",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopHyperParameterTuningJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops a running hyper parameter tuning job create via the CreateHyperParameterTuningJob.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "hyper-parameter-tuning-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopLabelingJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops a labeling job. Any labels already generated will be exported before stopping.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "labeling-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopMonitoringSchedule",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops a monitoring schedule.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "monitoring-schedule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopNotebookInstance",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Terminates the EC2 instance. Before terminating the instance, Amazon SageMaker disconnects the EBS volume from it. Amazon SageMaker preserves the EBS volume.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notebook-instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopProcessingJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops a processing job. To stop a job, Amazon SageMaker sends the algorithm the SIGTERM signal, which delays job termination for 120 seconds.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "processing-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopTrainingJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops a training job. To stop a job, Amazon SageMaker sends the algorithm the SIGTERM signal, which delays job termination for 120 seconds.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "training-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopTransformJob",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Stops a transform job. When Amazon SageMaker receives a StopTransformJob request, the status of the job changes to Stopping. After Amazon SageMaker stops the job, the status is set to Stopped",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "transform-job",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateCodeRepository",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a code repository.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "code-repository",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateDomain",
+            "condition_keys": [
+                "sagemaker:VpcSecurityGroupIds",
+                "sagemaker:InstanceTypes",
+                "sagemaker:DomainSharingOutputKmsKey"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to update a Domain",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "domain",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateEndpoint",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an endpoint to use the endpoint configuration specified in the request.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateEndpointWeightsAndCapacities",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates variant weight, capacity, or both of one or more variants associated with an endpoint.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "endpoint",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateExperiment",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates an experiment.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "experiment",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateMonitoringSchedule",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "sagemaker:InstanceTypes",
+                "sagemaker:MaxRuntimeInSeconds",
+                "sagemaker:NetworkIsolation",
+                "sagemaker:OutputKmsKey",
+                "sagemaker:VolumeKmsKey",
+                "sagemaker:VpcSecurityGroupIds",
+                "sagemaker:VpcSubnets"
+            ],
+            "dependent_actions": [
+                "iam:PassRole"
+            ],
+            "description": "Updates a monitoring schedule.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "monitoring-schedule",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateNotebookInstance",
+            "condition_keys": [
+                "sagemaker:AcceleratorTypes",
+                "sagemaker:InstanceTypes",
+                "sagemaker:RootAccess"
+            ],
+            "dependent_actions": [],
+            "description": "Updates a notebook instance. Notebook instance updates include upgrading or downgrading the EC2 instance used for your notebook instance to accommodate changes in your workload requirements. You can also update the VPC security groups.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notebook-instance",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateNotebookInstanceLifecycleConfig",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a notebook instance lifecycle configuration created with the CreateNotebookInstanceLifecycleConfig API.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "notebook-instance-lifecycle-config",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTrial",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a trial.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "experiment-trial",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateTrialComponent",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a trial component.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "experiment-trial-component",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateUserProfile",
+            "condition_keys": [
+                "sagemaker:InstanceTypes",
+                "sagemaker:VpcSecurityGroupIds",
+                "sagemaker:InstanceTypes",
+                "sagemaker:DomainSharingOutputKmsKey"
+            ],
+            "dependent_actions": [],
+            "description": "Grants permission to update a UserProfile",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "user-profile",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateWorkforce",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a workforce.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workforce",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateWorkteam",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a workteam.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "workteam",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "sagemaker",
+    "service": "Amazon SageMaker"
+}

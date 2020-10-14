@@ -1,0 +1,669 @@
+{
+    "actions": [
+        {
+            "access_level": "Write",
+            "action": "BatchDeleteBuilds",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes one or more builds.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetBuildBatches",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about one or more build batches.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetBuilds",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about one or more builds.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetProjects",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about one or more build projects.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetReportGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns an array of ReportGroup objects that are specified by the input reportGroupArns parameter.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "report-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "BatchGetReports",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns an array of the Report objects specified by the input reportArns parameter.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "report-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchPutCodeCoverages",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds or updates information about a report.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "report-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "BatchPutTestCases",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Adds or updates information about a report.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "report-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateProject",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a build project.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateReport",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a report. A report is created when tests specified in the buildspec file for a report groups run during the build of a project.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "report-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateReportGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Creates a report group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "report-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "CreateWebhook",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "For an existing AWS CodeBuild build project that has its source code stored in a GitHub or Bitbucket repository, enables AWS CodeBuild to start rebuilding the source code every time a code change is pushed to the repository.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteBuildBatch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a build batch.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteOAuthToken",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes an OAuth token from a connected third-party OAuth provider. Only used in the AWS CodeBuild console.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a build project.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteReport",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a report.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "report-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteReportGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a report group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "report-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "DeleteResourcePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a resource policy for the associated project or report group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": false
+                },
+                {
+                    "name": "report-group",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteSourceCredentials",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deletes a set of GitHub, GitHub Enterprise, or Bitbucket source credentials.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeleteWebhook",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "For an existing AWS CodeBuild build project that has its source code stored in a GitHub or Bitbucket repository, stops AWS CodeBuild from rebuilding the source code every time a code change is pushed to the repository.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeCodeCoverages",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns an array of CodeCoverage objects.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "report-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeTestCases",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns an array of TestCase objects.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "report-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Read",
+            "action": "GetResourcePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a resource policy for the specified project or report group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": false
+                },
+                {
+                    "name": "report-group",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "ImportSourceCredentials",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Imports the source repository credentials for an AWS CodeBuild project that has its source code stored in a GitHub, GitHub Enterprise, or Bitbucket repository.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "InvalidateProjectCache",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Resets the cache for a project.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListBuildBatches",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a list of build batch IDs, with each build batch ID representing a single build batch.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListBuildBatchesForProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a list of build batch IDs for the specified build project, with each build batch ID representing a single build batch.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListBuilds",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a list of build IDs, with each build ID representing a single build.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListBuildsForProject",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a list of build IDs for the specified build project, with each build ID representing a single build.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListConnectedOAuthAccounts",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists connected third-party OAuth providers. Only used in the AWS CodeBuild console.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListCuratedEnvironmentImages",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets information about Docker images that are managed by AWS CodeBuild.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListProjects",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Gets a list of build project names, with each build project name representing a single build project.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListReportGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of report group ARNs. Each report group ARN represents one report group.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListReports",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of report ARNs. Each report ARN representing one report.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListReportsForReportGroup",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of report ARNs that belong to the specified report group. Each report ARN represents one report.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "report-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "List",
+            "action": "ListRepositories",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists source code repositories from a connected third-party OAuth provider. Only used in the AWS CodeBuild console.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSharedProjects",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of project ARNs that have been shared with the requester. Each project ARN represents one project.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSharedReportGroups",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of report group ARNs that have been shared with the requester. Each report group ARN represents one report group.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListSourceCredentials",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Returns a list of SourceCredentialsInfo objects.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "PersistOAuthToken",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Saves an OAuth token from a connected third-party OAuth provider. Only used in the AWS CodeBuild console.",
+            "permission_only": true,
+            "resources": []
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "PutResourcePolicy",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Creates a resource policy for the associated project or report group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": false
+                },
+                {
+                    "name": "report-group",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RetryBuild",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retries a build.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "RetryBuildBatch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retries a build batch.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartBuild",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts running a build.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StartBuildBatch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Starts running a build batch.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopBuild",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Attempts to stop running a build.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "StopBuildBatch",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Attempts to stop running a build batch.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateProject",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Changes the settings of an existing build project.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateReport",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates information about a report.",
+            "permission_only": true,
+            "resources": [
+                {
+                    "name": "report-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateReportGroup",
+            "condition_keys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "dependent_actions": [],
+            "description": "Changes the settings of an existing report group.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "report-group",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateWebhook",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates the webhook associated with an AWS CodeBuild build project.",
+            "permission_only": false,
+            "resources": [
+                {
+                    "name": "project",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "prefix": "codebuild",
+    "service": "AWS CodeBuild"
+}

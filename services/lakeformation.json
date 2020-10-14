@@ -1,0 +1,132 @@
+{
+    "actions": [
+        {
+            "access_level": "Permissions management",
+            "action": "BatchGrantPermissions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants data lake permissions to one or more principals in a batch.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "BatchRevokePermissions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Revokes data lake permissions from one or more principals in a batch.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "DeregisterResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Deregisters a registered location.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "DescribeResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Describes a registered location.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "GetDataAccess",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants virtual data lake access permissions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetDataLakeSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves data lake settings such as the list of data lake administrators and database and table default permissions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Read",
+            "action": "GetEffectivePermissionsForPath",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Retrieves permissions attached to resources in the given path.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "GrantPermissions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Grants data lake permissions to a principal.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListPermissions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists permissions filtered by principal or resource.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "List",
+            "action": "ListResources",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Lists registered locations.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "PutDataLakeSettings",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Overwrites data lake settings such as the list of data lake administrators and database and table default permissions.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "RegisterResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Registers a new location to be managed by Lake Formation.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Permissions management",
+            "action": "RevokePermissions",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Revokes data lake permissions from a principal.",
+            "permission_only": false,
+            "resources": []
+        },
+        {
+            "access_level": "Write",
+            "action": "UpdateResource",
+            "condition_keys": [],
+            "dependent_actions": [],
+            "description": "Updates a registered location.",
+            "permission_only": false,
+            "resources": []
+        }
+    ],
+    "prefix": "lakeformation",
+    "service": "AWS Lake Formation"
+}
